@@ -15,8 +15,8 @@ public class GameMenuState extends BasicGameState {
 	private Input input ;
 	private Image bg = null ;
 	
-	private Meniu resume ;
-	private Meniu exit ;
+	private ManipImg resume ;
+	private ManipImg exit ;
 	
 	
 	// stadiul meniului secundar
@@ -24,8 +24,8 @@ public class GameMenuState extends BasicGameState {
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input = gc.getInput();
 		bg = new Image("res/gm_fundal.png");
-		resume = new Meniu( new Image("res/resume.jpg") , 300 , 300) ;
-		exit = new Meniu( new Image("res/exit.jpg") , 300 , 400) ;
+		resume = new ManipImg( new Image("res/resume.jpg") , 300 , 300) ;
+		exit = new ManipImg( new Image("res/exit.jpg") , 300 , 400) ;
 	}
 
 

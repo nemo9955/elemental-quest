@@ -13,8 +13,8 @@ public class MainMenuState extends BasicGameState {
 	private Input input ;
 	private Image bg = null ;
 	private int ID;
-	private Meniu start ;
-	private Meniu exit ;
+	private ManipImg start ;
+	private ManipImg exit ;
 	
 	
 	public MainMenuState( int ID ) {
@@ -27,8 +27,8 @@ public class MainMenuState extends BasicGameState {
 		System.out.println("Init menu");
 		input =gc.getInput();
 		bg = new Image("res/fundal.jpg");
-		start = new Meniu( new Image("res/start.jpg") , 300 , 300) ;
-		exit = new Meniu( new Image("res/exit.jpg") , 300 , 400) ;
+		start = new ManipImg( new Image("res/start.jpg") , 300 , 300) ;
+		exit = new ManipImg( new Image("res/exit.jpg") , 300 , 400) ;
 	}
 
 	@Override
