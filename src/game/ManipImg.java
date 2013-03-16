@@ -23,6 +23,10 @@ public class ManipImg {
 		img.draw(poz.x , poz.y , raport ) ;
 	}
 	
+	public void render(int x, int y) {
+		img.draw(poz.x+x , poz.y+y ) ;
+	}
+	
 	// verifica daca butonul a fost apasat 
 	public boolean inZon(float x , float y){
 		if(zon.contains(x, y)){

@@ -2,6 +2,7 @@ package game;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
@@ -18,6 +19,7 @@ public class GameplayState extends BasicGameState {
 	private int  mapW ;
 	private int  mapH ;
 	public Camera camera ;
+	private Image health;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -33,6 +35,7 @@ public class GameplayState extends BasicGameState {
 		player = new Player (75 , 1400 , 60 , gc , map);
 		camera = new Camera(mapW , mapH);
 		input = gc.getInput();
+		health=new Image("res/health_bar1.jpg");
 	}
 
 	@Override
@@ -42,11 +45,10 @@ public class GameplayState extends BasicGameState {
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);
 		
-/*		TODO debug tool
+//		TODO debug tool
 		if(input.isKeyPressed(Input.KEY_F1))
-			System.out.println(input.getMouseX() + "  " + input.getMouseY() );
-			System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
-*/
+			System.out.println(camera.getX() + "  " + camera.getY() );
+//			System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
 		
 	}
 
@@ -54,6 +56,7 @@ public class GameplayState extends BasicGameState {
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
 		camera.translate(g, player);
 		map.render(0, 0);
+		health.draw(-camera.getX()+25 ,-camera.getY()+20 ) ;
 		player.render(gc, g);
 	}
 	

@@ -5,7 +5,8 @@ import org.newdawn.slick.geom.Vector2f;
 
 public class Camera {
 	
-	private int transX, transY;
+	private int transX;
+	private int transY;
 	private int mapWidth, mapHeight;
 	private Vector2f cen ;
 
@@ -22,7 +23,7 @@ public class Camera {
 		
 		/*
 		 *  verifica fiecare axa in parte astfel incat
-		 *  camera sa fie centrata pe jucator , dar sa nu afiseze in afara hartii
+		 *  camera sa fie centrata pe jucator cand este posibil , dar sa nu afiseze in afara hartii
 		 */
 		
 		// axa x
@@ -43,5 +44,14 @@ public class Camera {
 
  
     	g.translate(transX, transY);
+    	
 	}
+	
+	public int getX(){
+		return transX;
+	}
+	public int getY(){
+		return transY;
+	}
+	
 }

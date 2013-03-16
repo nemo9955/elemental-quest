@@ -12,17 +12,17 @@ public class Player {
 	
 	private float x ;
 	private float y;
-	private Input input ;
-	private float accel;
-	private Color color=Color.blue ;
 	private int  marime ;
+	private float accel;
 	private boolean jump=false ;
 	private boolean canjump=true ;
-	private Rectangle poly ;
-	private BlockMap blockmap ;
 	private float grav;
 	private float moveSpeed;
 	private boolean moving = false ;
+	private Input input ;
+	private Color color=Color.blue ;
+	private Rectangle poly ;
+	private BlockMap blockmap ;
 	
 	private float accelIni = 20f;
 	private float accelMod = 0.6f ;
