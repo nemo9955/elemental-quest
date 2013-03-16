@@ -13,7 +13,7 @@ public class Player {
 	private float x ;
 	private float y;
 	private int  marime ;
-	private float accel;
+	private float accel = 0;
 	private boolean jump=false ;
 	private boolean canjump=true ;
 	private float grav;
@@ -74,6 +74,7 @@ public class Player {
 			poly.setY(y);
 			jump=false;
 			canjump=true;
+			accel=0;
 			grav=4f;
 			if(cadee > 40)
 				takeLife(cadee/2);
@@ -82,7 +83,7 @@ public class Player {
 		}else{
 			canjump=false;
 			grav+=gravMod;
-			cadee++;
+			if(accel<=0)cadee++;
 		}
 		if(grav > gravMax) grav=gravMax;
 		
@@ -148,6 +149,8 @@ public class Player {
 		if(input.isKeyPressed(Input.KEY_F4))
 			System.out.println(blockmap.getProp((int)x/32 , (int)y/32 ));
 				
+		if(input.isKeyDown(Input.KEY_F6))
+			addLife(10);
 		if(input.isKeyDown(Input.KEY_F5)){
 			x=2400;
 			poly.setX(x);
