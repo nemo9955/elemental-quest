@@ -64,15 +64,18 @@ public class GameplayState extends BasicGameState {
 	}
 
 	private void renderHealthBar(){
+		// afla cat trebuie sa randeze din bara de viata
 		init= health.getWidth() - ( player.LifeLS() * health.getWidth() );
 		
-		if( init > rap )
-			rap+=11;
+		// folosite pentru modificarea treptata marimii imaginii
+		if( init > rap ) rap+=11;
+		if(rap>init)     rap=init;
 		
 		Vector2f loc    = new Vector2f(-camera.getX()+25 ,-camera.getY()+20);
 		Vector2f pozimg = new Vector2f(health.getWidth()-camera.getX()+25-rap , health.getHeight()-camera.getY()+20);
 		Vector2f recini = new Vector2f(0 , 0);
 		Vector2f recfin = new Vector2f(health.getWidth()-rap , health.getHeight());
+		// desenez o parte din imagine ( in functie de viata jucatorului )
 		health.draw(loc.x , loc.y , pozimg.x , pozimg.y , recini.x , recini.y ,recfin.x , recfin.y );
 	}
 	

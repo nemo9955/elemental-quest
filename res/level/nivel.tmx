@@ -5,54 +5,24 @@
    <property name="solid" value=""/>
   </properties>
   <image source="stone.png" width="192" height="160"/>
-  <tile id="3">
-   <properties>
-    <property name="solid" value=""/>
-   </properties>
-  </tile>
-  <tile id="8">
-   <properties>
-    <property name="solid" value=""/>
-   </properties>
-  </tile>
-  <tile id="18">
-   <properties>
-    <property name="solid" value=""/>
-   </properties>
-  </tile>
  </tileset>
  <tileset firstgid="31" name="pipe" tilewidth="32" tileheight="32">
   <properties>
    <property name="spike" value=""/>
   </properties>
   <image source="pipe.png" width="128" height="128"/>
-  <tile id="10">
-   <properties>
-    <property name="spike" value=""/>
-   </properties>
-  </tile>
  </tileset>
  <tileset firstgid="47" name="stone_darker" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
   <image source="stone_darker.png" width="192" height="160"/>
-  <tile id="2">
-   <properties>
-    <property name="solid" value=""/>
-   </properties>
-  </tile>
  </tileset>
  <tileset firstgid="77" name="decorations" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
   <image source="decorations.png" width="256" height="256"/>
-  <tile id="46">
-   <properties>
-    <property name="solid" value=""/>
-   </properties>
-  </tile>
  </tileset>
  <layer name="BG" width="100" height="50">
   <data encoding="base64" compression="zlib">
