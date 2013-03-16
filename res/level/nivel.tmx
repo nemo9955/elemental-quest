@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="50" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="solid" value=""/>
+  </properties>
+  <image source="stone.png" width="192" height="160"/>
+  <tile id="3">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="31" name="pipe" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="spike" value=""/>
+  </properties>
+  <image source="pipe.png" width="128" height="128"/>
+  <tile id="10">
+   <properties>
+    <property name="spike" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="47" name="stone_darker" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="solid" value=""/>
+  </properties>
+  <image source="stone_darker.png" width="192" height="160"/>
+  <tile id="2">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="77" name="decorations" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="solid" value=""/>
+  </properties>
+  <image source="decorations.png" width="256" height="256"/>
+  <tile id="46">
+   <properties>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="BG" width="100" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzNmkGu4zgMRHOZXGB2XnxjdkEuMfc/RncDn0BNoUgWZTm/F0ISW5ZIPpKi5Hw9Ho+vpB3w+U7u8XWnuc/s7HeYY2Xt9bud3w2vn83Y6pmVdiTf+Xdni1fRPsXj2GATlPeE5nJ2uFRjof9XPNgeE5t3/SaxV3G/u01ioOrb8VAs+Lmpz3e+lzHpbFKx25GrlF15bIybFS5hc9UO+uR7aIer7UXfM3uvtkrPqXw7x1XjKX/EdXziz5WPTuJ/NWepvpMcfyU2JnGQ2Zz7vWmeLFc5+cVlUbG7ymRiN5cH2mwyruIScaHGetM809io7H7FFt3a0PG4i8Uq55M4qLHUPTXXq7i+6s8rdnGYdLHhjLkrNlCuN4x1wvfjkXNydcj8fyeP18KYO3jsjA1lZxxX7bdXeHQy7GIxHe985HnZ0aVaw10eWDd1/WItV+t+xaNby3cyuRJ3u3m4LFwGrE9l7+qeo4tjv27f1NXT1fMn9Z/y6FiwLaYMvkT/qzymTM5HbkO+1tXSuAZWLCoeV2NjhYHyKYdHNk6lF9uU7c9yqzrAqY1xLIdHJ/eERbWHdjlksk958HW2d9XQJyoW1R5WjaXibOpH1XWcr8vzDoupzzixkcWBsgtzwbPQjM0J15/f35/wPXSbxoaKz4pFlo9W9xyunM5cUR93HKp7vM8OPpmPBg/VXB1XeAQD12Ydh6mc+FysU+zX6jw5kyHjEPfecL2qrZhH3HvSOFM9szhQMXqFR3aumfVnOaOuwrMV5ORwwPv/ChbMJ5NxGh8TPTkOVLxciY1uH+7IGb9VzuRzFW6VTZmT2mu7z2J8OGOwniizqiV2xEZV+3bn7fxuXJ31OrWdYtTFhOvfweOfpF+W51n+LA5cHnez6HjwPkXFhOqr3uNVZ+Uuk6wP8shk7PawO2Kj2xNOeeCa7exTVL6K9TmLiSzfdTkn24tXPlLJP+VxZ2xwzYT243pWraFqHIyBLD93unTxp2qML7ju+l3YX+WvO2Ij24epdTGLD+RxwPenGDvztyoOHJ2cZ9W+v7Oneo9S8VhlUdnd9ZuKR/zmXI4snLOnKmdl9j+/53b6TnlUuWrCQtnf5aDmVPHB8fOk38hg5f24yyViM1vXOz7ZOwJVB7o8Ik9m/r/CwuER8/EassKh8n/lc6i3io/MV3mu7J10Vdt1Z6dd7l1tWJsrHmo9d9k7+V+NpeotXrsmeld72Z3P7GiKB8aKqrEqHk5Od9a490Pnp+rZbM4q76yw6PxwNVehvLz3UDpkZ0mYSzo5J7GldLzKw7FzdzZ0Jwvk8Wes/xaaI+NUTpWju7pF2Yv9nWsgfmYaS5mMu+IDZVJ7MNQneGT7nBUOqNPULzJbVWfTzL36z8iE0w4eSjesr74e/1/XMTay/efKvgh5vGl8tmO0kEXZwqlbV1lkcbGa75AH6sZ5KOr/+Iz4WI0BRy+0sap7s74uD85Z2TndVO6quYwO+lQ8qvjYzSP8gnNlVnejLG/q4/DYGRvTltV4zAN1vJuH8pkYH+025RE6qZyJtSTHm8tiBw/VmEdm78wGV/0Bx+d8iM9Neai9Ezd+X/XTLIIDx6xaR1Z4rNYeynbP5DrXeViLHPAc63FQ/wmLT/NgJjx3xWNH7afsh/aqbNHFCOqNHJjNT7CoeKDdHR476m8114QH70uqhuNUuVPVkXfwwPW84sG5i6/t4pDp6ay1SqY/n3y2c8J11b+TLWs7uTjviDMf28XB4YG647xqrcv2FVgDPx9rPpXJuKtl7wgyLjvjYaIn38v2r2Fr/sR1PMZGn/rUmWHX1H/4VLuLQ8ei8o2sroi9PPPg9574/N/IQ9k9W+vu4MHx0M0TTPg/MA6PiC9VL/wUC8WDOWQy7uJytYZxefD/M6p152/k4TC5wqWrTyY8ggnvNxQPVTN2PD7FwuHh+A7b12mVnlP9ue5T1yoOHZNP8vgFa7jQvQ==
+  </data>
+ </layer>
+ <layer name="solid" width="100" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt3N0KgkAQQOGFoqt+IPD9XzUlBrYiMko9s3sOzLXix+BeiEMpZXBQY4z0YKUHKz1Y6cFKD1Z6sDoUPUhdix6k9GClBys9WOnBSg9WerDSg5UerPRgpQcrPVjpwUqPx7Z+Fnrco3xrowfDIerZg7ITdT16EB2iyeO49U2sGNUh6smD7BD14EHfibqWPTI5RK16ZLSYas2DfHaaU0semR2i7B7Z9+G5jB6tGdRl9Wi1TB6t7kRdBo8eHCK6Ry8OEdGj5ff1p0gevRrUbenhPwle28LD5/++tTzcg3kt6aHB9/3bQ4PfIp2vTA9ak8dpnP0Kc6lmqWvsks95nBs2lBUb
+  </data>
+ </layer>
+</map>
