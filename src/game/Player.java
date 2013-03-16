@@ -203,14 +203,12 @@ public class Player {
     }
     
     private void adapteaza(float cantitate){
-    	while( colid() ){
+    	while( !colid() ){
 			y+=cantitate;
 			poly.setY(y);
-			if(colid()){
+    	}
 				y-=cantitate;
 				poly.setY(y);
-			}
-    	}
     }
 
 	public float getX() {
