@@ -1,5 +1,8 @@
 package game;
 
+
+import nivel.Proprietati;
+
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -16,7 +19,7 @@ import diverse.Main;
 public class GameplayState extends BasicGameState {
 
 	private int ID ;
-	private Player player = null ;
+	public Player player = null ;
 	private Input input ;
 	private TiledMap map;
 	private int  mapW ;
@@ -25,6 +28,7 @@ public class GameplayState extends BasicGameState {
 	private Image health;
 	private float init;
 	private float rap =0;
+	private Proprietati prop ;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -40,6 +44,8 @@ public class GameplayState extends BasicGameState {
 		camera = new Camera(mapW , mapH);
 		input = gc.getInput();
 		health=new Image("res/health_bar1.jpg");
+		setProp(new Proprietati(map , player));
+		
 	}
 
 	@Override
@@ -82,6 +88,14 @@ public class GameplayState extends BasicGameState {
 	
 	public int getID() { 
 		return ID;
+	}
+
+	public Proprietati getProp() {
+		return prop;
+	}
+
+	public void setProp(Proprietati prop) {
+		this.prop = prop;
 	}
 
 	

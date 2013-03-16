@@ -25,7 +25,7 @@ public class Player {
 	private Color color=Color.blue ;
 	private Rectangle poly ;
 	private BlockMap blockmap ;
-	
+
 	private float accelIni = 20f;
 	private float accelMod = 0.6f ;
 	private float gravMax = 15f;
@@ -36,7 +36,16 @@ public class Player {
 	private int viata = 100 ;
 	private int cadee=0 ;
 
-	// clasa principala a jucatorului 
+	public void setPlayer(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
+		this.accelIni = accelIni;
+		this.accelMod = accelMod;
+		this.gravMax = gravMax;
+		this.gravMod = gravMod;
+		this.moveSpeedMax = moveSpeedMax;
+		this.moveSpeedMod = moveSpeedMod;
+	}
+
+	// constructorul principal al jucatorului din gamestate
 	public Player (float x , float y , int marime , GameContainer gc , TiledMap map) throws SlickException{
 		this.x=x;
 		this.y=y;
@@ -45,7 +54,7 @@ public class Player {
 		poly = new Rectangle (x , y, marime , marime);
 		input = gc.getInput();
 	}
-
+	
     public void update(GameContainer gc, int delta){
 		
     	// initializarea sariturii
