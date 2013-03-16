@@ -1,4 +1,7 @@
-package game;
+package states;
+
+import diverse.Main;
+import diverse.ManipImg;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;

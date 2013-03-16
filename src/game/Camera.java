@@ -3,6 +3,8 @@ package game;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Vector2f;
 
+import diverse.Main;
+
 public class Camera {
 	
 	private int transX;

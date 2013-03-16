@@ -1,9 +1,15 @@
-package game ;
+package diverse ;
+
+import game.GameplayState;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
+
+import states.GameMenuState;
+import states.MainMenuState;
+import states.SplashState;
 
 public class Main extends StateBasedGame{
 

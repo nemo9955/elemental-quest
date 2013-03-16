@@ -1,4 +1,4 @@
-package game;
+package nivel;
 
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
