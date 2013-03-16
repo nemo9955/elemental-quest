@@ -32,6 +32,7 @@ public class Player {
 	private float moveSpeedMod = 0.5f;
 	
 	private int viata = 100 ;
+	private int cadee=0 ;
 
 	// clasa principala a jucatorului 
 	public Player (float x , float y , int marime , GameContainer gc , TiledMap map) throws SlickException{
@@ -61,6 +62,7 @@ public class Player {
 					poly.setY(y);
 					accel=0 ;
 				}
+			if(accel>0)
 				accel -= accelMod ;
 		}
 
@@ -72,10 +74,16 @@ public class Player {
 			poly.setY(y);
 			jump=false;
 			canjump=true;
-			grav=4;
+			grav=4f;
+			if(cadee > 40)
+				takeLife(cadee/2);
+			if(cadee > 5)
+				System.out.println("cazu : " + cadee);
+			cadee=0;
 		}else{
 			canjump=false;
 			grav+=gravMod;
+			cadee++;
 		}
 		if(grav > gravMax) grav=gravMax;
 		
@@ -136,13 +144,15 @@ public class Player {
 			System.out.println(x + "  " + y );
 		if(input.isKeyPressed(Input.KEY_F2))
 			System.out.println(marime);
+		if(input.isKeyPressed(Input.KEY_F3))
+			System.out.println("viata : " + viata);
 		if(input.isKeyPressed(Input.KEY_F4))
 			System.out.println(blockmap.getProp((int)x/32 , (int)y/32 ));
 				
 		if(input.isKeyDown(Input.KEY_F5)){
-			x=2050;
+			x=2400;
 			poly.setX(x);
-			y=400;
+			y=500;
 			poly.setY(y);
 		}
     }
@@ -203,5 +213,14 @@ public class Player {
 	
 	public float LifeLS(){
 		return viata/100f ;
+	}
+	
+	public void addLife(int x){
+		viata+=x;
+		if(viata>100)viata=100;
+	}
+	public void takeLife(int x){
+		viata-=x;
+		if(viata<0)viata=0;
 	}
 }
