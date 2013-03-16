@@ -21,12 +21,8 @@ public class GameplayState extends BasicGameState {
 	private int  mapH ;
 	public Camera camera ;
 	private Image health;
-	
-	private Vector2f loc ;
-	private Vector2f pozimg ;
-	private Vector2f recini ;
-	private Vector2f recfin ;
-	private float rap ;
+	private float init;
+	private float rap =0;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -68,13 +64,16 @@ public class GameplayState extends BasicGameState {
 	}
 
 	private void renderHealthBar(){
-		rap = health.getWidth() - ( player.LifeLS() * health.getWidth() ) ;
-		loc    = new Vector2f(-camera.getX()+25 ,-camera.getY()+20);
-		pozimg = new Vector2f(health.getWidth()-camera.getX()+25-rap , health.getHeight()-camera.getY()+20);
-		recini = new Vector2f(0 , 0);
-		recfin = new Vector2f(health.getWidth()-rap , health.getHeight());
-		health.draw(loc.x , loc.y , pozimg.x , pozimg.y , recini.x , recini.y ,recfin.x , recfin.y );
+		init= health.getWidth() - ( player.LifeLS() * health.getWidth() );
 		
+		if( init > rap )
+			rap+=11;
+		
+		Vector2f loc    = new Vector2f(-camera.getX()+25 ,-camera.getY()+20);
+		Vector2f pozimg = new Vector2f(health.getWidth()-camera.getX()+25-rap , health.getHeight()-camera.getY()+20);
+		Vector2f recini = new Vector2f(0 , 0);
+		Vector2f recfin = new Vector2f(health.getWidth()-rap , health.getHeight());
+		health.draw(loc.x , loc.y , pozimg.x , pozimg.y , recini.x , recini.y ,recfin.x , recfin.y );
 	}
 	
 	public int getID() { 

@@ -221,6 +221,11 @@ public class Player {
 	}
 	public void takeLife(int x){
 		viata-=x;
-		if(viata<0)viata=0;
+		if(viata<0){
+			viata=0;
+			//TODO mori
+			System.out.println("esti moooort");
+		}
+		// TODO adauga efect cand suferi damage
 	}
 }
