@@ -30,6 +30,8 @@ public class Player {
 	private float gravMod = 0.5f;
 	private float moveSpeedMax = 8f;
 	private float moveSpeedMod = 0.5f;
+	
+	private int viata = 100 ;
 
 	// clasa principala a jucatorului 
 	public Player (float x , float y , int marime , GameContainer gc , TiledMap map) throws SlickException{
@@ -197,5 +199,9 @@ public class Player {
 
 	public void setMarime(int marime) {
 		this.marime = marime;
+	}
+	
+	public float LifeLS(){
+		return viata/100f ;
 	}
 }
