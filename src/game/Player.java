@@ -77,8 +77,7 @@ public class Player {
 			grav=4f;
 			if(cadee > 40)
 				takeLife(cadee/2);
-			if(cadee > 5)
-				System.out.println("cazu : " + cadee);
+//			if(cadee > 5) System.out.println("cazu : " + cadee); TODO debug
 			cadee=0;
 		}else{
 			canjump=false;
@@ -115,7 +114,7 @@ public class Player {
 		}
 		if(moveSpeed > moveSpeedMax) moveSpeed = moveSpeedMax ;
 		
-		// debuging
+		// TODO debug
 /*		if(input.isKeyDown(Input.KEY_S)){
 			y+=moveSpeed;
 			poly.setY(y);
@@ -139,7 +138,7 @@ public class Player {
 			else
 				color=Color.blue;
 				
-		//TODO debug tool
+		//TODO debug
 		if(input.isKeyPressed(Input.KEY_F1))
 			System.out.println(x + "  " + y );
 		if(input.isKeyPressed(Input.KEY_F2))
@@ -176,7 +175,7 @@ public class Player {
 		g.setColor(color);
 		g.setLineWidth(3);
 		g.draw(poly);
-/*		g.setColor(Color.cyan);
+/*		g.setColor(Color.cyan);  TODO debug
 		for(int j=0 ; j<map.getHeight() ; j++)
 			for(int i=0 ; i<map.getWidth() ; i++){
 				if(blockmap.isBlock(i, j)){

@@ -31,7 +31,6 @@ public class GameplayState extends BasicGameState {
 	// stadiul jocului insasi
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
-		System.out.println("Init game");
 		map = new TiledMap("res/level/nivel.tmx");
 		mapW= map.getWidth()*map.getTileWidth() ;
 		mapH = map.getHeight()*map.getTileHeight();

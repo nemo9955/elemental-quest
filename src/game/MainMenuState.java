@@ -24,7 +24,6 @@ public class MainMenuState extends BasicGameState {
 	// stadiul meniului principal , care apare dupa pornirea jocului
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
-		System.out.println("Init menu");
 		input =gc.getInput();
 		bg = new Image("res/fundal.jpg");
 		start = new ManipImg( new Image("res/start.jpg") , 300 , 300) ;
