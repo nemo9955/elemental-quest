@@ -16,7 +16,7 @@ public class Player {
 	private float y;
 	private int  marime ;
 	private float accel = 0;
-	private boolean jump=false ;
+	private boolean jumping=false ;
 	private boolean canjump=true ;
 	private float grav;
 	private float moveSpeed;
@@ -34,7 +34,7 @@ public class Player {
 	private float moveSpeedMod = 0.5f;
 	
 	private int viata = 100 ;
-	private int cadee=0 ;
+	private float cadee=0 ;
 
 	public void setPlayer(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
 		this.accelIni = accelIni;
@@ -58,43 +58,45 @@ public class Player {
     public void update(GameContainer gc, int delta){
 		
     	// initializarea sariturii
-		if(!jump && canjump && input.isKeyPressed(Input.KEY_W)){
+		if(!jumping && canjump && input.isKeyPressed(Input.KEY_W)){
 			accel = accelIni;
-			jump=true;
+			jumping=true;
 		}
 		
 		// "comportamentul" sariturii
-		if(jump){
+		if(jumping){
 			y-=accel;
 			poly.setY(y);
 				if(colid()){
-					jump=false;
+					jumping=false;
 					y+=accel;
 					poly.setY(y);
+//					adapteaza(-1);
 					accel=0 ;
 				}
 			if(accel>0)
 				accel -= accelMod ;
+			else
+				jumping=false;
 		}
 
 		// gravitatia
-		y+=grav;
-		poly.setY(y);
+		y+=grav;	poly.setY(y);
 		if(colid()){
-			y-=grav;
-			poly.setY(y);
-			jump=false;
-			canjump=true;
+			y-=grav;	poly.setY(y);
+			jumping=false; canjump=true;
 			accel=0;
-			grav=4f;
-			if(cadee > 40)
-				takeLife(cadee/2);
-//			if(cadee > 5) System.out.println("cazu : " + cadee); TODO debug
+			adapteaza(1);
+			grav=0f;
+			if(cadee >  170 )
+				takeLife( cadee/7 );
+//			if(cadee > 0) System.out.println("cazu : " + cadee);// TODO debug
 			cadee=0;
 		}else{
 			canjump=false;
 			grav+=gravMod;
-			if(accel<=0)cadee++;
+			
+			if(accel<=0 && gravMax>7)  cadee+=grav/3;
 		}
 		if(grav > gravMax) grav=gravMax;
 		
@@ -199,6 +201,17 @@ public class Player {
 			}*/
 		
     }
+    
+    private void adapteaza(float cantitate){
+    	while( colid() ){
+			y+=cantitate;
+			poly.setY(y);
+			if(colid()){
+				y-=cantitate;
+				poly.setY(y);
+			}
+    	}
+    }
 
 	public float getX() {
 		return x;
@@ -232,7 +245,7 @@ public class Player {
 		viata+=x;
 		if(viata>100)viata=100;
 	}
-	public void takeLife(int x){
+	public void takeLife(float x){
 		viata-=x;
 		if(viata<0){
 			viata=0;
