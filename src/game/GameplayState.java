@@ -50,16 +50,15 @@ public class GameplayState extends BasicGameState {
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
-		player = new Player (100 , 1400 , 60 , gc );
-		setEntit(new Entitate(player));
+		player = new Player (100 , 1400  , gc );
 		obi = new Obiecte(map);
+		setEntit(new Entitate(player));
 	}
 
 	@Override
 	public void enter(GameContainer gc, StateBasedGame sb)throws SlickException {
 		if (player.getViata() <= 0)
 			startGen(gc);
-		System.out.println();
 	}
 	
 	@Override
@@ -67,9 +66,9 @@ public class GameplayState extends BasicGameState {
 		player.update( delta);
 		
 		for(int i=0 ; i<obi.getMonstru().size() ; i++)
-			obi.monstru.get(i).upadte(gc, delta);
+			Obiecte.monstru.get(i).upadte(gc, delta);
 		for(int i=0 ; i<obi.getSolaris().size() ; i++)
-			obi.solaris.get(i).upadte(gc, delta);
+			Obiecte.solaris.get(i).upadte(gc, delta);
 		
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);
@@ -88,9 +87,9 @@ public class GameplayState extends BasicGameState {
 		map.render(0, 0);
 		
 		for(int i=0 ; i<obi.getMonstru().size() ; i++)
-			obi.monstru.get(i).render(gc, g);
+			Obiecte.monstru.get(i).render(gc, g);
 		for(int i=0 ; i<obi.getSolaris().size() ; i++)
-			obi.solaris.get(i).render(gc, g);
+			Obiecte.solaris.get(i).render(gc, g);
 		
 		renderHealthBar();
 		player.render(gc, g);

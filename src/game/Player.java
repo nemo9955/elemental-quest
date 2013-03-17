@@ -5,6 +5,7 @@ import entity.Entitate;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
@@ -14,14 +15,14 @@ public class Player extends Entitate{
 	
 	public Color color=Color.blue ;
 	private Input input ;
-	private int viata = 100 ;
 
 	// constructorul principal al jucatorului din gamestate
-	public Player (float x , float y , int marime , GameContainer gc ) throws SlickException{
+	public Player (float x , float y , GameContainer gc ) throws SlickException{
 		super(player);
+		this.img=new Image("res/entitati/player.png");
 		this.x=x;
 		this.y=y;
-		poly = new Rectangle (x , y, marime , marime);
+		poly = new Rectangle (x , y, img.getWidth() , img.getHeight());
 		input = gc.getInput();
 		this.team = 5 ;
 	}
@@ -92,8 +93,9 @@ public class Player extends Entitate{
 
     public void render(GameContainer gc, Graphics g){
 		g.setColor(color);
-		g.setLineWidth(3);
+		g.setLineWidth(2);
 		g.draw(poly);
+		img.draw(x, y);
     }
     
     public Rectangle getPoy(){

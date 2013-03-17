@@ -10,8 +10,9 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Monstru extends Entitate {
 	
-	public Monstru(float x, float y) throws SlickException{
+	public Monstru(float x, float y , int specie) throws SlickException{
 		super(player);
+		this.specie=specie;
 		this.img = new Image("res/entitati/monstru.jpg");
 		this.x=x;
 		this.y=y;
@@ -57,10 +58,10 @@ public class Monstru extends Entitate {
 				}
 				if(moveSpeed > moveSpeedMax) moveSpeed = moveSpeedMax ;
 				
+				if(poly.intersects( player.getPoy() ) && player.color==Color.green )
+						takeLife(1);
 				if(poly.intersects( player.getPoy() ) && player.color==Color.blue )
 					player.takeLife(1);
-					
-				
 	}
 	
 }

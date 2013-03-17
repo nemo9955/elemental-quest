@@ -1,8 +1,10 @@
 package game;
 
+import nivel.Obiecte;
 import nivel.Proprietati;
 
 import org.newdawn.slick.geom.Rectangle;
+
 
 public class Physics extends Proprietati{
 	
@@ -17,8 +19,9 @@ public class Physics extends Proprietati{
 	
 	public Rectangle poly ;
 	
-	protected int viata = 100 ;
 	protected float cadee=0 ;
+	protected int viata = 100 ;
+	protected int specie;
 
 	public void setPhysics(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
 		Physics.accelIni = accelIni;
@@ -108,6 +111,14 @@ public class Physics extends Proprietati{
 		public void setY(float y) {
 			this.y = y;
 		}
+
+		public void takeLife(float x){
+			viata-=x;
+			if(viata<=0){
+				viata=0;
+				elimina(specie);
+			}
+		}
 		
 		public float LifeLS(){
 			return viata/100f ;
@@ -120,11 +131,11 @@ public class Physics extends Proprietati{
 			viata+=x;
 			if(viata>100)viata=100;
 		}
-		public void takeLife(float x){
-			viata-=x;
-			if(viata<0){
-				viata=0;
+		// TODO entitati
+		private void elimina(int specie2){
+			switch(specie2){
+			case 1 : Obiecte.monstru.remove( this ); break;
+			case 2 : Obiecte.solaris.remove( this ); break;
 			}
 		}
-	 
 }
