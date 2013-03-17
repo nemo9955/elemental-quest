@@ -28,7 +28,7 @@ public class GameplayState extends BasicGameState {
 	private float rap =0;
 	public static Proprietati prop ;
 	public BlockMap blockmap;
-	public Player player;
+	public static Player player;
 	private Obiecte obi ;
 	private Entitate entit ;
 	
@@ -50,8 +50,7 @@ public class GameplayState extends BasicGameState {
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
-		player = new Player (100 , 1400  , gc );
-		obi = new Obiecte(map);
+		obi = new Obiecte(map,gc);
 		setEntit(new Entitate(player));
 	}
 
