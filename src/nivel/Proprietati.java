@@ -13,15 +13,15 @@ public class Proprietati {
 	protected static float moveSpeedMod = 0.5f;
 	
 	public static TiledMap map ;
+	public static BlockMap blockmap ;
 	
-	public Proprietati () throws SlickException{
-		map = new TiledMap("res/level/nivel.tmx");
+	public void initProp(TiledMap map , BlockMap blockmap) throws SlickException{
+		Proprietati.map=map;
+		Proprietati.blockmap=blockmap;
 		Gravitatie(map.getMapProperty("gravity", "2"));
 		Viteza(map.getMapProperty("speed", "2"));
-//		physics.setPhysics(accelIni, accelMod, gravMax, gravMod, moveSpeedMax, moveSpeedMod);
 		System.out.println("prop : "+accelIni +" "+ accelMod +" "+ gravMax +" "+ gravMod +"  "+ moveSpeedMax +" "+ moveSpeedMod);
 	}
-
 	
 	private void Gravitatie(String grav){
 		switch(grav){

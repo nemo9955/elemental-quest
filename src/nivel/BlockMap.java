@@ -1,16 +1,17 @@
 package nivel;
 
-import org.newdawn.slick.SlickException;
+
 import org.newdawn.slick.geom.Rectangle;
+import org.newdawn.slick.tiled.TiledMap;
 
-public class BlockMap extends Proprietati {
+public class BlockMap {
 
-	private static Block bloc[][] ;
+	private Block bloc[][] ;
 	private int solidNo ;
 
 	// consctuctorul care salveaza fiecare obiect al clasei Block intr-o matrice
-	public BlockMap() throws SlickException{
-
+	public BlockMap(TiledMap map) {
+		
 		bloc = new Block [map.getWidth()] [map.getHeight()] ;
 
 		solidNo = map.getLayerIndex("solid");

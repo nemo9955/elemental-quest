@@ -10,6 +10,7 @@ public class Block {
 	
 	// constructor in caz ca blocul e solid
 	public Block ( String prop , int pozX , int pozY ){
+//		System.out.println("Block " + pozX + " " + pozY);//TODO debug
 		this.prop=prop;
 		zon = new Rectangle (32*pozX+1 , 32*pozY , 31 , 31) ;
 		exist = true ;

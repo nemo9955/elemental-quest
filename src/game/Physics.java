@@ -1,17 +1,10 @@
 package game;
 
-import nivel.BlockMap;
 import nivel.Proprietati;
 
-import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
 public class Physics extends Proprietati{
-	
-	public Physics() throws SlickException {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	protected float x ;
 	protected float y;
 	protected float accel = 0;
@@ -22,7 +15,6 @@ public class Physics extends Proprietati{
 	protected boolean moving = false ;
 	
 	protected Rectangle poly ;
-	public static BlockMap blockmap ;
 	
 	protected int viata = 100 ;
 	protected float cadee=0 ;
@@ -73,15 +65,15 @@ public class Physics extends Proprietati{
 					
 					if(accel<=0 && gravMax>7)  cadee+=grav/3;
 				}
-				if(grav > gravMax) grav=gravMax;
 				
+				if(grav > gravMax) grav=gravMax;
 	}
 	
 	public boolean colid(){
     	for(float i=x ; i<=x+poly.getWidth() ; i+=30 )
     		for(float j=y ; j<=y+poly.getHeight() ; j+=30 )
     		{
-    			if(blockmap.isBlock((int) i/32,(int) j/32)){
+    			if( blockmap.isBlock( (int)i/32 , (int)j/32 ) ){
     				Rectangle rec = blockmap.getBlock((int) i/32,(int) j/32);
     					if( rec.intersects(poly)){
     						return true ;

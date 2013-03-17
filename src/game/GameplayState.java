@@ -25,7 +25,7 @@ public class GameplayState extends BasicGameState {
 	private Image health;
 	private float init;
 	private float rap =0;
-	public Player player = null ;
+	public Player player;
 	public Monstru mo1;
 	public static Proprietati prop ;
 	public BlockMap blockmap;
@@ -40,14 +40,15 @@ public class GameplayState extends BasicGameState {
 		input = gc.getInput();
 		map = new TiledMap("res/level/nivel.tmx");
 		prop = new Proprietati ();
-		blockmap = new BlockMap();
+		blockmap = new BlockMap(map);
+		prop.initProp(map,blockmap);
 		startGen(gc);
 		camera = new Camera(map.getWidth()*map.getTileWidth() , map.getHeight()*map.getTileHeight());
 		health=new Image("res/health_bar1.jpg");
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
-		player = new Player (75 , 1400 , 60 , gc );
+		player = new Player (100 , 1400 , 60 , gc );
 		mo1= new Monstru ( 1250f , 1500f );
 	}
 
@@ -77,9 +78,11 @@ public class GameplayState extends BasicGameState {
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
 		camera.translate(g, player);
 		map.render(0, 0);
+		
+		mo1.render(gc, g);
+		
 		renderHealthBar();
 		player.render(gc, g);
-		mo1.render(gc, g);
 	}
 
 	private void renderHealthBar(){
