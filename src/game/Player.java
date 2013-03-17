@@ -12,12 +12,13 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Player extends Entitate{	
 	
-	private Color color=Color.blue ;
+	public Color color=Color.blue ;
 	private Input input ;
 	private int viata = 100 ;
 
 	// constructorul principal al jucatorului din gamestate
 	public Player (float x , float y , int marime , GameContainer gc ) throws SlickException{
+		super(player);
 		this.x=x;
 		this.y=y;
 		poly = new Rectangle (x , y, marime , marime);
@@ -86,6 +87,7 @@ public class Player extends Entitate{
 			y=500;
 			poly.setY(y);
 		}
+		
     }
 
     public void render(GameContainer gc, Graphics g){

@@ -1,10 +1,10 @@
 package game;
 
 import nivel.BlockMap;
+import nivel.Obiecte;
 import nivel.Proprietati;
 import diverse.Main;
-import entity.Monstru;
-import entity.Solaris;
+import entity.Entitate;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -29,8 +29,8 @@ public class GameplayState extends BasicGameState {
 	public static Proprietati prop ;
 	public BlockMap blockmap;
 	public Player player;
-	public Monstru mo1;
-	public Solaris sol1;
+	private Obiecte obi ;
+	private Entitate entit ;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -51,8 +51,8 @@ public class GameplayState extends BasicGameState {
 	
 	public void startGen (GameContainer gc)throws SlickException {
 		player = new Player (100 , 1400 , 60 , gc );
-		mo1= new Monstru ( 200 , 1400 );
-		sol1=new Solaris( 500 , 1400 );
+		setEntit(new Entitate(player));
+		obi = new Obiecte(map);
 	}
 
 	@Override
@@ -65,8 +65,12 @@ public class GameplayState extends BasicGameState {
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
 		player.update( delta);
-		mo1.upadte(gc, delta);
-		sol1.upadte(gc, delta);
+		
+		for(int i=0 ; i<obi.getMonstru().size() ; i++)
+			obi.monstru.get(i).upadte(gc, delta);
+		for(int i=0 ; i<obi.getSolaris().size() ; i++)
+			obi.solaris.get(i).upadte(gc, delta);
+		
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);
 		if(player.getViata() <= 0)
@@ -83,8 +87,10 @@ public class GameplayState extends BasicGameState {
 		camera.translate(g, player);
 		map.render(0, 0);
 		
-		mo1.render(gc, g);
-		sol1.render(gc, g);
+		for(int i=0 ; i<obi.getMonstru().size() ; i++)
+			obi.monstru.get(i).render(gc, g);
+		for(int i=0 ; i<obi.getSolaris().size() ; i++)
+			obi.solaris.get(i).render(gc, g);
 		
 		renderHealthBar();
 		player.render(gc, g);
@@ -108,6 +114,14 @@ public class GameplayState extends BasicGameState {
 	
 	public int getID() { 
 		return ID;
+	}
+
+	public Entitate getEntit() {
+		return entit;
+	}
+
+	public void setEntit(Entitate entit) {
+		this.entit = entit;
 	}
 	
 }

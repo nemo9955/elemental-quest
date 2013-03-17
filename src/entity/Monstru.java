@@ -1,5 +1,7 @@
 package entity;
 
+
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
@@ -9,6 +11,7 @@ import org.newdawn.slick.geom.Rectangle;
 public class Monstru extends Entitate {
 	
 	public Monstru(float x, float y) throws SlickException{
+		super(player);
 		this.img = new Image("res/entitati/monstru.jpg");
 		this.x=x;
 		this.y=y;
@@ -20,11 +23,10 @@ public class Monstru extends Entitate {
 		Input input = gc.getInput();
 		
 		// initializarea sariturii
-				if(!jumping && canjump && input.isKeyPressed(Input.KEY_UP)){
+				if(!jumping && canjump && input.isKeyDown(Input.KEY_UP)){
 					accel = accelIni;
 					jumping=true;
 				}
-				
 				Gravitatie();
 				
 				// miscarea
@@ -54,6 +56,10 @@ public class Monstru extends Entitate {
 					moving=true;
 				}
 				if(moveSpeed > moveSpeedMax) moveSpeed = moveSpeedMax ;
+				
+				if(poly.intersects( player.getPoy() ) && player.color==Color.blue )
+					player.takeLife(1);
+					
 				
 	}
 	

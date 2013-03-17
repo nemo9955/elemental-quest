@@ -15,7 +15,7 @@ public class Physics extends Proprietati{
 	protected float moveSpeed;
 	protected boolean moving = false ;
 	
-	protected Rectangle poly ;
+	public Rectangle poly ;
 	
 	protected int viata = 100 ;
 	protected float cadee=0 ;
