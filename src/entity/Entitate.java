@@ -10,7 +10,7 @@ public class Entitate extends Physics {
 	
 	protected Image img ;
 	protected int team ;
-	
+
 	public void upadte(GameContainer gc , int delta){
 		Gravitatie();	
 	}

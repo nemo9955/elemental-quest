@@ -35,7 +35,18 @@
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt280KgkAUQOGBolU/EPn+r5oDlS40U1LPnTkfXCJtERwcRMYmpdQ4qBGDPVjswWIPFnuw2IPFHiynZA+Se7IHiT1Y7MFiDxZ7sNiDxR4s9mCxB4s9lnm85t/sscwaLTJ7sNiDxR6s/SD2YLEHSy09ouw/q6VHFLnHee8/oY/SekRZl8aU1iM6e7BE7dFMfEYVtUep7MFC7rHFsyPafRe5R43swULo4XuOHUIPdezBslcP38ce5vXBYg+WLXu4Hk3z+mCxB8vaPVyX5nn3WGs/quapab269Wbo+9ixb8enzv1yvv+b3OPSzrGQOQSfaztPrOUYgw==
+   eJzt280KgkAUQOGBolU/ELnt/R8zjUoX2qSknuucDy6hthAODhFjlVKqHNSIwR4s9mCxB4s9WOzBYg+WQ7IHyTXZg8QeLPZgsQeLPVjswWIPFnuw2IPFHtPcXvNv9phmjhYNe7DYg8UerP0g9mCxB0spPaLsPyulRxRNj+PaN6GPrfWIsi4N2VqP6OzBErVHlfmMKmqPrbIHC7nHEv8d0X53kXuUyB4shB6+59gi9FAr1+O+1I3oaa3nw/ex+7lesdiDZckerkd5Ph8s9mCZu4fr0jjvHnPtR9U4Ja1Xl870HQ+d+3Y+d+2X693vND1O9ew3Mrvgc67nAa1bGKE=
   </data>
  </layer>
+ <objectgroup name="monstru" width="100" height="50">
+  <object x="206" y="1184" width="76" height="60"/>
+  <object x="1131" y="1488" width="54" height="51"/>
+  <object x="1995" y="971" width="73" height="83"/>
+ </objectgroup>
+ <objectgroup name="solaris" width="100" height="50">
+  <object x="1461" y="909" width="29" height="32"/>
+  <object x="43" y="1230" width="47" height="44"/>
+  <object x="430" y="1416" width="51" height="68"/>
+  <object x="2982" y="1393" width="35" height="73"/>
+ </objectgroup>
 </map>

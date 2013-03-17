@@ -2,6 +2,9 @@ package game;
 
 import nivel.BlockMap;
 import nivel.Proprietati;
+import diverse.Main;
+import entity.Monstru;
+import entity.Solaris;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -13,10 +16,6 @@ import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
-import diverse.Main;
-import entity.Monstru;
-import entity.Solaris;
-
 
 public class GameplayState extends BasicGameState {
 
@@ -27,11 +26,11 @@ public class GameplayState extends BasicGameState {
 	private Image health;
 	private float init;
 	private float rap =0;
+	public static Proprietati prop ;
+	public BlockMap blockmap;
 	public Player player;
 	public Monstru mo1;
 	public Solaris sol1;
-	public static Proprietati prop ;
-	public BlockMap blockmap;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -57,9 +56,10 @@ public class GameplayState extends BasicGameState {
 	}
 
 	@Override
-	public void enter(GameContainer gc, StateBasedGame sb) throws SlickException {
-		if(player.getViata() <= 0 )
+	public void enter(GameContainer gc, StateBasedGame sb)throws SlickException {
+		if (player.getViata() <= 0)
 			startGen(gc);
+		System.out.println();
 	}
 	
 	@Override
