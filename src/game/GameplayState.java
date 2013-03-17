@@ -1,5 +1,7 @@
 package game;
 
+import java.util.ArrayList;
+
 import nivel.BlockMap;
 import nivel.Proprietati;
 
@@ -27,8 +29,10 @@ public class GameplayState extends BasicGameState {
 	private float rap =0;
 	public Player player;
 	public Monstru mo1;
+	public Solaris sol1;
 	public static Proprietati prop ;
 	public BlockMap blockmap;
+	private ArrayList<Entitate> cevauri;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -50,6 +54,7 @@ public class GameplayState extends BasicGameState {
 	public void startGen (GameContainer gc)throws SlickException {
 		player = new Player (100 , 1400 , 60 , gc );
 		mo1= new Monstru ( 200 , 1400 );
+		sol1=new Solaris( 500 , 1400 );
 	}
 
 	@Override
@@ -62,6 +67,7 @@ public class GameplayState extends BasicGameState {
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
 		player.update( delta);
 		mo1.upadte(gc, delta);
+		sol1.upadte(gc, delta);
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);
 		if(player.getViata() <= 0)
@@ -71,7 +77,6 @@ public class GameplayState extends BasicGameState {
 		if(input.isKeyPressed(Input.KEY_F1))
 			System.out.println(camera.getX() + "  " + camera.getY() );
 //			System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
-		
 	}
 
 	@Override
@@ -80,6 +85,7 @@ public class GameplayState extends BasicGameState {
 		map.render(0, 0);
 		
 		mo1.render(gc, g);
+		sol1.render(gc, g);
 		
 		renderHealthBar();
 		player.render(gc, g);

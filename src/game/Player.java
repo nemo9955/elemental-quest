@@ -8,7 +8,7 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
-public class Player extends Physics{	
+public class Player extends Entitate{	
 	
 	private Color color=Color.blue ;
 	private Input input ;
@@ -20,6 +20,7 @@ public class Player extends Physics{
 		this.y=y;
 		poly = new Rectangle (x , y, marime , marime);
 		input = gc.getInput();
+		this.team = 5 ;
 	}
 	
     public void update( int delta){
