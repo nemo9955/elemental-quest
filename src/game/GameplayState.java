@@ -1,7 +1,5 @@
 package game;
 
-import java.util.ArrayList;
-
 import nivel.BlockMap;
 import nivel.Proprietati;
 
@@ -16,6 +14,8 @@ import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
 import diverse.Main;
+import entity.Monstru;
+import entity.Solaris;
 
 
 public class GameplayState extends BasicGameState {
@@ -32,7 +32,6 @@ public class GameplayState extends BasicGameState {
 	public Solaris sol1;
 	public static Proprietati prop ;
 	public BlockMap blockmap;
-	private ArrayList<Entitate> cevauri;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;

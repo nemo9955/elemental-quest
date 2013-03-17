@@ -1,4 +1,6 @@
-package game;
+package entity;
+
+import game.Physics;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -10,8 +12,7 @@ public class Entitate extends Physics {
 	protected int team ;
 	
 	public void upadte(GameContainer gc , int delta){
-		Gravitatie();
-				
+		Gravitatie();	
 	}
 	
 	public void render(GameContainer gc , Graphics g){

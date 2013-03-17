@@ -1,5 +1,6 @@
 package game;
 
+import entity.Entitate;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -7,6 +8,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
+
 
 public class Player extends Entitate{	
 	
@@ -76,10 +78,9 @@ public class Player extends Entitate{
 			System.out.println("viata : " + viata);
 		if(input.isKeyPressed(Input.KEY_F4))
 			System.out.println(blockmap.getProp((int)x/32 , (int)y/32 ));
-				
-		if(input.isKeyDown(Input.KEY_F6))
+		if(input.isKeyPressed(Input.KEY_F6))
 			addLife(10);
-		if(input.isKeyDown(Input.KEY_F5)){
+		if(input.isKeyPressed(Input.KEY_F5)){
 			x=2400;
 			poly.setX(x);
 			y=500;
