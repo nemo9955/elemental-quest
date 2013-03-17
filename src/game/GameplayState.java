@@ -19,7 +19,6 @@ import diverse.Main;
 public class GameplayState extends BasicGameState {
 
 	private int ID ;
-	public Player player = null ;
 	private Input input ;
 	private TiledMap map;
 	private int  mapW ;
@@ -29,6 +28,8 @@ public class GameplayState extends BasicGameState {
 	private float init;
 	private float rap =0;
 	private Proprietati prop ;
+	public Player player = null ;
+	public Monstru mo1;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -48,6 +49,7 @@ public class GameplayState extends BasicGameState {
 	
 	public void startGen (GameContainer gc)throws SlickException {
 		player = new Player (75 , 1400 , 60 , gc , map);
+		mo1= new Monstru ( 1250f , 1500f );
 		setProp(new Proprietati(map , player));
 	}
 
@@ -79,6 +81,7 @@ public class GameplayState extends BasicGameState {
 		map.render(0, 0);
 		renderHealthBar();
 		player.render(gc, g);
+		mo1.render(gc, g);
 	}
 
 	private void renderHealthBar(){
