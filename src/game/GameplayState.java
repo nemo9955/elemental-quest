@@ -1,6 +1,7 @@
 package game;
 
 
+import nivel.BlockMap;
 import nivel.Proprietati;
 
 import org.newdawn.slick.GameContainer;
@@ -30,6 +31,7 @@ public class GameplayState extends BasicGameState {
 	private Proprietati prop ;
 	public Player player = null ;
 	public Monstru mo1;
+	public BlockMap blockmap ;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -45,10 +47,11 @@ public class GameplayState extends BasicGameState {
 		startGen(gc);
 		camera = new Camera(mapW , mapH);
 		health=new Image("res/health_bar1.jpg");
+		blockmap = new BlockMap(map);
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
-		player = new Player (75 , 1400 , 60 , gc , map);
+		player = new Player (75 , 1400 , 60 , gc );
 		mo1= new Monstru ( 1250f , 1500f );
 		setProp(new Proprietati(map , player));
 	}
@@ -61,7 +64,7 @@ public class GameplayState extends BasicGameState {
 	
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
-		player.update(gc, delta);
+		player.update( delta);
 		
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);

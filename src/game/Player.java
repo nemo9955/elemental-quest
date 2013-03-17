@@ -1,6 +1,5 @@
 package game;
 
-import nivel.BlockMap;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -8,18 +7,8 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
-import org.newdawn.slick.tiled.TiledMap;
 
-public class Player extends Physics{	
-	
-/*	private int  marime ;
-	private boolean jumping=false ;
-	private boolean canjump=true ;
-	private float moveSpeed;
-	private boolean moving = false ;
-	private float accelIni = 20f;
-	private float moveSpeedMax = 8f;
-	private float moveSpeedMod = 0.5f;*/
+public class Player extends Entitate{	
 	
 	private Color color=Color.blue ;
 	private Input input ;
@@ -35,16 +24,15 @@ public class Player extends Physics{
 	}
 
 	// constructorul principal al jucatorului din gamestate
-	public Player (float x , float y , int marime , GameContainer gc , TiledMap map) throws SlickException{
+	public Player (float x , float y , int marime , GameContainer gc ) throws SlickException{
+		super(blockmap);
 		this.x=x;
 		this.y=y;
-		blockmap = new BlockMap(map);
-		this.marime=marime;
 		poly = new Rectangle (x , y, marime , marime);
 		input = gc.getInput();
 	}
 	
-    public void update(GameContainer gc, int delta){
+    public void update( int delta){
 		
     	// initializarea sariturii
 		if(!jumping && canjump && input.isKeyPressed(Input.KEY_W)){
@@ -82,24 +70,6 @@ public class Player extends Physics{
 		}
 		if(moveSpeed > moveSpeedMax) moveSpeed = moveSpeedMax ;
 		
-		// TODO debug
-/*		if(input.isKeyDown(Input.KEY_S)){
-			y+=moveSpeed;
-			poly.setY(y);
-			if(colid()){
-				y-=moveSpeed;
-				poly.setY(y);
-			}
-		}
-		if(input.isKeyDown(Input.KEY_W)){
-			y-=moveSpeed;
-			poly.setY(y);
-			if(colid()){
-				y+=moveSpeed;
-				poly.setY(y);
-			}
-		}*/
-		
 		if(input.isKeyPressed(Input.KEY_SPACE))
 			if(color==Color.blue)
 				color=Color.green;
@@ -110,7 +80,7 @@ public class Player extends Physics{
 		if(input.isKeyPressed(Input.KEY_F1))
 			System.out.println(x + "  " + y );
 		if(input.isKeyPressed(Input.KEY_F2))
-			System.out.println(marime);
+			System.out.println(poly.getWidth());
 		if(input.isKeyPressed(Input.KEY_F3))
 			System.out.println("viata : " + viata);
 		if(input.isKeyPressed(Input.KEY_F4))
@@ -125,27 +95,17 @@ public class Player extends Physics{
 			poly.setY(y);
 		}
     }
-    
-    
-
 
     public void render(GameContainer gc, Graphics g){
 		g.setColor(color);
 		g.setLineWidth(3);
 		g.draw(poly);
-/*		g.setColor(Color.cyan);  TODO debug
-		for(int j=0 ; j<map.getHeight() ; j++)
-			for(int i=0 ; i<map.getWidth() ; i++){
-				if(blockmap.isBlock(i, j)){
-					rec = blockmap.getBlock(i, j);
-					g.draw(rec);
-				}
-			}*/
-		
     }
     
-   
-
+    public Rectangle getPoy(){
+    	return poly;
+    }
+    
 	public float getX() {
 		return x;
 	}
@@ -160,14 +120,6 @@ public class Player extends Physics{
 
 	public void setY(float y) {
 		this.y = y;
-	}
-
-	public int getMarime() {
-		return marime;
-	}
-
-	public void setMarime(int marime) {
-		this.marime = marime;
 	}
 	
 	public float LifeLS(){

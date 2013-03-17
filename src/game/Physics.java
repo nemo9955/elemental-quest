@@ -8,16 +8,16 @@ public class Physics {
 
 	protected float x ;
 	protected float y;
-	protected int  marime ;
+//	protected int  marime ;
 	protected float accel = 0;
 	protected boolean jumping=false ;
 	protected boolean canjump=true ;
 	protected float grav;
 	protected float moveSpeed;
 	protected boolean moving = false ;
+	
 	protected Rectangle poly ;
-
-	protected BlockMap blockmap ;
+	protected static BlockMap blockmap ;
 	
 	protected float accelIni = 20f;
 	protected float accelMod = 0.6f ;
@@ -28,6 +28,10 @@ public class Physics {
 	
 	protected int viata = 100 ;
 	protected float cadee=0 ;
+	
+	public Physics(BlockMap blockmap){
+		Physics.blockmap = blockmap ;
+	}
 	
 	public void Gravitatie(){
 		// "comportamentul" sariturii
@@ -70,8 +74,8 @@ public class Physics {
 	}
 	
 	public boolean colid(){
-    	for(float i=x ; i<=x+marime ; i+=30 )
-    		for(float j=y ; j<=y+marime ; j+=30 )
+    	for(float i=x ; i<=x+poly.getWidth() ; i+=30 )
+    		for(float j=y ; j<=y+poly.getHeight() ; j+=30 )
     		{
     			if(blockmap.isBlock((int) i/32,(int) j/32)){
     				Rectangle rec = blockmap.getBlock((int) i/32,(int) j/32);
@@ -106,14 +110,6 @@ public class Physics {
 
 		public void setY(float y) {
 			this.y = y;
-		}
-
-		public int getMarime() {
-			return marime;
-		}
-
-		public void setMarime(int marime) {
-			this.marime = marime;
 		}
 		
 		public float LifeLS(){

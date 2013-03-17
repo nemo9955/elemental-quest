@@ -21,7 +21,7 @@ public class Camera {
 	
 	public void translate (Graphics g, Player player) {
 		
-		cen = new Vector2f ( player.getX()+player.getMarime()/2 , player.getY()+player.getMarime()/2 ) ;
+		cen = new Vector2f ( player.getX()+player.getPoy().getWidth()/2 , player.getY()+player.getPoy().getHeight()/2 ) ;
 		
 		/*
 		 *  verifica fiecare axa in parte astfel incat
