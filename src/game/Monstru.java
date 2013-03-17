@@ -10,7 +10,7 @@ public class Monstru extends Entitate {
 		this.img = new Image("res/entitati/monstru.jpg");
 		this.x=x;
 		this.y=y;
-		poly = new Rectangle (y,x,img.getWidth(),img.getHeight());
+		poly = new Rectangle (x , y , img.getWidth() , img.getHeight());
 	}
-
+	
 }

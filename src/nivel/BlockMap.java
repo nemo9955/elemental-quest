@@ -1,6 +1,5 @@
 package nivel;
 
-
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -35,7 +34,8 @@ public class BlockMap {
 	
 	// functii / metode pentru accesarea informatiilor din matricea de blocuri
 	public boolean isBlock(int x , int y){
-		return bloc[x][y].exists();
+//		System.out.println("Block " + x + " " + y);//TODO debug
+		return bloc[x][y].exists() ;
 	}
 	
 	public Rectangle getBlock(int x , int y){

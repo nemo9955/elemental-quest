@@ -5,6 +5,7 @@ import nivel.Proprietati;
 import org.newdawn.slick.geom.Rectangle;
 
 public class Physics extends Proprietati{
+	
 	protected float x ;
 	protected float y;
 	protected float accel = 0;
@@ -70,8 +71,8 @@ public class Physics extends Proprietati{
 	}
 	
 	public boolean colid(){
-    	for(float i=x ; i<=x+poly.getWidth() ; i+=30 )
-    		for(float j=y ; j<=y+poly.getHeight() ; j+=30 )
+    	for(float i=x ; i<=x+poly.getWidth() ; i+=(int)poly.getWidth()/Math.ceil(poly.getWidth()/32) )
+    		for(float j=y ; j<=y+poly.getHeight() ; j+=(int)poly.getHeight()/Math.ceil(poly.getHeight()/32) )
     		{
     			if( blockmap.isBlock( (int)i/32 , (int)j/32 ) ){
     				Rectangle rec = blockmap.getBlock((int) i/32,(int) j/32);

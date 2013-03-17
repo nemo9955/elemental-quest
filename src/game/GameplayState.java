@@ -49,7 +49,7 @@ public class GameplayState extends BasicGameState {
 	
 	public void startGen (GameContainer gc)throws SlickException {
 		player = new Player (100 , 1400 , 60 , gc );
-		mo1= new Monstru ( 1250f , 1500f );
+		mo1= new Monstru ( 200 , 1400 );
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class GameplayState extends BasicGameState {
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
 		player.update( delta);
-		
+		mo1.upadte(gc, delta);
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);
 		if(player.getViata() <= 0)
