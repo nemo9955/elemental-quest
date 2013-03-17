@@ -33,27 +33,38 @@ public class GameplayState extends BasicGameState {
 	public GameplayState(int ID) {
 		this.ID=ID;
 	}
-	
+
 	// stadiul jocului insasi
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
+		input = gc.getInput();
 		map = new TiledMap("res/level/nivel.tmx");
 		mapW= map.getWidth()*map.getTileWidth() ;
 		mapH = map.getHeight()*map.getTileHeight();
-		player = new Player (75 , 1400 , 60 , gc , map);
+		startGen(gc);
 		camera = new Camera(mapW , mapH);
-		input = gc.getInput();
 		health=new Image("res/health_bar1.jpg");
+	}
+	
+	public void startGen (GameContainer gc)throws SlickException {
+		player = new Player (75 , 1400 , 60 , gc , map);
 		setProp(new Proprietati(map , player));
-		
 	}
 
+	@Override
+	public void enter(GameContainer gc, StateBasedGame sb) throws SlickException {
+		if(player.getViata() <= 0 )
+			startGen(gc);
+	}
+	
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
 		player.update(gc, delta);
 		
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEMENUSTATE);
+		if(player.getViata() <= 0)
+			sb.enterState(Main.DEATHSTATE);
 		
 //		TODO debug tool
 		if(input.isKeyPressed(Input.KEY_F1))

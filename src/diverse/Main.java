@@ -7,6 +7,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 
+import states.DeathState;
 import states.GameMenuState;
 import states.MainMenuState;
 import states.SplashState;
@@ -23,6 +24,7 @@ public class Main extends StateBasedGame{
 	public static final int MAINMENUSTATE = 1;
     public static final int GAMEMENUSTATE = 2;
     public static final int GAMEPLAYSTATE = 3;
+    public static final int DEATHSTATE = 4;
     
 	
 	public Main(String name) {
@@ -45,6 +47,7 @@ public class Main extends StateBasedGame{
 		addState( new GameMenuState( GAMEMENUSTATE ) );
 		addState( new GameplayState( GAMEPLAYSTATE ) );
 		addState( new MainMenuState( MAINMENUSTATE ) );
+		addState( new DeathState   ( DEATHSTATE    ) );
 		 
 	}
 

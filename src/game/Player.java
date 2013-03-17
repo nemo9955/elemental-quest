@@ -238,6 +238,9 @@ public class Player {
 	public float LifeLS(){
 		return viata/100f ;
 	}
+	public float getViata(){
+		return viata ;
+	}
 	
 	public void addLife(int x){
 		viata+=x;
