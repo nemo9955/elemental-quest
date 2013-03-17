@@ -1,23 +1,24 @@
 package nivel;
 
-import game.Player;
-
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
 public class Proprietati {
 	
-	private float accelIni ;
-	private float accelMod  ;
-	private float gravMax ;
-	private float gravMod ;
-	private float moveSpeedMax ;
-	private float moveSpeedMod ;
+	protected static float accelIni = 20f;
+	protected static float accelMod = 0.6f ;
+	protected static float gravMax = 15f;
+	protected static float gravMod = 0.5f;
+	protected static float moveSpeedMax = 8f;
+	protected static float moveSpeedMod = 0.5f;
 	
+	public static TiledMap map ;
 	
-	public Proprietati (TiledMap map, Player player){
+	public Proprietati () throws SlickException{
+		map = new TiledMap("res/level/nivel.tmx");
 		Gravitatie(map.getMapProperty("gravity", "2"));
 		Viteza(map.getMapProperty("speed", "2"));
-		player.setPlayer(accelIni, accelMod, gravMax, gravMod, moveSpeedMax, moveSpeedMod);
+//		physics.setPhysics(accelIni, accelMod, gravMax, gravMod, moveSpeedMax, moveSpeedMod);
 		System.out.println("prop : "+accelIni +" "+ accelMod +" "+ gravMax +" "+ gravMod +"  "+ moveSpeedMax +" "+ moveSpeedMod);
 	}
 

@@ -1,6 +1,5 @@
 package game;
 
-
 import nivel.BlockMap;
 import nivel.Proprietati;
 
@@ -21,17 +20,15 @@ public class GameplayState extends BasicGameState {
 
 	private int ID ;
 	private Input input ;
-	private TiledMap map;
-	private int  mapW ;
-	private int  mapH ;
+	public static TiledMap map;
 	public Camera camera ;
 	private Image health;
 	private float init;
 	private float rap =0;
-	private Proprietati prop ;
 	public Player player = null ;
 	public Monstru mo1;
-	public BlockMap blockmap ;
+	public static Proprietati prop ;
+	public BlockMap blockmap;
 	
 	public GameplayState(int ID) {
 		this.ID=ID;
@@ -42,18 +39,16 @@ public class GameplayState extends BasicGameState {
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input = gc.getInput();
 		map = new TiledMap("res/level/nivel.tmx");
-		mapW= map.getWidth()*map.getTileWidth() ;
-		mapH = map.getHeight()*map.getTileHeight();
+		prop = new Proprietati ();
+		blockmap = new BlockMap();
 		startGen(gc);
-		camera = new Camera(mapW , mapH);
+		camera = new Camera(map.getWidth()*map.getTileWidth() , map.getHeight()*map.getTileHeight());
 		health=new Image("res/health_bar1.jpg");
-		blockmap = new BlockMap(map);
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
 		player = new Player (75 , 1400 , 60 , gc );
 		mo1= new Monstru ( 1250f , 1500f );
-		setProp(new Proprietati(map , player));
 	}
 
 	@Override
@@ -106,14 +101,5 @@ public class GameplayState extends BasicGameState {
 	public int getID() { 
 		return ID;
 	}
-
-	public Proprietati getProp() {
-		return prop;
-	}
-
-	public void setProp(Proprietati prop) {
-		this.prop = prop;
-	}
-
 	
 }

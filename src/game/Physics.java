@@ -1,14 +1,19 @@
 package game;
 
 import nivel.BlockMap;
+import nivel.Proprietati;
 
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
-public class Physics {
-
+public class Physics extends Proprietati{
+	
+	public Physics() throws SlickException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	protected float x ;
 	protected float y;
-//	protected int  marime ;
 	protected float accel = 0;
 	protected boolean jumping=false ;
 	protected boolean canjump=true ;
@@ -17,23 +22,22 @@ public class Physics {
 	protected boolean moving = false ;
 	
 	protected Rectangle poly ;
-	protected static BlockMap blockmap ;
-	
-	protected float accelIni = 20f;
-	protected float accelMod = 0.6f ;
-	protected float gravMax = 15f;
-	protected float gravMod = 0.5f;
-	protected float moveSpeedMax = 8f;
-	protected float moveSpeedMod = 0.5f;
+	public static BlockMap blockmap ;
 	
 	protected int viata = 100 ;
 	protected float cadee=0 ;
-	
-	public Physics(BlockMap blockmap){
-		Physics.blockmap = blockmap ;
+
+	public void setPhysics(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
+		Physics.accelIni = accelIni;
+		Physics.accelMod = accelMod;
+		Physics.gravMax = gravMax;
+		Physics.gravMod = gravMod;
+		Physics.moveSpeedMax = moveSpeedMax;
+		Physics.moveSpeedMod = moveSpeedMod;
 	}
 	
 	public void Gravitatie(){
+		
 		// "comportamentul" sariturii
 				if(jumping){
 					y-=accel;

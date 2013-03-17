@@ -7,7 +7,6 @@ import org.newdawn.slick.geom.Rectangle;
 public class Monstru extends Entitate {
 	
 	public Monstru(float x, float y) throws SlickException{
-		super(blockmap);
 		this.img = new Image("res/entitati/monstru.jpg");
 		this.x=x;
 		this.y=y;

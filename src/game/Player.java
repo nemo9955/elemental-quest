@@ -8,24 +8,14 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
-public class Player extends Entitate{	
+public class Player extends Physics{	
 	
 	private Color color=Color.blue ;
 	private Input input ;
 	private int viata = 100 ;
 
-	public void setPlayer(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
-		this.accelIni = accelIni;
-		this.accelMod = accelMod;
-		this.gravMax = gravMax;
-		this.gravMod = gravMod;
-		this.moveSpeedMax = moveSpeedMax;
-		this.moveSpeedMod = moveSpeedMod;
-	}
-
 	// constructorul principal al jucatorului din gamestate
 	public Player (float x , float y , int marime , GameContainer gc ) throws SlickException{
-		super(blockmap);
 		this.x=x;
 		this.y=y;
 		poly = new Rectangle (x , y, marime , marime);
