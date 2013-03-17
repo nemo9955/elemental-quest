@@ -32,15 +32,15 @@ public class Proprietati {
 			}break;
 			case "2" : {
 				accelIni = 20f;
-				accelMod = 0.25f ;
-				gravMax = 16f;
-				gravMod = 1f;
+				accelMod = 0.5f ;
+				gravMax = 20f;
+				gravMod = 1.2f;
 			}break;
 			case "3" : {
-				accelIni = 22f;
+				accelIni = 21f;
 				accelMod = 1f ;
-				gravMax = 20f;
-				gravMod = 1f;
+				gravMax = 26f;
+				gravMod = 1.8f;
 			}break;
 		}
 	}
@@ -48,8 +48,8 @@ public class Proprietati {
 	private void Viteza (String vit){
 		switch(vit){
 		case "1" :{
-			moveSpeedMax=5f;
-			moveSpeedMod=0.25f;
+			moveSpeedMax=5.6f;
+			moveSpeedMod=0.2f;
 		}break;
 		case "2" :{
 			moveSpeedMax=8f;

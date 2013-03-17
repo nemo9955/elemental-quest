@@ -71,7 +71,7 @@ public class Player {
 					jumping=false;
 					y+=accel;
 					poly.setY(y);
-//					adapteaza(-1);
+					adapteaza(-1);
 					accel=0 ;
 				}
 			if(accel>0)
@@ -89,7 +89,7 @@ public class Player {
 			adapteaza(1);
 			grav=0f;
 			if(cadee >  170 )
-				takeLife( cadee/7 );
+				takeLife( cadee/7.5f*gravMod );
 //			if(cadee > 0) System.out.println("cazu : " + cadee);// TODO debug
 			cadee=0;
 		}else{

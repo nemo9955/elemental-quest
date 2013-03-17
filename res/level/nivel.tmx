@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="100" height="50" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
-  <property name="gravity" value="2"/>
+  <property name="gravity" value="1"/>
   <property name="speed" value="2"/>
  </properties>
  <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
@@ -35,7 +35,7 @@
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt28sKgzAQQNGBFld9gJD//9XqpnbRIhUS7yT3wNCl0kuC+CgRURzUiMEeLPZgsQeLPVjswWIPlinsQTKHPUjswWIPFnuw2IPFHiz2YLEHiz1Y7HFcjWd69jiuxv9mDxZ7sNiD9T6IPVjswTJKjyzvn43SI4u1x+3sk9Bbbz2y7Eu/9NYjO3uwZO1Rdn6zytqjV/ZgIfdoce+Idt1F7jEie7AQevid44bQQxt7sJzVw++xv3N9sNiDpWUP96N9rg8We7DU7uG+9B/XB4s9WNYe92WuDeb5MbWOcUk+j2Veuc8XkQ==
+   eJzt280KgkAUQOGBolU/EPn+r5oDlS40U1LPnTkfXCJtERwcRMYmpdQ4qBGDPVjswWIPFnuw2IPFHiynZA+Se7IHiT1Y7MFiDxZ7sNiDxR4s9mCxB4s9lnm85t/sscwaLTJ7sNiDxR6s/SD2YLEHSy09ouw/q6VHFLnHee8/oY/SekRZl8aU1iM6e7BE7dFMfEYVtUep7MFC7rHFsyPafRe5R43swULo4XuOHUIPdezBslcP38ce5vXBYg+WLXu4Hk3z+mCxB8vaPVyX5nn3WGs/quapab269Wbo+9ixb8enzv1yvv+b3OPSzrGQOQSfaztPrOUYgw==
   </data>
  </layer>
 </map>
