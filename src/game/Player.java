@@ -10,31 +10,20 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.tiled.TiledMap;
 
-public class Player {	
+public class Player extends Physics{	
 	
-	private float x ;
-	private float y;
-	private int  marime ;
-	private float accel = 0;
+/*	private int  marime ;
 	private boolean jumping=false ;
 	private boolean canjump=true ;
-	private float grav;
 	private float moveSpeed;
 	private boolean moving = false ;
-	private Input input ;
-	private Color color=Color.blue ;
-	private Rectangle poly ;
-	private BlockMap blockmap ;
-
 	private float accelIni = 20f;
-	private float accelMod = 0.6f ;
-	private float gravMax = 15f;
-	private float gravMod = 0.5f;
 	private float moveSpeedMax = 8f;
-	private float moveSpeedMod = 0.5f;
+	private float moveSpeedMod = 0.5f;*/
 	
+	private Color color=Color.blue ;
+	private Input input ;
 	private int viata = 100 ;
-	private float cadee=0 ;
 
 	public void setPlayer(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
 		this.accelIni = accelIni;
@@ -63,42 +52,7 @@ public class Player {
 			jumping=true;
 		}
 		
-		// "comportamentul" sariturii
-		if(jumping){
-			y-=accel;
-			poly.setY(y);
-				if(colid()){
-					jumping=false;
-					y+=accel;
-					poly.setY(y);
-					adapteaza(-1);
-					accel=0 ;
-				}
-			if(accel>0)
-				accel -= accelMod ;
-			else
-				jumping=false;
-		}
-
-		// gravitatia
-		y+=grav;	poly.setY(y);
-		if(colid()){
-			y-=grav;	poly.setY(y);
-			jumping=false; canjump=true;
-			accel=0;
-			adapteaza(1);
-			grav=0f;
-			if(cadee >  170 )
-				takeLife( cadee/7.5f*gravMod );
-//			if(cadee > 0) System.out.println("cazu : " + cadee);// TODO debug
-			cadee=0;
-		}else{
-			canjump=false;
-			grav+=gravMod;
-			
-			if(accel<=0 && gravMax>7)  cadee+=grav/3;
-		}
-		if(grav > gravMax) grav=gravMax;
+		Gravitatie();
 		
 		// miscarea
 		if(!moving) moveSpeed=0;
@@ -114,7 +68,7 @@ public class Player {
 			}
 			moveSpeed+=moveSpeedMod;
 			moving=true;
-		}		
+		}
 		// stanga
 		if(input.isKeyDown(Input.KEY_A)){
 			x-=moveSpeed;
@@ -173,19 +127,7 @@ public class Player {
     }
     
     
-	private boolean colid(){
-    	for(float i=x ; i<=x+marime ; i+=30 )
-    		for(float j=y ; j<=y+marime ; j+=30 )
-    		{
-    			if(blockmap.isBlock((int) i/32,(int) j/32)){
-    				Rectangle rec = blockmap.getBlock((int) i/32,(int) j/32);
-    					if( rec.intersects(poly)){
-    						return true ;
-    					}
-    			}
-    		}
-    	return false ;
-    }
+
 
     public void render(GameContainer gc, Graphics g){
 		g.setColor(color);
@@ -202,14 +144,7 @@ public class Player {
 		
     }
     
-    private void adapteaza(float cantitate){
-    	while( !colid() ){
-			y+=cantitate;
-			poly.setY(y);
-    	}
-				y-=cantitate;
-				poly.setY(y);
-    }
+   
 
 	public float getX() {
 		return x;
