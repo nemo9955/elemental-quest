@@ -22,7 +22,7 @@ public class Player extends Entitate{
 	private int focRate = 1;
 
 	// constructorul principal al jucatorului din gamestate
-	public Player (float x , float y , GameContainer gc ) throws SlickException{
+	public Player (float x , float y  , GameContainer gc) throws SlickException{
 		super(player);
 		this.img=new Image("res/entitati/player.png");
 		this.x=x;
@@ -32,7 +32,7 @@ public class Player extends Entitate{
 		this.team = 5 ;
 	}
 	
-    public void update( int delta) throws SlickException{
+    public void update( int delta , GameContainer gc) throws SlickException{
 		
     	// initializarea sariturii
 		if(!jumping && canjump && input.isKeyDown(Input.KEY_W)){
@@ -104,6 +104,12 @@ public class Player extends Entitate{
         y-= hip * Math.cos(Math.toRadians(rotation));*/
 		
 		if(input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON)  && focRate==0){
+			float mx ,my ,ang;
+			mx=739;
+			my=1411;
+			
+			ang=(float) Math.atan( (poly.getY() - my )/( poly.getX() - mx ) );
+			System.out.println(ang);
 			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team );
 			focRate=1;
 		}

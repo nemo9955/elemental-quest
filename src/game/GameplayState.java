@@ -62,7 +62,7 @@ public class GameplayState extends BasicGameState {
 	
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
-		player.update( delta);
+		player.update( delta , gc);
 		
 		//TODO entitati
 		for(int i=0 ; i<obi.getMonstru().size() ; i++)
