@@ -97,11 +97,14 @@ public class Player extends Entitate{
 		if(viataRate > 0)		viataRate += delta ;
 		if(viataRate > 1000)	viataRate = 0 ;
 		if(focRate > 0)		focRate += delta ;
-		if(focRate > 300)	focRate = 0 ;
+		if(focRate > 200)	focRate = 0 ;
 		
+		
+/*      x+= hip * Math.sin(Math.toRadians(rotation));
+        y-= hip * Math.cos(Math.toRadians(rotation));*/
 		
 		if(input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON)  && focRate==0){
-			Obiecte.focShot( x, y, team );
+			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team );
 			focRate=1;
 		}
     }

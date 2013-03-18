@@ -20,7 +20,8 @@ public class Physics extends Proprietati{
 	public Rectangle poly ;
 	
 	protected float cadee=0 ;
-	protected int viata = 100 ;
+	protected int viataMax = 100 ;
+	protected int viata = viataMax ;
 	protected int specie;
 
 	public void setPhysics(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
@@ -121,7 +122,7 @@ public class Physics extends Proprietati{
 		}
 		
 		public float LifeLS(){
-			return viata/100f ;
+			return viata/viataMax ;
 		}
 		public float getViata(){
 			return viata ;
@@ -129,7 +130,7 @@ public class Physics extends Proprietati{
 		
 		public void addLife(int x){
 			viata+=x;
-			if(viata>100)viata=100;
+			if(viata>viataMax)viata=viataMax;
 		}
 		// TODO entitati
 		protected void elimina(int specie2){
