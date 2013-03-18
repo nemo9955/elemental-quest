@@ -15,6 +15,7 @@ import states.SplashState;
 public class Main extends StateBasedGame{
 
 	private final static String titlu = "Elemental Quest" ;
+	private final static String icons[] = {"res/icon16.png" , "res/icon32.png" , "res/icon24.png" , "res/icon64.png" , "res/icon64.jpg" , "res/icon16.jpg" , "res/icon32.jpg" , "res/icon24.jpg"} ;
 	
 	public static int WIDTH = 800 ;
 	public static int HEIGHT = 600 ;
@@ -35,7 +36,7 @@ public class Main extends StateBasedGame{
         AppGameContainer app = new AppGameContainer(new Main(titlu));
         app.setDisplayMode(WIDTH, HEIGHT, false);
         app.setTargetFrameRate(60);
-        app.setIcon("res/icon.jpg");
+        app.setIcons(icons);
         app.setShowFPS(false);
         app.setVSync(true);
         app.start();

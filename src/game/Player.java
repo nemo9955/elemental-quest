@@ -104,12 +104,14 @@ public class Player extends Entitate{
         y-= hip * Math.cos(Math.toRadians(rotation));*/
 		
 		if(input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON)  && focRate==0){
-			float mx ,my ,ang;
+			float mx ,my ;
+			double ang;
+			
 			mx=739;
 			my=1411;
 			
-			ang=(float) Math.atan( (poly.getY() - my )/( poly.getX() - mx ) );
-			System.out.println(ang);
+			ang=(double) Math.atan( (poly.getY() - my )/( poly.getX() - mx ) );
+			System.out.println(Math.toDegrees(ang));
 			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team );
 			focRate=1;
 		}
