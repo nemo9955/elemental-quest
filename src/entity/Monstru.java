@@ -10,9 +10,9 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Monstru extends Entitate {
 	
-	public Monstru(float x, float y , int specie) throws SlickException{
+	public Monstru(float x, float y ) throws SlickException{
 		super(player);
-		this.specie=specie;
+		this.specie=1;
 		this.img = new Image("res/entitati/monstru.jpg");
 		this.x=x;
 		this.y=y;

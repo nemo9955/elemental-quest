@@ -136,7 +136,7 @@ public class Physics extends Proprietati{
 			switch(specie2){
 			case 1 : Obiecte.monstru.remove( this ); break;
 			case 2 : Obiecte.solaris.remove( this ); break;
-			case 3 : Obiecte.shot.remove( this ); break;
+			case 3 : Obiecte.shot.remove( this )   ; break;
 			}
 		}
 }

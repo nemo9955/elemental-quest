@@ -6,9 +6,9 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Solaris extends Entitate {
 	
-	public Solaris(float x, float y , int specie) throws SlickException{
+	public Solaris(float x, float y) throws SlickException{
 		super(player);
-		this.specie=specie;
+		this.specie=2;
 		this.img = new Image("res/entitati/solaris.png");
 		this.x=x;
 		this.y=y;

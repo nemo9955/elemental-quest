@@ -2,6 +2,8 @@ package game;
 
 import entity.Entitate;
 
+import nivel.Obiecte;
+
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -16,7 +18,8 @@ public class Player extends Entitate{
 	public Color color=Color.blue ;
 	private Input input ;
 	
-	private int countd = 0;
+	private int viataRate = 0;
+	private int focRate = 1;
 
 	// constructorul principal al jucatorului din gamestate
 	public Player (float x , float y , GameContainer gc ) throws SlickException{
@@ -29,7 +32,7 @@ public class Player extends Entitate{
 		this.team = 5 ;
 	}
 	
-    public void update( int delta){
+    public void update( int delta) throws SlickException{
 		
     	// initializarea sariturii
 		if(!jumping && canjump && input.isKeyDown(Input.KEY_W)){
@@ -91,11 +94,16 @@ public class Player extends Entitate{
 			poly.setY(y);
 		}
 		
-		if(countd > 0)		countd += delta ;
-		if(countd > 1000)	countd = 0 ;
+		if(viataRate > 0)		viataRate += delta ;
+		if(viataRate > 1000)	viataRate = 0 ;
+		if(focRate > 0)		focRate += delta ;
+		if(focRate > 300)	focRate = 0 ;
 		
 		
-		
+		if(input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON)  && focRate==0){
+			Obiecte.focShot( x, y, team );
+			focRate=1;
+		}
     }
 
     public void render(GameContainer gc, Graphics g){
@@ -137,9 +145,9 @@ public class Player extends Entitate{
 		if(viata>100)viata=100;
 	}
 	public void takeLife(float x){
-		if(countd == 0){
+		if(viataRate == 0){
 			viata-=x;
-			countd=1;
+			viataRate=1;
 			if(viata<0){
 				viata=0;
 			}
