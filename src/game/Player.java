@@ -15,6 +15,8 @@ public class Player extends Entitate{
 	
 	public Color color=Color.blue ;
 	private Input input ;
+	
+	private int countd = 0;
 
 	// constructorul principal al jucatorului din gamestate
 	public Player (float x , float y , GameContainer gc ) throws SlickException{
@@ -30,7 +32,7 @@ public class Player extends Entitate{
     public void update( int delta){
 		
     	// initializarea sariturii
-		if(!jumping && canjump && input.isKeyPressed(Input.KEY_W)){
+		if(!jumping && canjump && input.isKeyDown(Input.KEY_W)){
 			accel = accelIni;
 			jumping=true;
 		}
@@ -89,6 +91,11 @@ public class Player extends Entitate{
 			poly.setY(y);
 		}
 		
+		if(countd > 0)		countd += delta ;
+		if(countd > 1000)	countd = 0 ;
+		
+		
+		
     }
 
     public void render(GameContainer gc, Graphics g){
@@ -130,12 +137,12 @@ public class Player extends Entitate{
 		if(viata>100)viata=100;
 	}
 	public void takeLife(float x){
-		viata-=x;
-		if(viata<0){
-			viata=0;
-			//TODO mori
-			System.out.println("esti moooort");
+		if(countd == 0){
+			viata-=x;
+			countd=1;
+			if(viata<0){
+				viata=0;
+			}
 		}
-		// TODO adauga efect cand suferi damage
 	}
 }

@@ -59,9 +59,10 @@ public class Monstru extends Entitate {
 				if(moveSpeed > moveSpeedMax) moveSpeed = moveSpeedMax ;
 				
 				if(poly.intersects( player.getPoy() ) && player.color==Color.green )
-						takeLife(1);
+					takeLife(1);// TODO debuding
+				
 				if(poly.intersects( player.getPoy() ) && player.color==Color.blue )
-					player.takeLife(1);
+					player.takeLife(9);
 	}
 	
 }

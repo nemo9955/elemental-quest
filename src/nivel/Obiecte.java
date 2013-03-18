@@ -20,6 +20,7 @@ public class Obiecte extends Entitate {
 	// TODO entitati
 	public static List<Monstru> monstru = new ArrayList<Monstru>();
 	public static List<Solaris> solaris = new ArrayList<Solaris>();
+	public static List<Solaris> shot = new ArrayList<Solaris>();
 	
 	public Obiecte(TiledMap map , GameContainer gc) throws SlickException{
 		super(player);

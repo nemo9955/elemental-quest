@@ -41,10 +41,10 @@
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
   <object name="solaris" x="206" y="1184" width="76" height="60"/>
   <object name="monstru" x="975" y="1498" width="54" height="51"/>
-  <object name="solaris" x="2019" y="979" width="73" height="83"/>
-  <object name="monstru" x="2464" y="491" width="65" height="74"/>
-  <object name="monstru" x="1107" y="1220" width="29" height="32"/>
-  <object name="monstru" x="1327" y="836" width="29" height="32"/>
-  <object name="player" x="1044" y="1102" width="66" height="70"/>
+  <object name="solaris" x="2015" y="995" width="73" height="83"/>
+  <object name="monstru" x="1236" y="1465" width="65" height="74"/>
+  <object name="monstru" x="1059" y="1510" width="29" height="32"/>
+  <object name="monstru" x="1127" y="1488" width="57" height="52"/>
+  <object name="player" x="414" y="1466" width="66" height="70"/>
  </objectgroup>
 </map>

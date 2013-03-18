@@ -3,7 +3,7 @@ package nivel;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
-public class Proprietati {
+public class Proprietati{
 	
 	protected static float accelIni = 20f;
 	protected static float accelMod = 0.6f ;
@@ -20,7 +20,7 @@ public class Proprietati {
 		Proprietati.blockmap=blockmap;
 		Gravitatie(map.getMapProperty("gravity", "2"));
 		Viteza(map.getMapProperty("speed", "2"));
-		System.out.println("prop : "+accelIni +" "+ accelMod +" "+ gravMax +" "+ gravMod +"  "+ moveSpeedMax +" "+ moveSpeedMod);
+//		System.out.println("prop : "+accelIni +" "+ accelMod +" "+ gravMax +" "+ gravMod +"  "+ moveSpeedMax +" "+ moveSpeedMod);
 	}
 	
 	private void Gravitatie(String grav){
