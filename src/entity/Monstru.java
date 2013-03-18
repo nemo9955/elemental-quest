@@ -18,8 +18,8 @@ public class Monstru extends Entitate {
 		this.y=y;
 		poly = new Rectangle (x , y , img.getWidth() , img.getHeight());
 		this.team = 10 ;
-		this.viataMax = 60 ;
-		this.viata = 60 ;
+//		this.viataMax = 60 ;
+//		this.viata = 60 ;
 	}
 	
 	public void upadte(GameContainer gc , int delta){

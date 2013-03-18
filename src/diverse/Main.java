@@ -35,6 +35,7 @@ public class Main extends StateBasedGame{
         AppGameContainer app = new AppGameContainer(new Main(titlu));
         app.setDisplayMode(WIDTH, HEIGHT, false);
         app.setTargetFrameRate(60);
+        app.setIcon("res/icon.jpg");
         app.setShowFPS(false);
         app.setVSync(true);
         app.start();

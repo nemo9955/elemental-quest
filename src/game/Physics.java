@@ -122,7 +122,7 @@ public class Physics extends Proprietati{
 		}
 		
 		public float LifeLS(){
-			return viata/viataMax ;
+			return viata/100 ;
 		}
 		public float getViata(){
 			return viata ;
@@ -132,6 +132,7 @@ public class Physics extends Proprietati{
 			viata+=x;
 			if(viata>viataMax)viata=viataMax;
 		}
+		
 		// TODO entitati
 		protected void elimina(int specie2){
 			switch(specie2){
