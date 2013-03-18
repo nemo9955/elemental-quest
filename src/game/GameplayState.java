@@ -22,7 +22,7 @@ public class GameplayState extends BasicGameState {
 	private int ID ;
 	private Input input ;
 	public static TiledMap map;
-	public Camera camera ;
+	public static Camera camera ;
 	private Image health;
 	private float init;
 	private float rap =0;

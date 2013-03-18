@@ -3,7 +3,6 @@ package game;
 import entity.Entitate;
 
 import nivel.Obiecte;
-
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -104,14 +103,14 @@ public class Player extends Entitate{
         y-= hip * Math.cos(Math.toRadians(rotation));*/
 		
 		if(input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON)  && focRate==0){
-			float mx ,my ;
-			double ang;
+			double ang, mx ,my ;
+//			System.out.println(maus.isClipMouseCoordinatesToWindow()); 
+//			input.
+			mx=input.getMouseX() - GameplayState.camera.getX();
+			my=input.getMouseY() - GameplayState.camera.getY();
 			
-			mx=739;
-			my=1411;
-			
-			ang=(double) Math.atan( (poly.getY() - my )/( poly.getX() - mx ) );
-			System.out.println(Math.toDegrees(ang));
+			ang=(double) Math.atan( (poly.getCenterY() - my )/( poly.getCenterX() - mx ) );
+			System.out.println(mx + " " + my + " " + Math.toDegrees(ang));
 			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team );
 			focRate=1;
 		}
