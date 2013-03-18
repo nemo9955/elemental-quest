@@ -21,7 +21,7 @@ public class Physics extends Proprietati{
 	
 	protected float cadee=0 ;
 	protected int viataMax = 100 ;
-	protected int viata = viataMax ;
+	protected int viata = 100 ;
 	protected int specie;
 
 	public void setPhysics(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
@@ -122,7 +122,7 @@ public class Physics extends Proprietati{
 		}
 		
 		public float LifeLS(){
-			return viata/100 ;
+			return (float) viata/viataMax ;
 		}
 		public float getViata(){
 			return viata ;
