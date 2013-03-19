@@ -1,6 +1,7 @@
 package game;
 
 import entity.Entitate;
+import entity.Shot;
 
 import nivel.Obiecte;
 import org.newdawn.slick.Color;
@@ -103,12 +104,10 @@ public class Player extends Entitate {
 			boolean sus;
 			mx = input.getMouseX() - GameplayState.camera.getX();
 			my = input.getMouseY() - GameplayState.camera.getY();
-			ang = (float) Math.atan((poly.getCenterY() - my)
-					/ (poly.getCenterX() - mx));
-			System.out.println(Math.toDegrees(ang));
+			ang = (float) Math.atan((poly.getCenterY() - my) / (poly.getCenterX() - mx));
+//			System.out.println(Math.toDegrees(ang));
 			sus = (my < poly.getCenterY()) ? true : false;
-			Obiecte.focShot(poly.getCenterX(), poly.getCenterY(), team, ang,
-					sus);
+			Obiecte.shot.add(new Shot (poly.getCenterX(), poly.getCenterY(), team , ang , sus));
 			focRate = 1;
 		}
 	}
@@ -127,23 +126,6 @@ public class Player extends Entitate {
 	public Rectangle getPoy() {
 		return poly;
 	}
-
-	public float getX() {
-		return x;
-	}
-
-	public void setX(float x) {
-		this.x = x;
-	}
-
-	public float getY() {
-		return y;
-	}
-
-	public void setY(float y) {
-		this.y = y;
-	}
-
 	public float LifeLS() {
 		return viata / 100f;
 	}

@@ -7,6 +7,7 @@ import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 
 public class Entitate extends Physics {
 	
@@ -19,7 +20,7 @@ public class Entitate extends Physics {
 		Entitate.player=player;
 	}
 	
-	public void upadte(GameContainer gc , int delta){
+	public void upadte(GameContainer gc , int delta) throws SlickException{
 		Gravitatie();
 	}
 	

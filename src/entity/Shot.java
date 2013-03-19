@@ -15,7 +15,7 @@ public class Shot extends Entitate {
 	private float ang;
 	private boolean sus;
 	
-	public Shot(float x , float y  ,int team, float ang, boolean sus  ) throws SlickException {
+	public Shot(float x , float y  ,int team, float ang , boolean sus  ) throws SlickException {
 		super(player);
 		if(team == 5){
 			this.team = 6 ;
@@ -25,12 +25,13 @@ public class Shot extends Entitate {
 			this.team=7;
 			this.img = new Image ("res/entitati/shot_en.png");
 		}
+		// ahh matematica asta
 		if(ang > 0)
 			this.ang=-90+(float)Math.toDegrees(ang);
 		else
 			this.ang=+90+(float)Math.toDegrees(ang);
 		this.sus=sus;
-		System.out.println(this.ang);
+//		System.out.println(this.ang);
 		
 		this.specie=3;
 		this.x=x-img.getWidth()/2;
@@ -60,8 +61,8 @@ public class Shot extends Entitate {
 				elimina(specie);
 		}
 		else {
-			if(hitPlayer())
-				elimina(specie);
+		//	if(hitPlayer());
+			//	elimina(specie);
 		}
 	}
 	

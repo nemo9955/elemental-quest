@@ -39,10 +39,6 @@ public class Obiecte extends Entitate {
 		}
 	}
 
-	public static void focShot(float x , float y  ,int team, float ang, boolean sus ) throws SlickException{
-		shot.add( new Shot(x, y, team , ang ,sus) );
-	}
-	
 	// TODO entitati
 	public List<Monstru> getMonstru() {
 		return monstru;
