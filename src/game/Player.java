@@ -98,20 +98,17 @@ public class Player extends Entitate{
 		if(focRate > 0)		focRate += delta ;
 		if(focRate > 200)	focRate = 0 ;
 		
-		
-/*      x+= hip * Math.sin(Math.toRadians(rotation));
-        y-= hip * Math.cos(Math.toRadians(rotation));*/
+
 		
 		if(input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON)  && focRate==0){
-			double ang, mx ,my ;
-//			System.out.println(maus.isClipMouseCoordinatesToWindow()); 
-//			input.
+			float ang, mx ,my ;
+			boolean sus;
 			mx=input.getMouseX() - GameplayState.camera.getX();
 			my=input.getMouseY() - GameplayState.camera.getY();
-			
-			ang=(double) Math.atan( (poly.getCenterY() - my )/( poly.getCenterX() - mx ) );
+			ang= (float) Math.atan( (poly.getCenterY() - my )/( poly.getCenterX() - mx ) );
 			System.out.println(mx + " " + my + " " + Math.toDegrees(ang));
-			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team );
+			sus = ( my < poly.getCenterY() )? true : false ;
+			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team , ang , sus);
 			focRate=1;
 		}
     }

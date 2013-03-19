@@ -12,8 +12,10 @@ import org.newdawn.slick.geom.Rectangle;
 public class Shot extends Entitate {
 	
 	private int lifeTime = 1000 ;
+	private float ang;
+	private boolean sus;
 	
-	public Shot(float x , float y  ,int team  ) throws SlickException {
+	public Shot(float x , float y  ,int team, float ang, boolean sus  ) throws SlickException {
 		super(player);
 		if(team == 5){
 			this.team = 6 ;
@@ -23,14 +25,29 @@ public class Shot extends Entitate {
 			this.team=7;
 			this.img = new Image ("res/entitati/shot_en.jpg");
 		}
+		this.ang=-ang;
+		this.sus=sus;
 		this.specie=3;
 		this.x=x-img.getWidth()/2;
 		this.y=y-img.getHeight()/2;
 		poly = new Rectangle (this.x, this.y , img.getWidth() , img.getHeight());
 	}
 	
+	
+/*      x+= hip * Math.sin(Math.toRadians(rotation));
+  	 	y-= hip * Math.cos(Math.toRadians(rotation));*/
+	
 	public void upadte(GameContainer gc , int delta){
-		x+=8;
+		
+		if(sus){
+			x+= 8 * Math.sin(Math.toRadians(Math.toDegrees(ang)));
+  	 		y-= 8 * Math.cos(Math.toRadians(Math.toDegrees(ang)));
+		}
+  	 	else{
+			x-= 8 * Math.sin(Math.toRadians(Math.toDegrees(ang)));
+  	 		y+= 8 * Math.cos(Math.toRadians(Math.toDegrees(ang)));
+  	 	}
+		
 		lifeTime-=delta;
 		poly.setX(x);
 		if(colid() || lifeTime<=0)
