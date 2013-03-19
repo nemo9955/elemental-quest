@@ -26,6 +26,7 @@ public class Main extends StateBasedGame{
     public static final int GAMEMENUSTATE = 2;
     public static final int GAMEPLAYSTATE = 3;
     public static final int DEATHSTATE = 4;
+    public static final int ALEGELVL = 5;
     
 	
 	public Main(String name) {
