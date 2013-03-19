@@ -20,6 +20,7 @@ import org.newdawn.slick.tiled.TiledMap;
 public class GameplayState extends BasicGameState {
 
 	private int ID ;
+	private boolean firstT ;
 	private Input input ;
 	public static TiledMap map;
 	public static Camera camera ;
@@ -40,24 +41,31 @@ public class GameplayState extends BasicGameState {
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input = gc.getInput();
-		map = new TiledMap(Main.NIVEL);
 		prop = new Proprietati ();
-		blockmap = new BlockMap(map);
-		prop.initProp(map,blockmap);
-		startGen(gc);
-		camera = new Camera(map.getWidth()*map.getTileWidth() , map.getHeight()*map.getTileHeight());
-		health=new Image("res/health_bar1.png");
+		firstT = true;
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
+		map = new TiledMap(Main.NIVEL);
+		blockmap = new BlockMap(map);
+		System.out.println(Main.NIVEL);
+		prop.initProp(map,blockmap);
 		obi = new Obiecte(map,gc);
 		setEntit(new Entitate(player));
+		camera = new Camera(map.getWidth()*map.getTileWidth() , map.getHeight()*map.getTileHeight());
+		health=new Image("res/health_bar1.png");
 	}
 
 	@Override
 	public void enter(GameContainer gc, StateBasedGame sb)throws SlickException {
-		if (player.getViata() <= 0)
+		if(firstT){
 			startGen(gc);
+		}else{
+			if (player.getViata() <= 0)
+				startGen(gc);
+		}
+			
+		
 	}
 	
 	@Override

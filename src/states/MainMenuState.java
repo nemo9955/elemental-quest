@@ -32,6 +32,11 @@ public class MainMenuState extends BasicGameState {
 		start = new ManipImg( new Image("res/start.png") , 300 , 300) ;
 		exit = new ManipImg( new Image("res/exit.png") , 300 , 400) ;
 	}
+	
+	@Override
+	public void enter(GameContainer gc, StateBasedGame sb)throws SlickException {
+		
+	}
 
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {

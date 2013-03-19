@@ -36,7 +36,7 @@ public class AlegeLVL extends BasicGameState  {
 		for(int i=0 ; i<20 ; i++){
 			if( img[i].inZon( input.getMouseX() , input.getMouseY() ) ){
 				if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) ){
-					Main.setNivel( String.format("res/level/nivel (%d).tmx" , i+1) );
+					Main.NIVEL = String.format("res/level/nivel (%d).tmx" , i+1) ;
 					sb.enterState( Main.GAMEPLAYSTATE);
 				}
 			}
