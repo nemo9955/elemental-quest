@@ -21,6 +21,7 @@ public class GameplayState extends BasicGameState {
 
 	private int ID ;
 	private boolean firstT ;
+	private String curent ;;
 	private Input input ;
 	public static TiledMap map;
 	public static Camera camera ;
@@ -46,6 +47,7 @@ public class GameplayState extends BasicGameState {
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
+		curent=Main.NIVEL;
 		map = new TiledMap(Main.NIVEL);
 		blockmap = new BlockMap(map);
 		System.out.println(Main.NIVEL);
@@ -62,11 +64,9 @@ public class GameplayState extends BasicGameState {
 			startGen(gc);
 			firstT=false;
 		}else{
-			if (player.getViata() <= 0)
+			if (player.getViata() <= 0 || Main.NIVEL!=curent )
 				startGen(gc);
 		}
-			
-		
 	}
 	
 	@Override

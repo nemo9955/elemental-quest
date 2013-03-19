@@ -1,5 +1,6 @@
 package entity;
 
+import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
@@ -16,6 +17,10 @@ public class Solaris extends Entitate {
 		this.team = 11 ;
 		this.viataMax = 110 ;
 		this.viata = viataMax ;
+	}
+	
+	public void upadte(GameContainer gc , int delta){
+		
 	}
 	
 }
