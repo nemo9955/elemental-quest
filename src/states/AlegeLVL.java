@@ -25,7 +25,7 @@ public class AlegeLVL extends BasicGameState  {
 		for(float i=0 ; i<=gc.getWidth() ; i+=gc.getWidth()/5)
 			for(float j=0 ; j<=gc.getHeight() ; j+=gc.getHeight()/4){
 				if(index <= 20){
-					img[index-1] = new ManipImg( new Image( String.format("res/img/Copy (%d) of 01.png", index) ), i , j);
+					img[index-1] = new ManipImg( new Image( String.format("res/img/imagine (%d).png", index) ), j+50 , i+10);
 					index++;
 				}
 			}
@@ -36,7 +36,7 @@ public class AlegeLVL extends BasicGameState  {
 		for(int i=0 ; i<20 ; i++){
 			if( img[i].inZon( input.getMouseX() , input.getMouseY() ) ){
 				if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) ){
-					Main.setNivel( String.format("res/level/nivel%d.tmx" , i+1) );
+					Main.setNivel( String.format("res/level/nivel (%d).tmx" , i+1) );
 					sb.enterState( Main.GAMEPLAYSTATE);
 				}
 			}

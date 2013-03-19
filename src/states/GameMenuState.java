@@ -3,6 +3,7 @@ package states;
 import diverse.Main;
 import diverse.ManipImg;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -19,6 +20,7 @@ public class GameMenuState extends BasicGameState {
 	private Image bg = null ;
 	
 	private ManipImg resume ;
+	private ManipImg mainM ;
 	private ManipImg exit ;
 	
 	
@@ -27,6 +29,7 @@ public class GameMenuState extends BasicGameState {
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input = gc.getInput();
 		bg = new Image("res/gm_fundal.png");
+		mainM = new ManipImg( new Image("res/mainM.png") , 300 , 200) ;
 		resume = new ManipImg( new Image("res/resume.png") , 300 , 300) ;
 		exit = new ManipImg( new Image("res/exit.png") , 300 , 400) ;
 	}
@@ -45,15 +48,21 @@ public class GameMenuState extends BasicGameState {
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
 				sb.enterState(Main.GAMEPLAYSTATE);
 		
+		if( mainM.inZon( input.getMouseX() , input.getMouseY() ) )
+			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
+				sb.enterState(Main.MAINMENUSTATE);
+		
 		if( exit.inZon( input.getMouseX() , input.getMouseY() ))
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
 				gc.exit();
 	}
 
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g){
+		g.setBackground(Color.black);
 		bg.draw( gc.getWidth()/2-bg.getWidth()/2 , gc.getHeight()/2-bg.getHeight()/2 );
 		resume.render();
 		exit.render();
+		mainM.render();
 
 	}
 

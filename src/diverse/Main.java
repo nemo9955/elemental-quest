@@ -22,7 +22,7 @@ public class Main extends StateBasedGame{
 	public static int HEIGHT = 600 ;
 	
 	// declaram o variabila statica corespunzatoare fiecarui stagiu
-	public static String NIVEL = "res/level/nivel1.tmx";
+	public static String NIVEL = "res/level/nivel (1).tmx";
 	
 	public static final int SPLASH = 0;
 	public static final int MAINMENUSTATE = 1;
