@@ -35,7 +35,7 @@
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt29sKgkAUQNGBoqcuEvna/39m2YV6MK08M22bveAQaUiwcSjRNqXUOqgRgz1Y7MFiDxZ7sNiDxR4sq2QPkn2yB4k9WOzBYg8We7DYg8UeLPZgsQeLPb5zuE00e3wnR4uOPVjswWIP1v0g9mCxxzTNbaLU0iPXehPZolNLj1xy9FgHH7Mm9hhW+r5Ye7DYg8UeV+3Iayn24In+/2GPaWrpUeLaUdTvrqgm5B5zE3HtxB6xpjYh9PjH5xybgRlC6KGHsR7HUl9EF786P3weu5/rFYs9WEr2cD0a5/nBYg+W3D1clz5z75HrflR9pqb1avc0fe9fbRvaPrbvnf3Pn+l6bM6z/JNZzHy25zkBelUaEQ==
+   eJzt29sKgkAUQNGBoqcuEPna/39mGpUVmCnOuI/uBYfoQgS7GcSsSilVDmrEYA8We7DYg8UeLPZgsQfLLtmD5JzsQWIPFnuw2IPFHiz2YPnV4/QYleP6YLEHiz3GuTxmavYYJ0eLhj1Ypurhcdg0puwRtQnpehD3KxZ7sKylR5Trz9bSI4qmx37uD6GXpfWIsi91WVqP6OzBErVH1XMbVdQeS5W7R+TzKHMgr48S547GvEfO7xe5B1HutW4PFkIP/+fYIvRQq6/HtdQH0d1c66PE728Rj7Pdr1jswVKyx5qPm/7l+mCxB0vuHu5Lwzx75LoeVcOsab86pc/z/9/3ux779Xjfc/88//6apsehnu1CZhN8jvXcAHLqGTc=
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
@@ -44,8 +44,18 @@
   <object name="solaris" x="2133" y="1439" width="73" height="83"/>
   <object name="monstru" x="1324" y="1003" width="65" height="74"/>
   <object name="monstru" x="1773" y="1494" width="29" height="32"/>
-  <object name="monstru" x="2537" y="634" width="57" height="52"/>
-  <object name="player" x="514" y="1464" width="66" height="70"/>
+  <object name="monstru" x="2540" y="636" width="57" height="52"/>
+  <object name="player" x="2164" y="592" width="66" height="70"/>
   <object name="solaris" x="2361" y="1411" width="73" height="83"/>
+  <object name="monstru" x="52" y="1424" width="57" height="52"/>
+  <object name="monstru" x="1820" y="840" width="57" height="52"/>
+  <object name="monstru" x="1394" y="1412" width="57" height="52"/>
+  <object name="solaris" x="744" y="972" width="76" height="60"/>
+  <object name="solaris" x="550" y="556" width="76" height="60"/>
+  <object name="solaris" x="200" y="376" width="76" height="60"/>
+  <object name="solaris" x="1710" y="1198" width="76" height="60"/>
+  <object name="solaris" x="2024" y="1002" width="76" height="60"/>
+  <object name="solaris" x="2408" y="990" width="76" height="60"/>
+  <object name="solaris" x="2468" y="494" width="76" height="60"/>
  </objectgroup>
 </map>

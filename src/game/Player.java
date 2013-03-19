@@ -106,7 +106,7 @@ public class Player extends Entitate{
 			mx=input.getMouseX() - GameplayState.camera.getX();
 			my=input.getMouseY() - GameplayState.camera.getY();
 			ang= (float) Math.atan( (poly.getCenterY() - my )/( poly.getCenterX() - mx ) );
-			System.out.println(mx + " " + my + " " + Math.toDegrees(ang));
+			System.out.println(Math.toDegrees(ang));
 			sus = ( my < poly.getCenterY() )? true : false ;
 			Obiecte.focShot( poly.getCenterX(), poly.getCenterY() , team , ang , sus);
 			focRate=1;

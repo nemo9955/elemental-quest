@@ -13,7 +13,7 @@ public class Monstru extends Entitate {
 	public Monstru(float x, float y ) throws SlickException{
 		super(player);
 		this.specie=1;
-		this.img = new Image("res/entitati/monstru.jpg");
+		this.img = new Image("res/entitati/monstru.png");
 		this.x=x;
 		this.y=y;
 		poly = new Rectangle (x , y , img.getWidth() , img.getHeight());

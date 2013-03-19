@@ -15,7 +15,7 @@ import states.SplashState;
 public class Main extends StateBasedGame{
 
 	private final static String titlu = "Elemental Quest" ;
-	private final static String icons[] = {"res/icon16.png" , "res/icon32.png" , "res/icon24.png" , "res/icon64.png" , "res/icon64.jpg" , "res/icon16.jpg" , "res/icon32.jpg" , "res/icon24.jpg"} ;
+	private final static String icons[] = {"res/icon16.png" , "res/icon32.png" , "res/icon24.png" , "res/icon64.png" } ;
 	
 	public static int WIDTH = 800 ;
 	public static int HEIGHT = 600 ;

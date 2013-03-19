@@ -22,7 +22,7 @@ public class DeathState extends BasicGameState  {
 	
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
-		death = new Image("res/death.jpg");
+		death = new Image("res/death.png");
 		input = gc.getInput();
 	}
 	

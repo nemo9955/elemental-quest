@@ -11,7 +11,7 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Shot extends Entitate {
 	
-	private int lifeTime = 1000 ;
+	private int lifeTime = 1500 ;
 	private float ang;
 	private boolean sus;
 	
@@ -19,37 +19,39 @@ public class Shot extends Entitate {
 		super(player);
 		if(team == 5){
 			this.team = 6 ;
-			this.img = new Image ("res/entitati/shot_pl.jpg");
+			this.img = new Image ("res/entitati/shot_pl.png");
 		}
 		else if(team >= 10){
 			this.team=7;
-			this.img = new Image ("res/entitati/shot_en.jpg");
+			this.img = new Image ("res/entitati/shot_en.png");
 		}
-		this.ang=-ang;
+		if(ang > 0)
+			this.ang=-90+(float)Math.toDegrees(ang);
+		else
+			this.ang=+90+(float)Math.toDegrees(ang);
 		this.sus=sus;
+		System.out.println(this.ang);
+		
 		this.specie=3;
 		this.x=x-img.getWidth()/2;
 		this.y=y-img.getHeight()/2;
 		poly = new Rectangle (this.x, this.y , img.getWidth() , img.getHeight());
 	}
 	
-	
-/*      x+= hip * Math.sin(Math.toRadians(rotation));
-  	 	y-= hip * Math.cos(Math.toRadians(rotation));*/
-	
 	public void upadte(GameContainer gc , int delta){
 		
 		if(sus){
-			x+= 8 * Math.sin(Math.toRadians(Math.toDegrees(ang)));
-  	 		y-= 8 * Math.cos(Math.toRadians(Math.toDegrees(ang)));
+			x+= 8 * Math.sin(Math.toRadians(ang));
+  	 		y-= 8 * Math.cos(Math.toRadians(ang));
 		}
   	 	else{
-			x-= 8 * Math.sin(Math.toRadians(Math.toDegrees(ang)));
-  	 		y+= 8 * Math.cos(Math.toRadians(Math.toDegrees(ang)));
+			x-= 8 * Math.sin(Math.toRadians(ang));
+  	 		y+= 8 * Math.cos(Math.toRadians(ang));
   	 	}
 		
 		lifeTime-=delta;
 		poly.setX(x);
+		poly.setY(y);
 		if(colid() || lifeTime<=0)
 			elimina(specie);
 		

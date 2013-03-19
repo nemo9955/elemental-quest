@@ -46,7 +46,7 @@ public class GameplayState extends BasicGameState {
 		prop.initProp(map,blockmap);
 		startGen(gc);
 		camera = new Camera(map.getWidth()*map.getTileWidth() , map.getHeight()*map.getTileHeight());
-		health=new Image("res/health_bar1.jpg");
+		health=new Image("res/health_bar1.png");
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {

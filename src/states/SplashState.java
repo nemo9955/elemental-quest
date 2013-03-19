@@ -22,7 +22,7 @@ public class SplashState extends BasicGameState {
 	// stadiul ecranului de incarcare
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
-		splash = new Image("res/splash.jpg");
+		splash = new Image("res/splash.png");
 		render(gc, sb, null);
 	}
 	
