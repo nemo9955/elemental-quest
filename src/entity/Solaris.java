@@ -48,12 +48,13 @@ public class Solaris extends Entitate {
 		if( firerate == 0 ){
 			if( Math.sqrt( Math.pow( player.getX()-x , 2)  + Math.pow( player.getY()-y , 2) ) < 500 ){
 				firerate=1;
-				Obiecte.shot.add(new Shot (poly.getCenterX(), poly.getCenterY(), team, dir , (player.getPoy().getCenterX() < poly.getCenterY()) ? true : false ));
+				boolean sus = (player.getPoy().getCenterY() < poly.getCenterY()) ? true : false ;
+				Obiecte.shot.add(new Shot (poly.getCenterX(), poly.getCenterY(), team, dir , sus));
 			}
 		}
 		if(firerate != 0)
 			firerate += delta;
-		if(firerate < 2000)
+		if(firerate > 100)
 			firerate = 0;
 	}
 	

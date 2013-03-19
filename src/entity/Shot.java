@@ -14,15 +14,21 @@ public class Shot extends Entitate {
 	private int lifeTime = 1500 ;
 	private float ang;
 	private boolean sus;
+	private int speed ;
+	private int damage ;
 	
 	public Shot(float x , float y  ,int team, float ang , boolean sus  ) throws SlickException {
 		super(player);
 		if(team == 5){
 			this.team = 6 ;
+			speed=10;
+			damage=35;
 			this.img = new Image ("res/entitati/shot_pl.png");
 		}
 		else if(team >= 10){
 			this.team=7;
+			speed=6;
+			damage=4;
 			this.img = new Image ("res/entitati/shot_en.png");
 		}
 		// ahh matematica asta
@@ -42,12 +48,12 @@ public class Shot extends Entitate {
 	public void upadte(GameContainer gc , int delta){
 		
 		if(sus){
-			x+= 8 * Math.sin(Math.toRadians(ang));
-  	 		y-= 8 * Math.cos(Math.toRadians(ang));
+			x+= speed * Math.sin(Math.toRadians(ang));
+  	 		y-= speed * Math.cos(Math.toRadians(ang));
 		}
   	 	else{
-			x-= 8 * Math.sin(Math.toRadians(ang));
-  	 		y+= 8 * Math.cos(Math.toRadians(ang));
+			x-= speed * Math.sin(Math.toRadians(ang));
+  	 		y+= speed * Math.cos(Math.toRadians(ang));
   	 	}
 		
 		lifeTime-=delta;
@@ -61,8 +67,8 @@ public class Shot extends Entitate {
 				elimina(specie);
 		}
 		else {
-		//	if(hitPlayer());
-			//	elimina(specie);
+			if(hitPlayer())
+				elimina(specie);
 		}
 	}
 	
@@ -70,13 +76,13 @@ public class Shot extends Entitate {
 		
 		for(Monstru inamic : Obiecte.monstru)
 			if(poly.intersects( inamic.poly )){
-				inamic.takeLife(35);
+				inamic.takeLife(damage);
 				return true;
 			}
 		
 		for(Solaris inamic : Obiecte.solaris)
 			if(poly.intersects( inamic.poly )){
-				inamic.takeLife(35);
+				inamic.takeLife(damage);
 				return true;
 			}
 		return false;
@@ -84,7 +90,7 @@ public class Shot extends Entitate {
 	
 	private boolean hitPlayer(){
 		if(poly.intersects( player.poly )){
-			player.takeLife(35);
+			player.takeLife(damage);
 				return true;
 		}
 		return false;

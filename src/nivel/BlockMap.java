@@ -14,8 +14,6 @@ public class BlockMap {
 		bloc = new Block [map.getWidth()] [map.getHeight()] ;
 
 		solidNo = map.getLayerIndex("solid");
-
-		bloc[2][48]= new Block ("solid" , 2, 48) ;
 		
 		for(int j=0 ; j<map.getHeight() ; j++)
 			for(int i=0 ; i<map.getWidth() ; i++){

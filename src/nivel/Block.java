@@ -34,6 +34,4 @@ public class Block {
 	public boolean exists() {
 		return exist;
 	}
-	
-	
 }
