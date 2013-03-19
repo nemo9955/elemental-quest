@@ -38,7 +38,7 @@ public class MainMenuState extends BasicGameState {
 		
 		if( start.inZon( input.getMouseX() , input.getMouseY() ) )
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
-				sb.enterState(Main.GAMEPLAYSTATE);
+				sb.enterState(Main.ALEGELVL);
 
 		if(exit.inZon(input.getMouseX(), input.getMouseY()))
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )

@@ -7,6 +7,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 
+import states.AlegeLVL;
 import states.DeathState;
 import states.GameMenuState;
 import states.MainMenuState;
@@ -21,6 +22,8 @@ public class Main extends StateBasedGame{
 	public static int HEIGHT = 600 ;
 	
 	// declaram o variabila statica corespunzatoare fiecarui stagiu
+	public static String NIVEL = "res/level/nivel1.tmx";
+	
 	public static final int SPLASH = 0;
 	public static final int MAINMENUSTATE = 1;
     public static final int GAMEMENUSTATE = 2;
@@ -48,11 +51,15 @@ public class Main extends StateBasedGame{
 	public void initStatesList(GameContainer gc) throws SlickException {
 		addState( new SplashState  ( SPLASH ) );
 		addState( new GameMenuState( GAMEMENUSTATE ) );
-		addState( new GameplayState( GAMEPLAYSTATE ) );
+		addState( new GameplayState( GAMEPLAYSTATE , null) );
 		addState( new MainMenuState( MAINMENUSTATE ) );
 		addState( new DeathState   ( DEATHSTATE    ) );
+		addState( new AlegeLVL     ( ALEGELVL      ) );
 		 
 	}
-
+	
+	public static void setNivel(String nivel){
+		NIVEL=nivel;
+	}
 	
 }

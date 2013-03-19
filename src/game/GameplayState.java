@@ -32,7 +32,7 @@ public class GameplayState extends BasicGameState {
 	private Obiecte obi ;
 	private Entitate entit ;
 	
-	public GameplayState(int ID) {
+	public GameplayState(int ID , String harta) {
 		this.ID=ID;
 	}
 
@@ -40,7 +40,7 @@ public class GameplayState extends BasicGameState {
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input = gc.getInput();
-		map = new TiledMap("res/level/nivel.tmx");
+		map = new TiledMap(Main.NIVEL);
 		prop = new Proprietati ();
 		blockmap = new BlockMap(map);
 		prop.initProp(map,blockmap);
