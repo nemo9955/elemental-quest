@@ -60,6 +60,7 @@ public class GameplayState extends BasicGameState {
 	public void enter(GameContainer gc, StateBasedGame sb)throws SlickException {
 		if(firstT){
 			startGen(gc);
+			firstT=false;
 		}else{
 			if (player.getViata() <= 0)
 				startGen(gc);
@@ -80,8 +81,10 @@ public class GameplayState extends BasicGameState {
 		for(int i=0 ; i<obi.getShot().size() ; i++)
 			Obiecte.shot.get(i).upadte(gc, delta);
 		
-		if(input.isKeyPressed(Input.KEY_ESCAPE))
+		if(input.isKeyPressed(Input.KEY_ESCAPE)){
+			player.setFocRate(1);
 			sb.enterState(Main.GAMEMENUSTATE);
+		}
 		if(player.getViata() <= 0)
 			sb.enterState(Main.DEATHSTATE);
 		

@@ -44,7 +44,7 @@
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt29sKgkAUQNGBoqcuEPna/39mGpUVmCnOuI/uBYfoQgS7GcSsSilVDmrEYA8We7DYg8UeLPZgsQfLLtmD5JzsQWIPFnuw2IPFHiz2YPnV4/QYleP6YLEHiz3GuTxmavYYJ0eLhj1Ypurhcdg0puwRtQnpehD3KxZ7sKylR5Trz9bSI4qmx37uD6GXpfWIsi91WVqP6OzBErVH1XMbVdQeS5W7R+TzKHMgr48S547GvEfO7xe5B1HutW4PFkIP/+fYIvRQq6/HtdQH0d1c66PE728Rj7Pdr1jswVKyx5qPm/7l+mCxB0vuHu5Lwzx75LoeVcOsab86pc/z/9/3ux779Xjfc/88//6apsehnu1CZhN8jvXcAHLqGTc=
+   eJztm9EOgjAMRZdofFJJjLz6/58pQxEwgQ1Yt9v1nqQxglKy45oxt9Y51zKggmBAH1jQBxb0gQV9YEEfc54bQgL62N/GEm4uzq6PlO2Z6loPZ9OHZM05Utcs+pB0sZQrNp9VHyVyxuSlj7x5Q7mt+SjlIjY/fWDlX/PRfKMmNPuoEfrAgj6wSOVj7zMMfcxJOT8i8R1rPjw5n8+35kzlQ9s4LMfc+TRPLCl9aHMy4Nvr6HqQVP+RWKxXyNAHFlZ8aFl/ZsWHFryPa+mbID9q86GlLi1Rmw/t0AcWWn20gVetaPVRK9I+NM+jlAC5f+TYS7TnGpK/L2QfiEj3dfrAAsEH9zmOIPggIyEfr1w3QnpK9Y8c+7E1jrNZr7CgDyxy+rA8boqF/QML+sBC2gfr0jYGH6XXfZMPlupV4+bz///vl46tHQ+dizk//Yz3ceviXEmclMe9izce7h7C
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">

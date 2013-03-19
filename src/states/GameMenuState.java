@@ -44,13 +44,13 @@ public class GameMenuState extends BasicGameState {
 		if(input.isKeyPressed(Input.KEY_ESCAPE))
 			sb.enterState(Main.GAMEPLAYSTATE);
 		
-		if( resume.inZon( input.getMouseX() , input.getMouseY() ) )
-			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
-				sb.enterState(Main.GAMEPLAYSTATE);
-		
 		if( mainM.inZon( input.getMouseX() , input.getMouseY() ) )
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
 				sb.enterState(Main.MAINMENUSTATE);
+		
+		if( resume.inZon( input.getMouseX() , input.getMouseY() ) )
+			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
+				sb.enterState(Main.GAMEPLAYSTATE);
 		
 		if( exit.inZon( input.getMouseX() , input.getMouseY() ))
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )

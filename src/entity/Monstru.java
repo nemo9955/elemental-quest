@@ -10,6 +10,9 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Monstru extends Entitate {
 	
+
+	private int viataRate = 0;
+	
 	public Monstru(float x, float y ) throws SlickException{
 		super(player);
 		this.specie=1;
@@ -18,8 +21,8 @@ public class Monstru extends Entitate {
 		this.y=y;
 		poly = new Rectangle (x , y , img.getWidth() , img.getHeight());
 		this.team = 10 ;
-//		this.viataMax = 60 ;
-//		this.viata = 60 ;
+		this.viataMax = 60 ;
+		this.viata = viataMax ;
 	}
 	
 	public void upadte(GameContainer gc , int delta){
@@ -60,11 +63,16 @@ public class Monstru extends Entitate {
 				}
 				if(moveSpeed > moveSpeedMax) moveSpeed = moveSpeedMax ;
 				
+				if(viataRate > 0)	viataRate += delta ;
+				if(viataRate > 500)	viataRate = 0 ;
+				
+				if(poly.intersects( player.getPoy() ) && player.color==Color.blue && viataRate == 0){
+					player.takeLife(9);
+					viataRate=1;
+				}
+				
 				if(poly.intersects( player.getPoy() ) && player.color==Color.green )
 					takeLife(1);// TODO debuding
-				
-				if(poly.intersects( player.getPoy() ) && player.color==Color.blue )
-					player.takeLife(9);
 	}
 	
 }

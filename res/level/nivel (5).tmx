@@ -49,16 +49,15 @@
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
   <object name="solaris" x="216" y="1148" width="76" height="60"/>
-  <object name="monstru" x="649" y="1496" width="54" height="51"/>
+  <object name="monstru" x="418" y="1311" width="54" height="51"/>
   <object name="solaris" x="2133" y="1439" width="73" height="83"/>
-  <object name="monstru" x="1324" y="1003" width="65" height="74"/>
-  <object name="monstru" x="1773" y="1494" width="29" height="32"/>
-  <object name="monstru" x="2540" y="636" width="57" height="52"/>
+  <object name="monstru" x="443" y="1407" width="65" height="74"/>
+  <object name="monstru" x="516" y="1368" width="57" height="52"/>
   <object name="player" x="2164" y="592" width="66" height="70"/>
   <object name="solaris" x="2361" y="1411" width="73" height="83"/>
-  <object name="monstru" x="52" y="1424" width="57" height="52"/>
-  <object name="monstru" x="1820" y="840" width="57" height="52"/>
-  <object name="monstru" x="1394" y="1412" width="57" height="52"/>
+  <object name="monstru" x="491" y="1431" width="57" height="52"/>
+  <object name="monstru" x="547" y="1429" width="57" height="52"/>
+  <object name="monstru" x="523" y="1385" width="57" height="52"/>
   <object name="solaris" x="744" y="972" width="76" height="60"/>
   <object name="solaris" x="550" y="556" width="76" height="60"/>
   <object name="solaris" x="200" y="376" width="76" height="60"/>
