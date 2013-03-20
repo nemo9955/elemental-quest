@@ -46,7 +46,7 @@ public class Solaris extends Entitate {
 		
 		// verific distanta dintre Solarys si jucator
 		if( firerate == 0 ){
-			if( Math.sqrt( Math.pow( player.getX()-x , 2)  + Math.pow( player.getY()-y , 2) ) < 500 ){
+			if( Math.sqrt( Math.pow( player.getX()-x , 2)  + Math.pow( player.getY()-y , 2) ) < 550 ){
 				firerate=1;
 				boolean sus = (player.getPoy().getCenterY() < poly.getCenterY()) ? true : false ;
 				Obiecte.shot.add(new Shot (poly.getCenterX(), poly.getCenterY(), team, dir , sus));
@@ -54,7 +54,7 @@ public class Solaris extends Entitate {
 		}
 		if(firerate != 0)
 			firerate += delta;
-		if(firerate > 90)
+		if(firerate > 80)
 			firerate = 0;
 	}
 	

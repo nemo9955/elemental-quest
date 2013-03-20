@@ -29,8 +29,8 @@ public class GameMenuState extends BasicGameState {
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input = gc.getInput();
 		bg = new Image("res/gm_fundal.png");
-		mainM = new ManipImg( new Image("res/mainM.png") , 300 , 200) ;
-		resume = new ManipImg( new Image("res/resume.png") , 300 , 300) ;
+		resume = new ManipImg( new Image("res/resume.png") , 300 , 200) ;
+		mainM = new ManipImg( new Image("res/mainM.png") , 300 , 300) ;
 		exit = new ManipImg( new Image("res/exit.png") , 300 , 400) ;
 	}
 

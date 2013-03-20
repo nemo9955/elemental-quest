@@ -20,9 +20,9 @@ public class Monstru extends Entitate {
 		this.specie = 1;
 		this.img = new Image("res/entitati/monstru.png");
 		Random zar = new Random();
-		this.x = x+zar.nextInt(range);
+		this.x = x + zar.nextInt(range);
 		this.y = y;
-		dr=zar.nextBoolean();
+		dr = zar.nextBoolean();
 		poly = new Rectangle(this.x, y, img.getWidth(), img.getHeight());
 		maxx = x + range - poly.getWidth();
 		minx = x;
@@ -41,21 +41,21 @@ public class Monstru extends Entitate {
 		moving = false;
 
 		// miscarea stanga - dreapta
-		
-		if( x >= maxx ){
-			dr=false;
-			moveSpeed=1;
+
+		if (x >= maxx) {
+			dr = false;
+			moveSpeed = 1;
 		}
-		if( x <= minx ){
-			dr=true ;
-			moveSpeed=1;
+		if (x <= minx) {
+			dr = true;
+			moveSpeed = 1;
 		}
-		
-		if(dr)
+
+		if (dr)
 			moveD();
 		else
 			moveS();
-		
+
 		if (!jumping && canjump) {
 			accel = accelIni;
 			jumping = true;
@@ -69,14 +69,10 @@ public class Monstru extends Entitate {
 		if (viataRate > 500)
 			viataRate = 0;
 
-		if (poly.intersects(player.getPoy()) && player.color == Color.blue
-				&& viataRate == 0) {
-			player.takeLife(9);
+		if (poly.intersects(player.getPoy()) && player.color == Color.blue&& viataRate == 0) {
+			player.takeLife(13);
 			viataRate = 1;
 		}
-
-		if (poly.intersects(player.getPoy()) && player.color == Color.green)
-			takeLife(1);// TODO debuding
 	}
 
 	private void moveD() {

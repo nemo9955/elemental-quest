@@ -2,6 +2,7 @@ package entity;
 
 import nivel.Obiecte;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -28,8 +29,8 @@ public class Shot extends Entitate {
 		}
 		else if(team >= 10){
 			this.team=7;
-			speed=6;
-			damage=1;
+			speed=7;
+			damage=2;
 			lifeTime=1600;
 			this.img = new Image ("res/entitati/shot_en.png");
 		}
@@ -91,7 +92,7 @@ public class Shot extends Entitate {
 	}
 	
 	private boolean hitPlayer(){
-		if(poly.intersects( player.poly )){
+		if(poly.intersects(player.poly) && player.color!=Color.green){
 			player.takeLife(damage);
 				return true;
 		}

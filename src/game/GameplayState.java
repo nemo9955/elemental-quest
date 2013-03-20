@@ -53,7 +53,7 @@ public class GameplayState extends BasicGameState {
 		curent=Main.NIVEL;
 		map = new TiledMap(Main.NIVEL);
 		blockmap = new BlockMap(map);
-		System.out.println(Main.NIVEL);
+//		System.out.println(Main.NIVEL);
 		prop.initProp(map,blockmap);
 		obi = new Obiecte(map,gc);
 		setEntit(new Entitate(player));
@@ -93,10 +93,10 @@ public class GameplayState extends BasicGameState {
 		if(player.poly.intersects(Obiecte.finish))
 			sb.enterState(Main.WINSTATE);
 		
-//		TODO debug tool
+/*		TODO debug tool
 		if(input.isKeyPressed(Input.KEY_F1))
 			System.out.println(camera.getX() + "  " + camera.getY() );
-//			System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
+//			System.out.println(input.get + "  " + input.getAbsoluteMouseY() );*/
 	}
 
 	@Override

@@ -37,7 +37,7 @@ public class WinState extends BasicGameState{
 
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
-		if(input.isKeyPressed(Input.KEY_SPACE))
+		if(input.isKeyDown(Input.KEY_SPACE))
 			sb.enterState(Main.MAINMENUSTATE);
 	}
 	

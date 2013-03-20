@@ -51,8 +51,4 @@ public class SplashState extends BasicGameState {
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
 		splash.draw(0,0);
 	}
-
-
-	
-
 }
