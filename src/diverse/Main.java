@@ -25,6 +25,7 @@ public class Main extends StateBasedGame{
 	
 	// declaram o variabila statica corespunzatoare fiecarui stagiu
 	public static String NIVEL = "res/level/nivel (1).tmx";
+	public static String mesaj ;
 	
 	public static final int SPLASH = 0;
 	public static final int MAINMENUSTATE = 1;
