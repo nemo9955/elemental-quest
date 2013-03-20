@@ -116,7 +116,7 @@ public class GameplayState extends BasicGameState {
 		renderHealthBar();
 		player.render(gc, g);
 	}
-
+	
 	private void renderHealthBar(){
 		// afla cat trebuie sa randeze din bara de viata
 		init= health.getWidth() - ( player.LifeLS() * health.getWidth() );

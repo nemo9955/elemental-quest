@@ -18,7 +18,6 @@ public class Player extends Entitate {
 	private Input input;
 	private boolean dre = true ;
 	private boolean ent = true ;
-
 	private int focRate = 1;
 
 	// constructorul principal al jucatorului din gamestate
@@ -79,7 +78,7 @@ public class Player extends Entitate {
 			ent=!ent;
 		}
 
-		if (input.isKeyPressed(Input.KEY_SPACE))
+		if (input.isKeyPressed(Input.KEY_F11))
 			if (color == Color.blue)
 				color = Color.green;
 			else

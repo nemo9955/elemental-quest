@@ -14,6 +14,7 @@ public class SplashState extends BasicGameState {
 
 	private Image splash = null ;
 	private int ID ;
+	private int delay =0;
 	
 	public int getID() {
 		return ID;
@@ -42,7 +43,8 @@ public class SplashState extends BasicGameState {
 
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
-		sb.enterState(Main.MAINMENUSTATE);
+		delay+=delta;
+		if(delay > 2000)sb.enterState(Main.MAINMENUSTATE);
 	}
 
 	@Override
