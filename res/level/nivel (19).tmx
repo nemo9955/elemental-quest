@@ -47,11 +47,6 @@
    eJzt3EEKwjAUQMFewvtfoXpC68KF6FsoSYkwA6F/mUAfZJV927brsW7H2s1m88v8+ALv9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9BW6ePyw4LZVukDVqQPaGf14a7EP5rZx6r//6r7Yj3uV9D0Ae3Zxxnv/I4yYw9nvXc8yoj9fDL7XCu8N/3tfAcaRRYJ
   </data>
  </layer>
- <layer name="void" width="200" height="30">
-  <data encoding="base64" compression="zlib">
-   eJzt3EEKwkAQAMH8Tv1t9IXmEhBJH4KrIVIFg3MKy0Bfnadpui/zWGa2n2Y/k6Nv9ck+f+Ee8A/0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBbe3jF//ze9mY6zK3nTPyDdcB39yzb91gz6zvHfGekXd4/9br7xF3Hrk/AVr+Bgw=
-  </data>
- </layer>
  <objectgroup color="#c80003" name="entitati" width="200" height="30">
   <object name="monstru" x="2076" y="860" width="808" height="52"/>
   <object name="player" x="324" y="819" width="66" height="70"/>
@@ -60,4 +55,9 @@
   <object name="monstru" x="2107" y="811" width="808" height="52"/>
   <object name="monstru" x="2061" y="761" width="808" height="52"/>
  </objectgroup>
+ <layer name="void" width="200" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt0bENADAIAzD+f6Kv9oQuaVhsiZWgMAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeSc0P/Jbtjt43ZLc1ei58ccLmI8mgw==
+  </data>
+ </layer>
 </map>

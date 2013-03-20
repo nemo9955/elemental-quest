@@ -48,7 +48,12 @@
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
-  <object name="player" x="2432" y="1374" width="66" height="70"/>
-  <object name="end" x="2822" y="1236" width="256" height="216"/>
+  <object name="player" x="1890" y="680" width="66" height="70"/>
+  <object name="end" x="2501" y="963" width="432" height="522"/>
  </objectgroup>
+ <layer name="void" width="100" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztz7EJADAIBED3XyKrprLTJiQI4Q4sff0IAAAAAAAAAAAAAAAAAAAAAAAA4HermJO9SVWHGz91OS86dx3yzgaaexAn
+  </data>
+ </layer>
 </map>
