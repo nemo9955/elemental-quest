@@ -12,7 +12,10 @@ public class Block {
 	public Block ( String prop , int pozX , int pozY ){
 //		System.out.println("Block " + pozX + " " + pozY);//TODO debug
 		this.prop=prop;
-		zon = new Rectangle (32*pozX+1 , 32*pozY , 31 , 31) ;
+		if(prop != "void")
+			zon = new Rectangle (32*pozX+1 , 32*pozY , 31 , 31) ;
+		else
+			zon = new Rectangle (32*pozX+2 , 32*pozY+1 , 29 , 29) ;
 		exist = true ;
 	}
 	

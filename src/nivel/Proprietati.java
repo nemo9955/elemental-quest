@@ -32,7 +32,7 @@ public class Proprietati{
 				gravMod = 1f;
 			}break;
 			case "2" : {
-				accelIni = 20f;
+				accelIni = 20.5f;
 				accelMod = 0.5f ;
 				gravMax = 20f;
 				gravMod = 1.2f;

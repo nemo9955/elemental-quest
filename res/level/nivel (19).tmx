@@ -44,15 +44,17 @@
  </layer>
  <layer name="solid" width="200" height="30">
   <data encoding="base64" compression="zlib">
-   eJzt3LENwCAQBEH6rwa7QuOAwLI2J5iRXlwDmzLHGNe6e920bfuz3xf40wc0fUDTBzR9QNMHNH1A0wc0fUDTBzR9QNMHNH1A0wc0fUDTBzR9QNMHNH1A0wc0fUDTBzR9QNMHNH1A0wc0fUDTB7Tdxyl/Adv2afsBWjU7Og==
+   eJzt3EEKwjAUQMFewvtfoXpC68KF6FsoSYkwA6F/mUAfZJV927brsW7H2s1m88v8+ALv9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9BW6ePyw4LZVukDVqQPaGf14a7EP5rZx6r//6r7Yj3uV9D0Ae3Zxxnv/I4yYw9nvXc8yoj9fDL7XCu8N/3tfAcaRRYJ
+  </data>
+ </layer>
+ <layer name="void" width="200" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt3EEKwkAQAMH8Tv1t9IXmEhBJH4KrIVIFg3MKy0Bfnadpui/zWGa2n2Y/k6Nv9ck+f+Ee8A/0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBbe3jF//ze9mY6zK3nTPyDdcB39yzb91gz6zvHfGekXd4/9br7xF3Hrk/AVr+Bgw=
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="200" height="30">
   <object name="monstru" x="2540" y="636" width="57" height="52"/>
   <object name="player" x="187" y="700" width="66" height="70"/>
   <object name="monstru" x="1820" y="840" width="57" height="52"/>
-  <object name="solaris" x="550" y="556" width="76" height="60"/>
-  <object name="solaris" x="200" y="376" width="76" height="60"/>
-  <object name="solaris" x="2468" y="494" width="76" height="60"/>
  </objectgroup>
 </map>

@@ -25,7 +25,7 @@ public class Solaris extends Entitate {
 		this.y=y;
 		poly = new Rectangle (x , y , img.getWidth() , img.getHeight());
 		this.team = 11 ;
-		this.viataMax = 110 ;
+		this.viataMax = 170 ;
 		this.viata = viataMax ;
 		Random zar =  new Random();
 		movex  = 7 + zar.nextInt( 5 );
