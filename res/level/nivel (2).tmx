@@ -48,6 +48,7 @@
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
-  <object name="player" x="2954" y="1464" width="66" height="70"/>
+  <object name="player" x="2432" y="1374" width="66" height="70"/>
+  <object name="end" x="2822" y="1236" width="256" height="216"/>
  </objectgroup>
 </map>

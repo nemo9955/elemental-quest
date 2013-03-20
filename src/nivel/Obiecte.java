@@ -35,7 +35,7 @@ public class Obiecte extends Entitate {
 			prop = map.getObjectName(0, i);
 			// TODO entitati
 			switch(prop){
-			case "monstru" : monstru.add(monstru.size() , new Monstru ( map.getObjectX(0, i) , map.getObjectY(0, i) )); break ;
+			case "monstru" : monstru.add(monstru.size() , new Monstru ( map.getObjectX(0, i), map.getObjectY(0, i) , map.getObjectWidth(0,i) )); break ;
 			case "solaris" : solaris.add(solaris.size() , new Solaris ( map.getObjectX(0, i) , map.getObjectY(0, i) )); break ;
 			case "player"  : GameplayState.player = new Player(map.getObjectX(0, i) , map.getObjectY(0, i) , gc) ; break;
 			case "end"     : finish = new Rectangle( map.getObjectX(0, i) , map.getObjectY(0, i) ,  map.getObjectWidth(0, i) , map.getObjectHeight(0, i));break;

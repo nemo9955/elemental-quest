@@ -16,14 +16,14 @@ public class BlockMap {
 
 		solidNo = map.getLayerIndex("solid");
 		voidNo = map.getLayerIndex("void");
-		System.out.println(voidNo);
+//		System.out.println(voidNo);
 		for (int j = 0; j < map.getHeight(); j++)
 			for (int i = 0; i < map.getWidth(); i++) {
 
-				if (voidNo>=0 && map.getTileId(i, j, voidNo) > 0 )
-					bloc[i][j] = new Block("void", i, j);
-				else if(solidNo>=0 && map.getTileId(i, j, solidNo) > 0)
+				if(solidNo>=0 && map.getTileId(i, j, solidNo) > 0)
 					bloc[i][j] = new Block("solid", i, j);
+				else if (voidNo>=0 && map.getTileId(i, j, voidNo) > 0 )
+					bloc[i][j] = new Block("void", i, j);
 				else
 					bloc[i][j] = new Block();
 

@@ -53,9 +53,11 @@
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="200" height="30">
-  <object name="monstru" x="2540" y="636" width="57" height="52"/>
-  <object name="player" x="187" y="700" width="66" height="70"/>
-  <object name="monstru" x="1820" y="840" width="57" height="52"/>
+  <object name="monstru" x="2076" y="860" width="808" height="52"/>
+  <object name="player" x="324" y="819" width="66" height="70"/>
+  <object name="monstru" x="1427" y="869" width="438" height="48"/>
   <object name="end" x="6329" y="328" width="19" height="591"/>
+  <object name="monstru" x="2107" y="811" width="808" height="52"/>
+  <object name="monstru" x="2061" y="761" width="808" height="52"/>
  </objectgroup>
 </map>
