@@ -15,6 +15,10 @@ public class SplashState extends BasicGameState {
 	private Image splash = null ;
 	private int ID ;
 	
+	public int getID() {
+		return ID;
+	}
+	
 	public SplashState(int ID){
 		this.ID=ID;
 	}
@@ -47,10 +51,6 @@ public class SplashState extends BasicGameState {
 	}
 
 
-	public int getID() {
-		return ID;
-	}
-	
 	
 
 }

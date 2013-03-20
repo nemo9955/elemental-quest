@@ -6,6 +6,7 @@ import nivel.Proprietati;
 import diverse.Main;
 import entity.Entitate;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -26,6 +27,7 @@ public class GameplayState extends BasicGameState {
 	public static TiledMap map;
 	public static Camera camera ;
 	private Image health;
+	private Image finFill;
 	private float init;
 	private float rap =0;
 	public static Proprietati prop ;
@@ -34,7 +36,7 @@ public class GameplayState extends BasicGameState {
 	private Obiecte obi ;
 	private Entitate entit ;
 	
-	public GameplayState(int ID , String harta) {
+	public GameplayState(int ID) {
 		this.ID=ID;
 	}
 
@@ -44,6 +46,7 @@ public class GameplayState extends BasicGameState {
 		input = gc.getInput();
 		prop = new Proprietati ();
 		firstT = true;
+		finFill = new Image ("res/finish_fill.png");
 	}
 	
 	public void startGen (GameContainer gc)throws SlickException {
@@ -87,6 +90,8 @@ public class GameplayState extends BasicGameState {
 		}
 		if(player.getViata() <= 0)
 			sb.enterState(Main.DEATHSTATE);
+		if(player.poly.intersects(Obiecte.finish))
+			sb.enterState(Main.WINSTATE);
 		
 //		TODO debug tool
 		if(input.isKeyPressed(Input.KEY_F1))
@@ -98,7 +103,8 @@ public class GameplayState extends BasicGameState {
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
 		camera.translate(g, player);
 		map.render(0, 0);
-		
+		g.setColor(Color.white);
+		g.texture(Obiecte.finish ,finFill );
 		//TODO entitati
 		for(int i=0 ; i<obi.getMonstru().size() ; i++)
 			Obiecte.monstru.get(i).render(gc, g);

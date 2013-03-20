@@ -56,5 +56,6 @@
   <object name="monstru" x="2540" y="636" width="57" height="52"/>
   <object name="player" x="187" y="700" width="66" height="70"/>
   <object name="monstru" x="1820" y="840" width="57" height="52"/>
+  <object name="end" x="6329" y="328" width="19" height="591"/>
  </objectgroup>
 </map>

@@ -15,7 +15,7 @@ public class Block {
 		if(prop != "void")
 			zon = new Rectangle (32*pozX+1 , 32*pozY , 31 , 31) ;
 		else
-			zon = new Rectangle (32*pozX+2 , 32*pozY+1 , 29 , 29) ;
+			zon = new Rectangle (32*pozX+10 , 32*pozY+10 , 10 , 10) ;
 		exist = true ;
 	}
 	

@@ -72,8 +72,11 @@ public class Physics extends Proprietati{
 				}
 				
 				if(grav > gravMax) grav=gravMax;
+				
+			
 	}
 	
+	//detectorul de coliziuni
 	public boolean colid(){
     	for(float i=x ; i<=x+poly.getWidth() ; i+=(int)poly.getWidth()/Math.ceil(poly.getWidth()/32) )
     		for(float j=y ; j<=y+poly.getHeight() ; j+=(int)poly.getHeight()/Math.ceil(poly.getHeight()/32) )
@@ -89,6 +92,7 @@ public class Physics extends Proprietati{
     	return false ;
     }
 	
+	// adapteaza pozitia jucatorului cand aterizeaza sau se loveste cu capul de ceva
 	 public void adapteaza(float cantitate){
 	    	while( !colid() ){
 				y+=cantitate;
@@ -139,7 +143,7 @@ public class Physics extends Proprietati{
 			switch(specie2){
 			case 1 : Obiecte.monstru.remove( this ); break;
 			case 2 : Obiecte.solaris.remove( this ); break;
-			case 3 : Obiecte.shot.remove( this )   ; break;
+			case 3 : Obiecte.shot.remove   ( this ); break;
 			}
 		}
 }

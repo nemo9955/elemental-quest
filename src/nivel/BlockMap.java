@@ -20,10 +20,10 @@ public class BlockMap {
 		for (int j = 0; j < map.getHeight(); j++)
 			for (int i = 0; i < map.getWidth(); i++) {
 
-				if (solidNo>=0 && map.getTileId(i, j, solidNo) > 0)
-					bloc[i][j] = new Block("solid", i, j);
-				else if(voidNo>=0 && map.getTileId(i, j, voidNo) > 0 )
+				if (voidNo>=0 && map.getTileId(i, j, voidNo) > 0 )
 					bloc[i][j] = new Block("void", i, j);
+				else if(solidNo>=0 && map.getTileId(i, j, solidNo) > 0)
+					bloc[i][j] = new Block("solid", i, j);
 				else
 					bloc[i][j] = new Block();
 

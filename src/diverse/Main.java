@@ -12,6 +12,7 @@ import states.DeathState;
 import states.GameMenuState;
 import states.MainMenuState;
 import states.SplashState;
+import states.WinState;
 
 public class Main extends StateBasedGame{
 
@@ -30,6 +31,7 @@ public class Main extends StateBasedGame{
     public static final int GAMEPLAYSTATE = 3;
     public static final int DEATHSTATE = 4;
     public static final int ALEGELVL = 5;
+    public static final int WINSTATE = 6;
     
 	
 	public Main(String name) {
@@ -51,10 +53,11 @@ public class Main extends StateBasedGame{
 	public void initStatesList(GameContainer gc) throws SlickException {
 		addState( new SplashState  ( SPLASH ) );
 		addState( new GameMenuState( GAMEMENUSTATE ) );
-		addState( new GameplayState( GAMEPLAYSTATE , null) );
+		addState( new GameplayState( GAMEPLAYSTATE ) );
 		addState( new MainMenuState( MAINMENUSTATE ) );
 		addState( new DeathState   ( DEATHSTATE    ) );
 		addState( new AlegeLVL     ( ALEGELVL      ) );
+		addState( new WinState     ( WINSTATE      ) );
 		 
 	}
 	

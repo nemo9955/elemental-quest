@@ -35,7 +35,7 @@ public class DeathState extends BasicGameState  {
 	@Override
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
 		death.draw(0,0);
-		g.drawString("Press SPACE to restart." , 300 , 300);
+//		g.drawString("Press SPACE to restart." , 300 , 300);
 	}
 	
 	

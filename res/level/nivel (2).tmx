@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="100" height="50" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
-  <property name="gravity" value="2"/>
+  <property name="gravity" value="1"/>
   <property name="speed" value="2"/>
  </properties>
  <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
@@ -44,27 +44,10 @@
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt29sKgkAUQNGBoqcuEPna/39mGpUVmCnOuI/uBYfoQgS7GcSsSilVDmrEYA8We7DYg8UeLPZgsQfLLtmD5JzsQWIPFnuw2IPFHiz2YPnV4/QYleP6YLEHiz3GuTxmavYYJ0eLhj1Ypurhcdg0puwRtQnpehD3KxZ7sKylR5Trz9bSI4qmx37uD6GXpfWIsi91WVqP6OzBErVH1XMbVdQeS5W7R+TzKHMgr48S547GvEfO7xe5B1HutW4PFkIP/+fYIvRQq6/HtdQH0d1c66PE728Rj7Pdr1jswVKyx5qPm/7l+mCxB0vuHu5Lwzx75LoeVcOsab86pc/z/9/3ux779Xjfc/88//6apsehnu1CZhN8jvXcAHLqGTc=
+   eJzt221rwjAUhuHAxqCwTZD16/7/z5xnmOm6NaltkzynuS8I4gsi3J5Qah1DCCNLakEDPbTQQws9tNBDCz3aGib36dHWtMdLoEcrQ/jb4xzo0cq0haFHG//NhqFHfXMtDD3qm2th6FFXajYMPepJdYhSPU7Xhe1ycxExH3UsaWHoUdbSuYjosc7HdaU82sLQY51UizUdInrsZwjbWpi9evR+HLa1Q7RnD69NlK4HYb/SQg8tvfTwcv1ZLz28sB6vrT8Efhyth5d9ac7RenhHDy1ee4yZW6+89jiq0j08n0dpQXk+apw7WvMeJb9fyj0UlZ51emhR6MH/HG8UeuAm1+Oz1gfBt1bzUeP3N4/H2exXWuihpWaPno+blmI+tNBDS+ke7EuPiT1y1wajjp72q1P4ff5/en/usdTjueeWPH//GuvxdlnPB1lPztf7ZX0B+4saKg==
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
-  <object name="solaris" x="216" y="1148" width="76" height="60"/>
-  <object name="monstru" x="649" y="1496" width="54" height="51"/>
-  <object name="solaris" x="2133" y="1439" width="73" height="83"/>
-  <object name="monstru" x="1324" y="1003" width="65" height="74"/>
-  <object name="monstru" x="1773" y="1494" width="29" height="32"/>
-  <object name="monstru" x="2540" y="636" width="57" height="52"/>
-  <object name="player" x="2164" y="592" width="66" height="70"/>
-  <object name="solaris" x="2361" y="1411" width="73" height="83"/>
-  <object name="monstru" x="52" y="1424" width="57" height="52"/>
-  <object name="monstru" x="1820" y="840" width="57" height="52"/>
-  <object name="monstru" x="1394" y="1412" width="57" height="52"/>
-  <object name="solaris" x="744" y="972" width="76" height="60"/>
-  <object name="solaris" x="550" y="556" width="76" height="60"/>
-  <object name="solaris" x="200" y="376" width="76" height="60"/>
-  <object name="solaris" x="1710" y="1198" width="76" height="60"/>
-  <object name="solaris" x="2024" y="1002" width="76" height="60"/>
-  <object name="solaris" x="2408" y="990" width="76" height="60"/>
-  <object name="solaris" x="2468" y="494" width="76" height="60"/>
+  <object name="player" x="2954" y="1464" width="66" height="70"/>
  </objectgroup>
 </map>
