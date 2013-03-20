@@ -16,6 +16,8 @@ public class Player extends Entitate {
 
 	public Color color = Color.blue;
 	private Input input;
+	private boolean dre = true ;
+	private boolean ent = true ;
 
 	private int focRate = 1;
 
@@ -24,7 +26,7 @@ public class Player extends Entitate {
 		super(player);
 		this.img = new Image("res/entitati/player.png");
 		this.x = x;
-		this.y = y;
+		this.y =y;
 		poly = new Rectangle(x, y, img.getWidth(), img.getHeight());
 		input = gc.getInput();
 		this.team = 5;
@@ -47,6 +49,7 @@ public class Player extends Entitate {
 
 		// dreapta
 		if (input.isKeyDown(Input.KEY_D)) {
+			dre=true;
 			x += moveSpeed;
 			poly.setX(x);
 			if (colid()) {
@@ -58,6 +61,7 @@ public class Player extends Entitate {
 		}
 		// stanga
 		if (input.isKeyDown(Input.KEY_A)) {
+			dre=false;
 			x -= moveSpeed;
 			poly.setX(x);
 			if (colid()) {
@@ -69,6 +73,11 @@ public class Player extends Entitate {
 		}
 		if (moveSpeed > moveSpeedMax)
 			moveSpeed = moveSpeedMax;
+		
+		if(dre != ent){
+			img=img.getFlippedCopy(true, false);
+			ent=!ent;
+		}
 
 		if (input.isKeyPressed(Input.KEY_SPACE))
 			if (color == Color.blue)
@@ -115,7 +124,7 @@ public class Player extends Entitate {
 	public void render(GameContainer gc, Graphics g) {
 		g.setColor(color);
 		g.setLineWidth(2);
-		g.draw(poly);
+		if(color==Color.green)g.draw(poly);
 		img.draw(x, y);
 	}
 

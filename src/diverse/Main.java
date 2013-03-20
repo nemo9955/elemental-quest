@@ -10,6 +10,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import states.AlegeLVL;
 import states.DeathState;
 import states.GameMenuState;
+import states.HelpState;
 import states.MainMenuState;
 import states.SplashState;
 import states.WinState;
@@ -32,6 +33,7 @@ public class Main extends StateBasedGame{
     public static final int DEATHSTATE = 4;
     public static final int ALEGELVL = 5;
     public static final int WINSTATE = 6;
+    public static final int HELPSTATE = 7;
     
 	
 	public Main(String name) {
@@ -58,6 +60,7 @@ public class Main extends StateBasedGame{
 		addState( new DeathState   ( DEATHSTATE    ) );
 		addState( new AlegeLVL     ( ALEGELVL      ) );
 		addState( new WinState     ( WINSTATE      ) );
+		addState( new HelpState     ( HELPSTATE     ) );
 		 
 	}
 	

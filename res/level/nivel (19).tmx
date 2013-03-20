@@ -39,7 +39,7 @@
  </tileset>
  <layer name="BG" width="200" height="30">
   <data encoding="base64" compression="zlib">
-   eJzt0zEKwgAABMH8H6I+2fTa74VMcUx/sOdxHK9rJ8kf39c+JP9a90kuW/dJLlv3SS5b90kuW/dJLlv3eRf99UzrPu+iv55p3Se5bN0nuWzdJ7ls3Se5bN0nuWzdJ7ls3Se5bN0nuWzdJ7ls3Se5bN0nuWzdJ7ls3Se5bN0nuWzdJ7ls3Se5bN0nuWzdJ7ls3Se5bN0nuWzdJ7nsF7YcDJw=
+   eJzt1UGKAkEQRcG+P+h4ZN00DKjr96VjUUQtiyIfeTuO4/46N5Jv/r3Og+RH6z7JZes+yWXrPsll6z7JZes+yWXrPn9F/3VN6z5/Rf91Tes+yWXrPsll6z7JZes+yWXrPsll6z7JZes+yWXrPsll6z7JZes+yWXrPsll6z7JZes+ues5I1eek7pP7nrerzwndZ/c9H8bC++p/4H8tj/qd9gfXPS81++wP8hN6z7JZes+yWXrPsllnwxsDJU=
   </data>
  </layer>
  <layer name="solid" width="200" height="30">
@@ -50,10 +50,22 @@
  <objectgroup color="#c80003" name="entitati" width="200" height="30">
   <object name="monstru" x="2076" y="860" width="808" height="52"/>
   <object name="player" x="324" y="819" width="66" height="70"/>
-  <object name="monstru" x="1427" y="869" width="438" height="48"/>
-  <object name="end" x="6329" y="328" width="19" height="591"/>
+  <object name="monstru" x="1408" y="864" width="438" height="48"/>
+  <object name="end" x="6287" y="295" width="55" height="367"/>
   <object name="monstru" x="2107" y="811" width="808" height="52"/>
   <object name="monstru" x="2061" y="761" width="808" height="52"/>
+  <object name="monstru" x="3556" y="825" width="438" height="48"/>
+  <object name="monstru" x="4193" y="828" width="180" height="57"/>
+  <object name="monstru" x="4402" y="831" width="180" height="57"/>
+  <object name="monstru" x="5038" y="816" width="293" height="54"/>
+  <object name="monstru" x="6053" y="849" width="293" height="54"/>
+  <object name="monstru" x="6050" y="803" width="293" height="54"/>
+  <object name="monstru" x="6038" y="752" width="293" height="54"/>
+  <object name="monstru" x="6053" y="849" width="293" height="54"/>
+  <object name="monstru" x="6050" y="803" width="293" height="54"/>
+  <object name="monstru" x="6050" y="803" width="293" height="54"/>
+  <object name="monstru" x="6050" y="803" width="293" height="54"/>
+  <object name="monstru" x="6047" y="861" width="293" height="54"/>
  </objectgroup>
  <layer name="void" width="200" height="30">
   <data encoding="base64" compression="zlib">

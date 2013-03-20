@@ -18,6 +18,9 @@ public class MainMenuState extends BasicGameState {
 	private int ID;
 	private ManipImg start ;
 	private ManipImg exit ;
+	private ManipImg help ;
+	private int pozx=70;
+	private int pozy=200;
 	
 	
 	public MainMenuState( int ID ) {
@@ -29,8 +32,9 @@ public class MainMenuState extends BasicGameState {
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input =gc.getInput();
 		bg = new Image("res/fundal.png");
-		start = new ManipImg( new Image("res/start.png") , 300 , 300) ;
-		exit = new ManipImg( new Image("res/exit.png") , 300 , 400) ;
+		start = new ManipImg( new Image("res/start.png") , pozx , pozy) ;
+		help  = new ManipImg( new Image("res/help.png") , pozx , pozy+100) ;
+		exit  = new ManipImg( new Image("res/exit.png") , pozx , pozy+200) ;
 	}
 	
 	@Override
@@ -44,10 +48,14 @@ public class MainMenuState extends BasicGameState {
 		if( start.inZon( input.getMouseX() , input.getMouseY() ) )
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
 				sb.enterState(Main.ALEGELVL);
-
+		
 		if(exit.inZon(input.getMouseX(), input.getMouseY()))
 			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
 				gc.exit();
+
+		if(help.inZon(input.getMouseX(), input.getMouseY()))
+			if( input.isMousePressed( Input.MOUSE_LEFT_BUTTON) )
+				sb.enterState(Main.HELPSTATE);
 
 	}
 	@Override
@@ -56,6 +64,7 @@ public class MainMenuState extends BasicGameState {
 		bg.draw(0,0);
 		start.render();
 		exit.render();
+		help.render();
 	}
 
 	public int getID() {

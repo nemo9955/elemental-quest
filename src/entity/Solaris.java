@@ -54,7 +54,7 @@ public class Solaris extends Entitate {
 		}
 		if(firerate != 0)
 			firerate += delta;
-		if(firerate > 100)
+		if(firerate > 90)
 			firerate = 0;
 	}
 	

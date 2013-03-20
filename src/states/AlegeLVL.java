@@ -1,6 +1,5 @@
 package states;
 
-import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -17,11 +16,13 @@ public class AlegeLVL extends BasicGameState  {
 	private int ID;
 	private ManipImg img[] = new ManipImg [20];
 	private Input input ;
+	private Image imgf ;
 
 	@Override
 	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
 		input=gc.getInput();
 		int index = 1 ;
+		imgf = new Image("res/lvl_pick.png");
 		for(float i=0 ; i<=gc.getWidth() ; i+=gc.getWidth()/5)
 			for(float j=0 ; j<=gc.getHeight() ; j+=gc.getHeight()/4){
 				if(index <= 20){
@@ -45,7 +46,7 @@ public class AlegeLVL extends BasicGameState  {
 	
 	@Override
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
-		g.setBackground(Color.white);
+		imgf.draw(0,0);
 		
 		for(int i=0 ; i<20 ; i++)
 			img[i].render();

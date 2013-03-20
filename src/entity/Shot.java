@@ -11,7 +11,7 @@ import org.newdawn.slick.geom.Rectangle;
 
 public class Shot extends Entitate {
 	
-	private int lifeTime = 1500 ;
+	private int lifeTime;
 	private float ang;
 	private boolean sus;
 	private int speed ;
@@ -22,13 +22,15 @@ public class Shot extends Entitate {
 		if(team == 5){
 			this.team = 6 ;
 			speed=10;
+			lifeTime=1500;
 			damage=35;
 			this.img = new Image ("res/entitati/shot_pl.png");
 		}
 		else if(team >= 10){
 			this.team=7;
 			speed=6;
-			damage=4;
+			damage=1;
+			lifeTime=1600;
 			this.img = new Image ("res/entitati/shot_en.png");
 		}
 		// ahh matematica asta
