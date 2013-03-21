@@ -35,7 +35,7 @@ public class WinState extends BasicGameState{
 	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
 		fin.draw(0,0);
 		g.setColor(Color.black);
-		g.drawString(Main.mesaj, 100, 500);
+		g.drawString(Main.mesaj, 70, 450);
 	}
 
 	@Override

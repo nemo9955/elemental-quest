@@ -94,23 +94,25 @@ public class GameplayState extends BasicGameState {
 			sb.enterState(Main.GAMEMENUSTATE);
 		}
 		if (player.getViata() <= 0) {
-			Main.mesaj = convTime("Ai rezistat eroic ");
+			Main.mesaj = convTime("Ai rezistat eroic");
 			sb.enterState(Main.DEATHSTATE);
 		}
-		if (player.poly.intersects(Obiecte.finish)) {
-			Main.mesaj = convTime("Ai terminat in doar ");
-			sb.enterState(Main.WINSTATE);
-		}
+		for (int i = 0; i < obi.getFinish().size(); i++)
+			if (player.poly.intersects(Obiecte.finish.get(i))) {
+				Main.mesaj = convTime("Ai terminat in doar");
+					sb.enterState(Main.WINSTATE );
+			}
 
 		/*
-		 * TODO debug tool if(input.isKeyPressed(Input.KEY_F1))
+		 * TODO debug tool
+		 * if(input.isKeyPressed(Input.KEY_F1))
 		 * System.out.println(camera.getX() + "  " + camera.getY() ); //
 		 * System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
 		 */
 	}
 
 	private String convTime(String beg){
-		System.out.println(time);
+//		System.out.println(time);
 		time/=1000;
 		if(time/60>=2){
 			if(time%60 >= 20)
@@ -142,7 +144,6 @@ public class GameplayState extends BasicGameState {
 		camera.translate(g, player);
 		map.render(0, 0);
 		g.setColor(Color.white);
-		g.texture(Obiecte.finish, finFill);
 		// TODO entitati
 		for (int i = 0; i < obi.getMonstru().size(); i++)
 			Obiecte.monstru.get(i).render(gc, g);
@@ -150,6 +151,8 @@ public class GameplayState extends BasicGameState {
 			Obiecte.solaris.get(i).render(gc, g);
 		for (int i = 0; i < obi.getShot().size(); i++)
 			Obiecte.shot.get(i).render(gc, g);
+		for (int i = 0; i < obi.getFinish().size(); i++)
+			g.texture(Obiecte.finish.get(i), finFill);
 
 		renderHealthBar();
 		player.render(gc, g);
