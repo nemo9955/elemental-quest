@@ -13,6 +13,7 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Vector2f;
+import org.newdawn.slick.imageout.ImageOut;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
@@ -35,6 +36,7 @@ public class GameplayState extends BasicGameState {
 	private Obiecte obi;
 	private Entitate entit;
 	public long time = 0;
+	private int poze =0;;
 
 	public GameplayState(int ID) {
 		this.ID = ID;
@@ -102,7 +104,16 @@ public class GameplayState extends BasicGameState {
 				Main.mesaj = convTime("Ai terminat in doar");
 					sb.enterState(Main.WINSTATE );
 			}
-
+		
+		 if (gc.getInput().isKeyPressed(Input.KEY_P)) {
+		        Image target = new Image(gc.getWidth(), gc.getHeight());
+		        gc.getGraphics().copyArea(target, 0, 0);
+		        String pozaTit = String.format("screenshot/screen %d.jpg",poze);
+		        ImageOut.write(target.getFlippedCopy(false, false),pozaTit , false);
+		        poze++;
+		        target.destroy();
+		    }
+		
 		/*
 		 * TODO debug tool
 		 * if(input.isKeyPressed(Input.KEY_F1))
