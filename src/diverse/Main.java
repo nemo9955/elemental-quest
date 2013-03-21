@@ -15,6 +15,14 @@ import states.MainMenuState;
 import states.SplashState;
 import states.WinState;
 
+/**
+ * 
+ * Lead Programer	Mogoi Adrian aka nemo9955
+ * Grafic designer	Caramete Elvis aka Keylos
+ * Level developer	Udrea Dragos aka dadu dad
+ * 
+ */  
+
 public class Main extends StateBasedGame{
 
 	private final static String titlu = "Elemental Quest" ;
@@ -68,5 +76,4 @@ public class Main extends StateBasedGame{
 	public static void setNivel(String nivel){
 		NIVEL=nivel;
 	}
-	
 }

@@ -27,7 +27,7 @@ public class Monstru extends Entitate {
 		maxx = x + range - poly.getWidth();
 		minx = x;
 		this.team = 10;
-		this.viataMax = 60;
+		this.viataMax = 70;
 		this.viata = viataMax;
 	}
 
@@ -66,7 +66,7 @@ public class Monstru extends Entitate {
 
 		if (viataRate > 0)
 			viataRate += delta;
-		if (viataRate > 500)
+		if (viataRate > 300)
 			viataRate = 0;
 
 		if (poly.intersects(player.getPoy()) && player.color == Color.blue&& viataRate == 0) {

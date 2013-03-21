@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="100" height="50" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
-  <property name="gravity" value="2"/>
-  <property name="speed" value="2"/>
+  <property name="gravity" value="3"/>
+  <property name="speed" value="3"/>
  </properties>
  <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
   <properties>
@@ -39,32 +39,38 @@
  </tileset>
  <layer name="BG" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJztm9EOgjAMRZdofFJJjLz6/58pQxEwgQ1Yt9v1nqQxglKy45oxt9Y51zKggmBAH1jQBxb0gQV9YEEfc54bQgL62N/GEm4uzq6PlO2Z6loPZ9OHZM05Utcs+pB0sZQrNp9VHyVyxuSlj7x5Q7mt+SjlIjY/fWDlX/PRfKMmNPuoEfrAgj6wSOVj7zMMfcxJOT8i8R1rPjw5n8+35kzlQ9s4LMfc+TRPLCl9aHMy4Nvr6HqQVP+RWKxXyNAHFlZ8aFl/ZsWHFryPa+mbID9q86GlLi1Rmw/t0AcWWn20gVetaPVRK9I+NM+jlAC5f+TYS7TnGpK/L2QfiEj3dfrAAsEH9zmOIPggIyEfr1w3QnpK9Y8c+7E1jrNZr7CgDyxy+rA8boqF/QML+sBC2gfr0jYGH6XXfZMPlupV4+bz///vl46tHQ+dizk//Yz3ceviXEmclMe9izce7h7C
+   eJztm9lOwzAQRa0WeAKCEHnl/z+zjdLSyHiNxzO38T3SCLUlcZTjGdtZZufczIAKggF9YEEfNnxFgj6woA8d/DyIYeFjculjsuSnIko4X+Olon3mR/05bt0uxZtr84Hc13NInk+pfX27MfNDul+H9h3af65+ofvokX89XcTaKm0P3UcPtFz4bfrthnKlpw/UscXCx73dXNsj5ocl9IFFyMd2nZjyMd1CE9QaJ8XWh/b4Qf7DeoXFKD6mSPi1T2putXcNs2yTuq54FB+lSF4fkd7m5NYxBdlHrN+3jPua6/PaNqXyQ3se1sqea+ct7ZQi6WOvk5N75Ooy/3u9hRbL+Wp9HqTlHknp+mNBej1w9PVFCr/fhRhtPEdnFB+x+6BW90djeWLlIzRmkNXHu/VBkD+kfKCM02h1qYRtnWB+YFHqA6X/Hx2t/Mit+Wp9z5m/6MTmMqxXWPT2YXGPEZWS53eR8yM3J5KYM+3ZR8/+hewDkd653uKDc656ctckJPNj7zUQvuf4gPUKi5yPX60DGRR/zmWVHxrvYz/jPJv1Cgv60Ce1JtT0MfK8qRTmBxb00ZfaNVlvH6xLddx9WL3DdSQkns8YqV5tn/0NfY59l/o+91vJ79v/WXx8uNXpEeL85PF5jQtRsiG8
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
   <object name="solaris" x="216" y="1148" width="76" height="60"/>
-  <object name="monstru" x="649" y="1496" width="54" height="51"/>
-  <object name="solaris" x="2133" y="1439" width="73" height="83"/>
-  <object name="monstru" x="1324" y="1003" width="65" height="74"/>
-  <object name="monstru" x="1773" y="1494" width="29" height="32"/>
-  <object name="monstru" x="2540" y="636" width="57" height="52"/>
+  <object name="monstru" x="579" y="1430" width="98" height="55"/>
+  <object name="solaris" x="2297" y="1357" width="73" height="83"/>
+  <object name="monstru" x="1188" y="1015" width="135" height="44"/>
+  <object name="monstru" x="1573" y="521" width="237" height="18"/>
+  <object name="monstru" x="2540" y="636" width="167" height="32"/>
   <object name="player" x="2164" y="592" width="66" height="70"/>
-  <object name="solaris" x="2361" y="1411" width="73" height="83"/>
-  <object name="monstru" x="52" y="1424" width="57" height="52"/>
-  <object name="monstru" x="1820" y="840" width="57" height="52"/>
-  <object name="monstru" x="1394" y="1412" width="57" height="52"/>
-  <object name="solaris" x="744" y="972" width="76" height="60"/>
+  <object name="solaris" x="2583" y="1159" width="73" height="83"/>
+  <object name="monstru" x="52" y="1424" width="175" height="30"/>
+  <object name="monstru" x="1792" y="850" width="149" height="34"/>
+  <object name="monstru" x="1394" y="1412" width="151" height="42"/>
+  <object name="solaris" x="710" y="882" width="76" height="60"/>
   <object name="solaris" x="550" y="556" width="76" height="60"/>
   <object name="solaris" x="200" y="376" width="76" height="60"/>
   <object name="solaris" x="1710" y="1198" width="76" height="60"/>
   <object name="solaris" x="2024" y="1002" width="76" height="60"/>
   <object name="solaris" x="2408" y="990" width="76" height="60"/>
   <object name="solaris" x="2468" y="494" width="76" height="60"/>
+  <object name="monstru" x="1252" y="504" width="271" height="32"/>
+  <object name="monstru" x="1255" y="555" width="238" height="17"/>
+  <object name="monstru" x="823" y="134" width="174" height="13"/>
+  <object name="monstru" x="1235" y="221" width="95" height="23"/>
+  <object name="end" x="2897" y="46" width="271" height="32"/>
+  <object name="end" x="1869" y="1498" width="271" height="32"/>
  </objectgroup>
 </map>

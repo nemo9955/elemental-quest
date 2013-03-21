@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="100" height="50" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
+<map version="1.0" orientation="orthogonal" width="300" height="50" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
-  <property name="gravity" value="2"/>
-  <property name="speed" value="2"/>
+  <property name="gravity" value="1"/>
+  <property name="speed" value="3"/>
  </properties>
  <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
   <properties>
@@ -37,28 +37,28 @@
  <tileset firstgid="175" name="stone textured" tilewidth="32" tileheight="32">
   <image source="stone_textured.png" width="192" height="160"/>
  </tileset>
- <layer name="BG" width="100" height="50">
+ <layer name="BG" width="300" height="50">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
- <layer name="solid" width="100" height="50">
+ <layer name="solid" width="300" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt29sKgkAUQNGBoqcuEPna/39mGpUVmCnOuI/uBYfoQgS7GcSsSilVDmrEYA8We7DYg8UeLPZgsQfLLtmD5JzsQWIPFnuw2IPFHiz2YPnV4/QYleP6YLEHiz3GuTxmavYYJ0eLhj1Ypurhcdg0puwRtQnpehD3KxZ7sKylR5Trz9bSI4qmx37uD6GXpfWIsi91WVqP6OzBErVH1XMbVdQeS5W7R+TzKHMgr48S547GvEfO7xe5B1HutW4PFkIP/+fYIvRQq6/HtdQH0d1c66PE728Rj7Pdr1jswVKyx5qPm/7l+mCxB0vuHu5Lwzx75LoeVcOsab86pc/z/9/3ux779Xjfc/88//6apsehnu1CZhN8jvXcAHLqGTc=
+   eJztnelu3DAMhJ2rv7YIEGSBNi36/o9ZB9kCW8O2Lh5Daj6AKLKHLVHkiJIS97osy5UGYQ8K9rja02rPq70MfPfsM5rt1ri2ltX4C8XOxm0bMy+F97af6fXL3ufuX/u2fOUJyUtNPJL5OIuHFl0u6VSPJh59lno1F0dxQuamVlO8oV4RQqJAvSKt/Oywj9V+rfZ78L4S10FCy1dZoV4RbSRz0CKvvTXEQvujQr0iURnN4xY9QNIO7/t7IqFXs/ouCyh5OAJKLWTtN437Wqzve/cSJOsr1rD4ZB+bjH3SpDcevOLIaj2YbU0eqc3RfR0ZBH9b5Z1FX1H2ryJqWEtN66HTUfyYmWgxjc5lwdCrPbLVZOSLmcd1ln5q8bbg6lUJiTjffq/WyDkza1It9EU7KOtBaxgrukTcGyH49OgV507iAVqMWbejdi2QmTO9er1ZBEpjSfLgcWYhMS/3fucotqXRqImlNRZ5PXjU15q9pswgnD2iINVXLR+e5SsiNfriCaJezZRvR8yuQ1pY+NSqHupFss/WMYmoVxF4v5kkUTTJYg0mmUvWfkUfv0+kNYt6hY20VqEjlfOaa9kMdaj1Ol9yTI+uIdl26hXZQypHrDQkqj71oKn1WnOR1NhI6VXrOeLeGl+LyPOtNRp1FP1ui9T8gjhu93o10saa333wOCup6ZPE/2uDAGqMZSbruQhqP870SvOsBKHvWUCMK5JTx7zZrge1zgw4NuNkncs9of9iIalXe2OPMv5R1nPUJD3o0/js7bdzHPVh7uhAvc/Np15dNq+h1kj/yBB/0dtfg8XvMGhrUqnmlb73DHExwp5eodESFxHWfTNxdN7Se61s9VLG86gWjW8dS0S9yhiXs4Nes1sSQaNQx8tar6zqaiKH5NhI1luRsDqLOrpPiyHrKGJ9VcO18C+RIeMcwrkxLlH1iuiRMZ/3+pStjzOgrVeRnlFK8lGjvZn0uWevO9IeDXJ9ZfG3ez3X8NBftLixorfPvbmGnsde7UHxAbJeaTHiZ89asbSPOnptRD1szQvEmmAU9D5Z6vtMeiV9zoUw10qctSHnwj0lXyP0AyEuMoOgV5rPbbGMG6847dWtqPm0bTN6P6hhciDo1QiIewzbtnnpVqld3nmDNl6WzNz3EUp69ceqIYlBikuU+3u3g8TEq76yeH4n8u9RIOWstp4i9bWVlr1khHlptL0Sptnn6OvB6ETNY0I8aNErb23VJks/ZsJyvPbu1WJkHMv6qma9dxZ7vXGJUssSPTh+c4C2HqSejDG7v2buey89virVmVqg6RWpB13Tvdvjff8RJNcC0tfxfB6Qtl7x+Z55kV5fa6zba75npWvclxjncrN374YQogz1IT5vi/160GueeV3+f77N9uej185eL71X8/5S8b4lDyf2uNrTas+rvXg1cHIijMlZDO21ubbdP1b7fvteBnsKbKUxbokBieuMtkeq7dvY1r6ft5XaNuoPDX9a+fjz723+AjSovXc=
   </data>
  </layer>
- <objectgroup color="#c80003" name="entitati" width="100" height="50">
+ <objectgroup color="#c80003" name="entitati" width="300" height="50">
   <object name="solaris" x="216" y="1148" width="76" height="60"/>
-  <object name="monstru" x="649" y="1496" width="54" height="51"/>
+  <object name="monstru" x="505" y="1443" width="160" height="35"/>
   <object name="solaris" x="2133" y="1439" width="73" height="83"/>
-  <object name="monstru" x="1324" y="1003" width="65" height="74"/>
-  <object name="monstru" x="1773" y="1494" width="29" height="32"/>
-  <object name="monstru" x="2540" y="636" width="57" height="52"/>
-  <object name="player" x="2164" y="592" width="66" height="70"/>
+  <object name="monstru" x="1261" y="1006" width="140" height="38"/>
+  <object name="monstru" x="1760" y="1459" width="120" height="24"/>
+  <object name="monstru" x="2130" y="608" width="208" height="27"/>
+  <object name="player" x="81" y="1460" width="66" height="70"/>
   <object name="solaris" x="2361" y="1411" width="73" height="83"/>
-  <object name="monstru" x="52" y="1424" width="57" height="52"/>
-  <object name="monstru" x="1820" y="840" width="57" height="52"/>
-  <object name="monstru" x="1394" y="1412" width="57" height="52"/>
+  <object name="monstru" x="476" y="1224" width="223" height="51"/>
+  <object name="monstru" x="1628" y="787" width="141" height="26"/>
+  <object name="monstru" x="1408" y="1453" width="187" height="42"/>
   <object name="solaris" x="744" y="972" width="76" height="60"/>
   <object name="solaris" x="550" y="556" width="76" height="60"/>
   <object name="solaris" x="200" y="376" width="76" height="60"/>
@@ -66,5 +66,51 @@
   <object name="solaris" x="2024" y="1002" width="76" height="60"/>
   <object name="solaris" x="2408" y="990" width="76" height="60"/>
   <object name="solaris" x="2468" y="494" width="76" height="60"/>
+  <object name="solaris" x="3629" y="1005" width="76" height="60"/>
+  <object name="solaris" x="3447" y="615" width="76" height="60"/>
+  <object name="monstru" x="5425" y="669" width="57" height="52"/>
+  <object name="solaris" x="5265" y="461" width="76" height="60"/>
+  <object name="solaris" x="4909" y="1035" width="76" height="60"/>
+  <object name="solaris" x="3085" y="409" width="76" height="60"/>
+  <object name="solaris" x="5018" y="1472" width="73" height="83"/>
+  <object name="solaris" x="5293" y="1023" width="76" height="60"/>
+  <object name="solaris" x="4595" y="1231" width="76" height="60"/>
+  <object name="monstru" x="4114" y="982" width="65" height="74"/>
+  <object name="solaris" x="5279" y="1369" width="73" height="83"/>
+  <object name="monstru" x="4673" y="1044" width="181" height="63"/>
+  <object name="solaris" x="3101" y="1181" width="76" height="60"/>
+  <object name="monstru" x="3534" y="1529" width="54" height="51"/>
+  <object name="monstru" x="4656" y="1515" width="226" height="15"/>
+  <object name="monstru" x="4279" y="1445" width="192" height="31"/>
+  <object name="monstru" x="3361" y="1257" width="57" height="52"/>
+  <object name="monstru" x="6316" y="1499" width="303" height="27"/>
+  <object name="solaris" x="6411" y="975" width="76" height="60"/>
+  <object name="monstru" x="7499" y="370" width="152" height="39"/>
+  <object name="monstru" x="5841" y="1273" width="479" height="60"/>
+  <object name="solaris" x="8138" y="136" width="76" height="60"/>
+  <object name="solaris" x="8061" y="1338" width="73" height="83"/>
+  <object name="solaris" x="7216" y="1108" width="76" height="60"/>
+  <object name="monstru" x="7009" y="1325" width="699" height="44"/>
+  <object name="solaris" x="7617" y="947" width="76" height="60"/>
+  <object name="solaris" x="6423" y="80" width="76" height="60"/>
+  <object name="solaris" x="5867" y="379" width="76" height="60"/>
+  <object name="monstru" x="7428" y="1485" width="375" height="24"/>
+  <object name="monstru" x="6961" y="669" width="164" height="47"/>
+  <object name="solaris" x="7800" y="1442" width="73" height="83"/>
+  <object name="solaris" x="5883" y="1151" width="76" height="60"/>
+  <object name="solaris" x="8075" y="993" width="76" height="60"/>
+  <object name="monstru" x="7138" y="46" width="580" height="37"/>
+  <object name="monstru" x="8442" y="418" width="164" height="44"/>
+  <object name="solaris" x="8871" y="987" width="76" height="60"/>
+  <object name="solaris" x="9148" y="123" width="76" height="60"/>
+  <object name="monstru" x="8957" y="1425" width="57" height="52"/>
+  <object name="solaris" x="8227" y="1159" width="73" height="83"/>
+  <object name="solaris" x="9435" y="811" width="76" height="60"/>
+  <object name="solaris" x="8359" y="339" width="76" height="60"/>
+  <object name="monstru" x="9294" y="1436" width="236" height="75"/>
+  <object name="solaris" x="8221" y="830" width="76" height="60"/>
+  <object name="end" x="9468" y="1168" width="102" height="400"/>
+  <object name="end" x="9426" y="93" width="126" height="118"/>
+  <object name="solaris" x="9369" y="1315" width="73" height="83"/>
  </objectgroup>
 </map>

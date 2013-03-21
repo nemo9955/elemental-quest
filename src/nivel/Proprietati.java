@@ -39,7 +39,7 @@ public class Proprietati{
 			}break;
 			case "3" : {
 				accelIni = 21f;
-				accelMod = 1f ;
+				accelMod = 0.6f ;
 				gravMax = 26f;
 				gravMod = 1.8f;
 			}break;
