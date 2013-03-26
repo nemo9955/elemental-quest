@@ -1,5 +1,9 @@
 package game;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import nivel.BlockMap;
 import nivel.Obiecte;
 import nivel.Proprietati;
@@ -36,7 +40,6 @@ public class GameplayState extends BasicGameState {
 	private Obiecte obi;
 	private Entitate entit;
 	public long time = 0;
-	private int poze =0;;
 
 	public GameplayState(int ID) {
 		this.ID = ID;
@@ -108,9 +111,10 @@ public class GameplayState extends BasicGameState {
 		 if (gc.getInput().isKeyPressed(Input.KEY_P)) {
 		        Image target = new Image(gc.getWidth(), gc.getHeight());
 		        gc.getGraphics().copyArea(target, 0, 0);
-		        String pozaTit = String.format("screenshot/screen %d.jpg",poze);
+		        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH,mm,ss");
+		        Date date = new Date();
+		        String pozaTit = String.format("screenshot/screen%s.jpg",dateFormat.format(date));
 		        ImageOut.write(target.getFlippedCopy(false, false),pozaTit , false);
-		        poze++;
 		        target.destroy();
 		    }
 		

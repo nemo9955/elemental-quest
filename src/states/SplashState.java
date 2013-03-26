@@ -44,7 +44,7 @@ public class SplashState extends BasicGameState {
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
 		delay+=delta;
-		if(delay > 2000)sb.enterState(Main.MAINMENUSTATE);
+		if(delay > 20)sb.enterState(Main.MAINMENUSTATE);
 	}
 
 	@Override
