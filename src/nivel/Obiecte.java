@@ -10,7 +10,6 @@ import org.newdawn.slick.tiled.TiledMap;
 
 import entity.Entitate;
 import entity.Monstru;
-import entity.Shot;
 import entity.Solaris;
 import game.GameplayState;
 import game.Player;
@@ -25,9 +24,7 @@ public class Obiecte extends Entitate {
 	
 	public Obiecte(TiledMap map , GameContainer gc) throws SlickException{
 		super(player);
-		monstru.clear();
-		solaris.clear();
-		shot.clear();
+		entit.clear();
 		finish.clear();
 		for(int i=0 ; i<map.getObjectCount(0) ; i++){
 			prop = map.getObjectName(0, i);

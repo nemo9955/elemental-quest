@@ -91,13 +91,8 @@ public class GameplayState extends BasicGameState {
 
 		ceva.upadte(gc, delta);
 		
-		// TODO entitati
-		for (int i = 0; i < obi.getMonstru().size(); i++)
-			Obiecte.monstru.get(i).upadte(gc, delta);
-		for (int i = 0; i < obi.getSolaris().size(); i++)
-			Obiecte.solaris.get(i).upadte(gc, delta);
-		for (int i = 0; i < obi.getShot().size(); i++)
-			Obiecte.shot.get(i).upadte(gc, delta);
+		for (Entitate entitate : Obiecte.entit)
+			entitate.upadte(gc, delta);
 
 		if (input.isKeyPressed(Input.KEY_ESCAPE)) {
 			player.setFocRate(1);
@@ -140,13 +135,8 @@ public class GameplayState extends BasicGameState {
 		
 		ceva.render(gc, g);
 		
-		// TODO entitati
-		for (int i = 0; i < obi.getMonstru().size(); i++)
-			Obiecte.monstru.get(i).render(gc, g);
-		for (int i = 0; i < obi.getSolaris().size(); i++)
-			Obiecte.solaris.get(i).render(gc, g);
-		for (int i = 0; i < obi.getShot().size(); i++)
-			Obiecte.shot.get(i).render(gc, g);
+		for (Entitate entitate : Obiecte.entit)
+			entitate.render(gc, g);
 		for (int i = 0; i < obi.getFinish().size(); i++)
 			g.texture(Obiecte.finish.get(i), finFill);
 

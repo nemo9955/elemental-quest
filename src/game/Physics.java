@@ -140,10 +140,6 @@ public class Physics extends Proprietati{
 		
 		// TODO entitati
 		protected void elimina(int specie2){
-			switch(specie2){
-			case 1 : Obiecte.monstru.remove( this ); break;
-			case 2 : Obiecte.solaris.remove( this ); break;
-			case 3 : Obiecte.shot.remove   ( this ); break;
-			}
+			Obiecte.entit.remove(this);
 		}
 }

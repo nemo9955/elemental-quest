@@ -115,7 +115,7 @@ public class Player extends Entitate {
 			ang = (float) Math.atan((poly.getCenterY() - my) / (poly.getCenterX() - mx));
 //			System.out.println(Math.toDegrees(ang));
 			sus = (my < poly.getCenterY()) ? true : false;
-			Obiecte.shot.add(new Shot (poly.getCenterX(), poly.getCenterY(), team , ang , sus));
+			Obiecte.entit.add(new Shot (poly.getCenterX(), poly.getCenterY(), team , ang , sus));
 			focRate = 1;
 		}
 	}
