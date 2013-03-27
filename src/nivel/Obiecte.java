@@ -20,9 +20,7 @@ public class Obiecte extends Entitate {
 	private String prop ;
 	
 	// TODO entitati
-	public static List<Monstru> monstru = new ArrayList<Monstru>();
-	public static List<Solaris> solaris = new ArrayList<Solaris>();
-	public static List<Shot> shot = new ArrayList<Shot>();
+	public static List<Entitate> entit = new ArrayList<Entitate>();
 	public static List<Rectangle> finish = new ArrayList<Rectangle>()  ;
 	
 	public Obiecte(TiledMap map , GameContainer gc) throws SlickException{
@@ -35,8 +33,8 @@ public class Obiecte extends Entitate {
 			prop = map.getObjectName(0, i);
 			// TODO entitati
 			switch(prop){
-			case "monstru" : monstru.add(monstru.size() , new Monstru ( map.getObjectX(0, i), map.getObjectY(0, i) , map.getObjectWidth(0,i) )); break ;
-			case "solaris" : solaris.add(solaris.size() , new Solaris ( map.getObjectX(0, i) , map.getObjectY(0, i) )); break ;
+			case "monstru" : entit.add(new Monstru ( map.getObjectX(0, i), map.getObjectY(0, i) , map.getObjectWidth(0,i) )); break ;
+			case "solaris" : entit.add(new Solaris ( map.getObjectX(0, i) , map.getObjectY(0, i) )); break ;
 			case "player"  : GameplayState.player = new Player(map.getObjectX(0, i) , map.getObjectY(0, i) , gc) ; break;
 			case "end"     : finish.add(new Rectangle( map.getObjectX(0, i) , map.getObjectY(0, i) ,  map.getObjectWidth(0, i) , map.getObjectHeight(0, i))); break ;
 			}
@@ -46,15 +44,7 @@ public class Obiecte extends Entitate {
 	}
 
 	// TODO entitati
-	public List<Monstru> getMonstru() {
-		return monstru;
-	}
-	public List<Solaris> getSolaris() {
-		return solaris;
-	}
-	public List<Shot> getShot() {
-		return shot;
-	}
+
 	public List<Rectangle> getFinish() {
 		return finish;
 	}

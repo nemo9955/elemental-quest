@@ -9,6 +9,7 @@ import nivel.Obiecte;
 import nivel.Proprietati;
 import diverse.Main;
 import entity.Entitate;
+import entity.Monstru;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -40,6 +41,7 @@ public class GameplayState extends BasicGameState {
 	private Obiecte obi;
 	private Entitate entit;
 	public long time = 0;
+	private Entitate ceva ;
 
 	public GameplayState(int ID) {
 		this.ID = ID;
@@ -52,6 +54,7 @@ public class GameplayState extends BasicGameState {
 		prop = new Proprietati();
 		firstT = true;
 		finFill = new Image("res/finish_fill.png");
+		ceva = new Monstru (800, 2300, 1000);
 	}
 
 	public void startGen(GameContainer gc) throws SlickException {
@@ -86,6 +89,8 @@ public class GameplayState extends BasicGameState {
 		time += delta;
 		player.update(delta, gc);
 
+		ceva.upadte(gc, delta);
+		
 		// TODO entitati
 		for (int i = 0; i < obi.getMonstru().size(); i++)
 			Obiecte.monstru.get(i).upadte(gc, delta);
@@ -125,6 +130,29 @@ public class GameplayState extends BasicGameState {
 		 * System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
 		 */
 	}
+	
+	@Override
+	public void render(GameContainer gc, StateBasedGame sb, Graphics g)
+			throws SlickException {
+		camera.translate(g, player);
+		map.render(0, 0);
+		g.setColor(Color.white);
+		
+		ceva.render(gc, g);
+		
+		// TODO entitati
+		for (int i = 0; i < obi.getMonstru().size(); i++)
+			Obiecte.monstru.get(i).render(gc, g);
+		for (int i = 0; i < obi.getSolaris().size(); i++)
+			Obiecte.solaris.get(i).render(gc, g);
+		for (int i = 0; i < obi.getShot().size(); i++)
+			Obiecte.shot.get(i).render(gc, g);
+		for (int i = 0; i < obi.getFinish().size(); i++)
+			g.texture(Obiecte.finish.get(i), finFill);
+
+		renderHealthBar();
+		player.render(gc, g);
+	}
 
 	private String convTime(String beg){
 //		System.out.println(time);
@@ -153,25 +181,6 @@ public class GameplayState extends BasicGameState {
 		}
 	}
 
-	@Override
-	public void render(GameContainer gc, StateBasedGame sb, Graphics g)
-			throws SlickException {
-		camera.translate(g, player);
-		map.render(0, 0);
-		g.setColor(Color.white);
-		// TODO entitati
-		for (int i = 0; i < obi.getMonstru().size(); i++)
-			Obiecte.monstru.get(i).render(gc, g);
-		for (int i = 0; i < obi.getSolaris().size(); i++)
-			Obiecte.solaris.get(i).render(gc, g);
-		for (int i = 0; i < obi.getShot().size(); i++)
-			Obiecte.shot.get(i).render(gc, g);
-		for (int i = 0; i < obi.getFinish().size(); i++)
-			g.texture(Obiecte.finish.get(i), finFill);
-
-		renderHealthBar();
-		player.render(gc, g);
-	}
 
 	private void renderHealthBar() {
 		// afla cat trebuie sa randeze din bara de viata

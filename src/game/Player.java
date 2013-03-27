@@ -85,7 +85,7 @@ public class Player extends Entitate {
 				color = Color.blue;
 
 		// TODO debug
-/*		if (input.isKeyPressed(Input.KEY_F1))
+		if (input.isKeyPressed(Input.KEY_F1))
 			System.out.println(x + "  " + y);
 		if (input.isKeyPressed(Input.KEY_F2))
 			System.out.println(poly.getWidth());
@@ -100,7 +100,7 @@ public class Player extends Entitate {
 			poly.setX(x);
 			y = 500;
 			poly.setY(y);
-		}*/
+		}
 
 		if (focRate > 0)
 			focRate += delta;

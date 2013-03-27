@@ -31,4 +31,7 @@ public class Entitate extends Physics {
 		g.setColor(Color.green);
 		g.drawRect(x, y-15,  LifeLS()*img.getWidth()  , 3);
 	}
+	
+	
+	
 }
