@@ -22,7 +22,6 @@ public class Physics extends Proprietati{
 	protected float cadee=0 ;
 	protected int viataMax = 100 ;
 	protected int viata = viataMax ;
-	protected int specie;
 
 	public void setPhysics(float accelIni, float accelMod, float gravMax, float gravMod,float moveSpeedMax, float moveSpeedMod) {
 		Physics.accelIni = accelIni;
@@ -122,7 +121,7 @@ public class Physics extends Proprietati{
 			viata-=x;
 			if(viata<=0){
 				viata=0;
-				elimina(specie);
+				elimina();
 			}
 		}
 		
@@ -139,7 +138,7 @@ public class Physics extends Proprietati{
 		}
 		
 		// TODO entitati
-		protected void elimina(int specie2){
+		protected void elimina(){
 			Obiecte.entit.remove(this);
 		}
 }

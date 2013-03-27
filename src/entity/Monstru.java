@@ -17,7 +17,6 @@ public class Monstru extends Entitate {
 
 	public Monstru(float x, float y, int range) throws SlickException {
 		super(player);
-		this.specie = 1;
 		this.img = new Image("res/entitati/monstru.png");
 		Random zar = new Random();
 		this.x = x + zar.nextInt(range);

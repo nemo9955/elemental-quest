@@ -41,12 +41,13 @@ public class Shot extends Entitate {
 		this.sus = sus;
 		// System.out.println(this.ang);
 
-		this.specie = 3;
 		this.x = x - img.getWidth() / 2;
 		this.y = y - img.getHeight() / 2;
 		poly = new Rectangle(this.x, this.y, img.getWidth(), img.getHeight());
 	}
-
+	
+	// Huston , avem o problema pe aici pe undeva
+	
 	public void upadte(GameContainer gc, int delta) {
 
 		if (sus) {
@@ -61,14 +62,14 @@ public class Shot extends Entitate {
 		poly.setX(x);
 		poly.setY(y);
 		if (colid() || lifeTime <= 0)
-			elimina(specie);
+			Obiecte.entit.remove(this);
 
 		if (team == 6) {
 			if (hitInamic())
-				elimina(specie);
+				elimina();
 		} else {
 			if (hitPlayer())
-				elimina(specie);
+				elimina();
 		}
 	}
 

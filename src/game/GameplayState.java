@@ -87,8 +87,8 @@ public class GameplayState extends BasicGameState {
 		player.update(delta, gc);
 
 		
-		for (Entitate entitate : Obiecte.entit)
-			entitate.upadte(gc, delta);
+		for (int i = 0; i < Obiecte.entit.size() ; i++)
+			Obiecte.entit.get(i).upadte(gc, delta);
 
 		if (input.isKeyPressed(Input.KEY_ESCAPE)) {
 			player.setFocRate(1);
@@ -130,8 +130,8 @@ public class GameplayState extends BasicGameState {
 		g.setColor(Color.white);
 		
 		
-		for (Entitate entitate : Obiecte.entit)
-			entitate.render(gc, g);
+		for (int i = 0; i < Obiecte.entit.size() ; i++)
+			Obiecte.entit.get(i).render(gc, g);
 		for (int i = 0; i < obi.getFinish().size(); i++)
 			g.texture(Obiecte.finish.get(i), finFill);
 

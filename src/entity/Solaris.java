@@ -19,7 +19,6 @@ public class Solaris extends Entitate {
 	
 	public Solaris(float x, float y) throws SlickException{
 		super(player);
-		this.specie=2;
 		this.img = new Image("res/entitati/solaris.png");
 		this.x=x;
 		this.y=y;
