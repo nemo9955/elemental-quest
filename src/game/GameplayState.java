@@ -9,7 +9,6 @@ import nivel.Obiecte;
 import nivel.Proprietati;
 import diverse.Main;
 import entity.Entitate;
-import entity.Monstru;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -41,7 +40,6 @@ public class GameplayState extends BasicGameState {
 	private Obiecte obi;
 	private Entitate entit;
 	public long time = 0;
-	private Entitate ceva ;
 
 	public GameplayState(int ID) {
 		this.ID = ID;
@@ -54,7 +52,6 @@ public class GameplayState extends BasicGameState {
 		prop = new Proprietati();
 		firstT = true;
 		finFill = new Image("res/finish_fill.png");
-		ceva = new Monstru (800, 2300, 1000);
 	}
 
 	public void startGen(GameContainer gc) throws SlickException {
@@ -89,7 +86,6 @@ public class GameplayState extends BasicGameState {
 		time += delta;
 		player.update(delta, gc);
 
-		ceva.upadte(gc, delta);
 		
 		for (Entitate entitate : Obiecte.entit)
 			entitate.upadte(gc, delta);
@@ -133,7 +129,6 @@ public class GameplayState extends BasicGameState {
 		map.render(0, 0);
 		g.setColor(Color.white);
 		
-		ceva.render(gc, g);
 		
 		for (Entitate entitate : Obiecte.entit)
 			entitate.render(gc, g);
