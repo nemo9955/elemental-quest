@@ -3,6 +3,8 @@ package entity;
 import game.Physics;
 import game.Player;
 
+import nivel.Obiecte;
+
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -14,7 +16,10 @@ public class Entitate extends Physics {
 	protected Image img ;
 	protected int team ;
 	
-	protected static Player player ;
+	public static Player player ;
+	protected int viataMax = 100 ;
+	protected int viata = viataMax ;
+
 	
 	public  Entitate(Player player){
 		Entitate.player=player;
@@ -32,6 +37,29 @@ public class Entitate extends Physics {
 		g.drawRect(x, y-15,  LifeLS()*img.getWidth()  , 3);
 	}
 	
+	public void takeLife(float x){
+		viata-=x;
+		if(viata<=0){
+			viata=0;
+			elimina();
+		}
+	}
 	
+	public float LifeLS(){
+		return (float) viata/viataMax ;
+	}
+	public float getViata(){
+		return viata ;
+	}
+	
+	public void addLife(int x){
+		viata+=x;
+		if(viata>viataMax)viata=viataMax;
+	}
+	
+	// TODO entitati
+	protected void elimina(){
+		Obiecte.entit.remove(this);
+	}
 	
 }

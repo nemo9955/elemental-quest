@@ -8,12 +8,15 @@ public class BlockMap {
 	private Block bloc[][];
 	private int solidNo;
 	private int voidNo;
+	private int mHeight;
+	private int mWidth;
 
 	// consctuctorul care salveaza fiecare obiect al clasei Block intr-o matrice
 	public BlockMap(TiledMap map) {
 
 		bloc = new Block[map.getWidth()][map.getHeight()];
-
+		mHeight=map.getHeight();
+		mWidth=map.getWidth();
 		solidNo = map.getLayerIndex("solid");
 		voidNo = map.getLayerIndex("void");
 //		System.out.println(voidNo);
@@ -33,6 +36,8 @@ public class BlockMap {
 
 	// functii / metode pentru accesarea informatiilor din matricea de blocuri
 	public boolean isBlock(int x, int y) {
+		if( x<0 || x>mWidth-1 || y<0 || y>mHeight-1)
+			return false;
 		return bloc[x][y].exists();
 	}
 

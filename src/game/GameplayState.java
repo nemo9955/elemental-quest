@@ -104,7 +104,7 @@ public class GameplayState extends BasicGameState {
 					sb.enterState(Main.WINSTATE );
 			}
 		
-		 if (gc.getInput().isKeyPressed(Input.KEY_P)) {
+		 if (input.isKeyPressed(Input.KEY_P)) {
 		        Image target = new Image(gc.getWidth(), gc.getHeight());
 		        gc.getGraphics().copyArea(target, 0, 0);
 		        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH,mm,ss");

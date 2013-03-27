@@ -54,7 +54,7 @@
   <object name="end" x="2987" y="37" width="175" height="85"/>
   <object name="monstru" x="1084" y="895" width="503" height="37"/>
   <object name="monstru" x="2540" y="636" width="57" height="52"/>
-  <object name="player" x="211" y="1168" width="66" height="70"/>
+  <object name="player" x="2370" y="64" width="66" height="70"/>
   <object name="solaris" x="2273" y="1291" width="73" height="83"/>
   <object name="monstru" x="76" y="1450" width="615" height="81"/>
   <object name="monstru" x="1637" y="841" width="252" height="31"/>

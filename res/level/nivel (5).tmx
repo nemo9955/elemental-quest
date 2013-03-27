@@ -44,11 +44,11 @@
  </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt0bEJA0EQBMG1ZEniEHz+qb7euRSujSoYf6CvmbksNRr0aNGjRY8WPVr0aNGj5TV6lPxGjxI9WvRo0aNFjxY9WvRo0aNFjxY9WvRo0aNFjxY9WvRo0aNFjxY9Wp4e79Mn2PRo0aNFjxY9WvRo0aNFjxY9WvRo0aNFjxY9WvRo0aNFjxY9WvRo0aNFjxY9WvRoeXp8Tp9g+/63Tp9gW6NHiR4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0bIstxtFRhjA
+   eJzt00EKAkEQBME+CYLKIOz/v6p7mRcIm0IE1L0h6WNmDkuNBj1a9GjRo0WPFj1a9Gi5jR4l79GjRI8WPVp+1eP+xyvxHy16tOjRokeLHi16tOjRokeLHi16tOjRokeLHi16tJw9HlcfwaZHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHix4terTo0aJHy9njefURbK/v1tVHsK3Ro0SPFj1a9GjRo0WPFj1a9GjRo0WPFj1a9GjRo0WPFj1a9GjRo0WPFj1a9GjRo0WPFj1a9GjRo0WPFj1a9GhZltsH1tgaZw==
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">
-  <object name="player" x="1423" y="2376" width="66" height="70"/>
+  <object name="player" x="1599" y="2276" width="66" height="70"/>
   <object name="monstru" x="2264" y="2334" width="132" height="63"/>
   <object name="solaris" x="392" y="1978" width="73" height="83"/>
   <object name="end" x="58" y="1650" width="195" height="861"/>
