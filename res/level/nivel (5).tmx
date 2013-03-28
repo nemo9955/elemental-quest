@@ -54,5 +54,6 @@
   <object name="end" x="58" y="1650" width="195" height="861"/>
   <object name="monstru" x="1114" y="2370" width="132" height="63"/>
   <object name="monstru" x="1920" y="2352" width="132" height="63"/>
+  <object name="health_add" x="1441" y="2357" width="48" height="49"/>
  </objectgroup>
 </map>
