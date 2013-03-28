@@ -1,5 +1,7 @@
 package items;
 
+import java.util.Random;
+
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -15,6 +17,8 @@ public class Item {
 	protected int time = 0;
 
 	public Item() {
+		Random zar = new Random();
+		time = zar.nextInt(360) ;
 	}
 
 	public void upadte(GameContainer gc, int delta) {
@@ -26,10 +30,11 @@ public class Item {
 	}
 
 	protected void MiscSinUD() {
-		time+=6;
-		if(time >= 360) time=0;
-		y +=  Math.sin(Math.toRadians(time));
-		System.out.println( Math.sin(Math.toRadians(time)));
+		time += 6;
+		if (time >= 360)
+			time = 0;
+		y += Math.sin(Math.toRadians(time));
+		// System.out.println( Math.sin(Math.toRadians(time)));
 	}
 
 }

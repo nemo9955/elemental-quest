@@ -18,7 +18,7 @@ import entity.Solaris;
 import game.GameplayState;
 import game.Player;
 
-public class Obiecte extends Entitate {
+public class Obiecte {
 	
 	private String prop ;
 	
@@ -27,7 +27,6 @@ public class Obiecte extends Entitate {
 	public static List<Item> items = new ArrayList<Item>()  ;
 	
 	public Obiecte(TiledMap map , GameContainer gc) throws SlickException{
-		super(player);
 		entit.clear();
 		finish.clear();
 		for(int i=0 ; i<map.getObjectCount(0) ; i++){
