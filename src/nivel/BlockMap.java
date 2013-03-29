@@ -38,14 +38,14 @@ public class BlockMap {
 			bloc[i][j] = new B_Void("void", i, j , id);
 			return;
 			
-		} else if (id > 0 && id < 175) {
+		} else if (id >= 1 ) {
 			
 			bloc[i][j] = new B_Solid("solid", i, j , id);
 			return;
 			
 		}
 		
-		bloc[i][j]=new Block (false);
+		bloc[i][j]=new Block (id);
 		
 	}
 

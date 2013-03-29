@@ -31,13 +31,10 @@
  <tileset firstgid="141" name="small_dark_tile" tilewidth="32" tileheight="32">
   <image source="small_dark_tile.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="145" name="stone darker" tilewidth="32" tileheight="32">
-  <image source="stone_darker.png" width="192" height="160"/>
- </tileset>
- <tileset firstgid="175" name="stone textured" tilewidth="32" tileheight="32">
+ <tileset firstgid="145" name="stone textured" tilewidth="32" tileheight="32">
   <image source="stone_textured.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="205" name="void" tilewidth="32" tileheight="32">
+ <tileset firstgid="175" name="void" tilewidth="32" tileheight="32">
   <image source="void.png" width="128" height="32"/>
  </tileset>
  <layer name="BG" width="100" height="50">
@@ -47,7 +44,7 @@
  </layer>
  <layer name="solid" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJztnN1ygjAQRjPTjle2Wqfc9v2fos+mOKRShpAfstlvyXdmdlRQjB52CSE6OOcGBlQQDOgDC/rAgj70uK5EDR+XaVtf0/1acS18TWk7Ut7Pb3/5+f26vezxEWpfr2j5oId1Qj6WNWmLk0v3QQ/b1MiPm4v7oIc0pH305OE3IWJI+ujFQyo5PnKOF0tS6hXRzw/yn9Y+ejpWlKCRH3QSRrNeaXtZG9dpGZptQuzvluxne/o0SCCeD1r4Pr+nqE1O/6qVFwQfsTyTcDFS0t9djmvXdoTgQ4ta5x+XCtvw0Md+5tdkpPo4UiDNB+H5ORb0gUUvPqzMP+vFhxVGH2ftRpA/jubDSl0KcTQf1qEPLKz6GCK3VrHq46hI+/DjKCQN5PxoMXZUOl9WCmQfiEjnOn1ggeCDv3N8geCDvIj5+GnVEPJEKz9aXH+z2M9mvcKCPrBo6aPnflMqzA8s6AMLaR+sS3l4H1LzUUkePdWr+f9erD0OLdtaHluXsn7+nNHHxyPeDxJvxuPzEXfJ3DC6
+   eJztnO1OwyAUhpto/KWuGvvXi/GGp16hxRSHBMpHOfBS3ic56VY6xvbkUErZlmmaFgZUEAzoAwv6wII+2jE7ooSPy1bXy/a4VMyZr8ltR8z76frtz6/LjnLEh699o9LKBz248fmw+6Q9HqZ4H/SwT4n8eJ3CPughDmkfI3n4iIgQkj5G8RBLio+U84VNTH9F2ucH+U9tHyOdK3JokR904kf5uBrxucbXGt/GdjbKzGPsfa4yXYerv2rtxTWvUzNKtMn+nk1vPpcqEMe7OXl/ZEyDBOL1YA/f59sWpUkZX9XyguAjlGcSLhQ54117Xru0IwQfrSh1/XEpUIeGPo5j3pORGuNIgbQehNfnWIzkw74mQGQUH72sPxvFRy8oH4+tG0H+OJuPXvolH2fz0Tv0gUWvPpbAtld69XFWpH3oeRQSB3J+1Jg7yl0vKwWyD0Skc50+sEDwwd853kDwQW6EfLzXagj5pVV+1Lj/1uM4m/0VFvSBRU0fI4+bYmF+YEEfWEj7YL+UhvYhtR6VpDFSf2X+74XruW/f3v5QWUy5eYzy8bTG/UnirvN4XuMHeMREww==
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="50">
@@ -71,9 +68,4 @@
   <object name="monstru" x="1108" y="67" width="309" height="31"/>
   <object name="monstru" x="594" y="60" width="445" height="52"/>
  </objectgroup>
- <layer name="viod" width="100" height="50">
-  <data encoding="base64" compression="zlib">
-   eJzt0bEJAAAIAzD/f86XPEFB0CWBbqVLIwAAAAAAAG5kk0lnssEPPwAAAAAAAAAAAAAAAMBeAf28FdY=
-  </data>
- </layer>
 </map>

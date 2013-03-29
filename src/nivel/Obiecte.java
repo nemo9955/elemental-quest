@@ -28,6 +28,7 @@ public class Obiecte {
 	
 	public Obiecte(TiledMap map , GameContainer gc) throws SlickException{
 		entit.clear();
+		items.clear();
 		finish.clear();
 		for(int i=0 ; i<map.getObjectCount(0) ; i++){
 			prop = map.getObjectName(0, i);

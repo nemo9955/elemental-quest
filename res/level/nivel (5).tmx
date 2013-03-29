@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="100" height="80" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
-  <property name="gravity" value="2"/>
+  <property name="gravity" value="1"/>
   <property name="speed" value="2"/>
  </properties>
  <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
@@ -37,14 +37,22 @@
  <tileset firstgid="175" name="void" tilewidth="32" tileheight="32">
   <image source="void.png" width="128" height="32"/>
  </tileset>
+ <tileset firstgid="179" name="tree2-final" tilewidth="32" tileheight="32">
+  <image source="tree2-final.png" width="256" height="256"/>
+ </tileset>
  <layer name="BG" width="100" height="80">
   <data encoding="base64" compression="zlib">
    eJztw0ENAAAMA6Hz/6jmTQgkrJqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrqP2heVoA=
   </data>
  </layer>
+ <layer name="FG" width="100" height="80">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1hDaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbn0AAAE=
+  </data>
+ </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt00sKwlAQRcE3EgSVILj/JfhZoWYSQsZCjlgFd95w6NsY42ap0aBHix4terTo0aJHix4th6FHyXXoUaJHix4t3+px/OGV+I8WPVr0aNGjRY8WPVr0aNGjRY8WPVr0aNGjRY8WPVrmHqe9j2ChR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR8vc47z3ESwun017H8FiGnqU6NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR8u/9LivtvVYbeu52tZrtW+ZLLc31gcirQ==
+   eJzt00dKRGEUBeE3EgSVRnD/exAMAyPmnHMWM5h24OlJz54giH/5uj448wvFHaqqasihJgZ7sNiDxR4s9mCxB4s9WHoqe5AMVvYgsQeLPVh+q0fvPx6J/8FiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPZgaffoK32EOuzBYg8We7DYg8UeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s7R79pY9Qx0DWKn2EOlqVPUjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7B0S4+RbDQby8YL3/KdbugxkU1mU9l0NpPNljzoG03vMZfNZwvZYraULWcr2WrBu+o0vcdatp5tZJvZVrad7WS7Be+q0/Qee9l+dpAdZkfZcXaSnRa8q07Te5xl59lFdpldZdfZTXZb7qxaTe/RdpfdZw/ZY/aUPWcvJY+q0Q092l6zt+w9+8g+y55Tq9XFG/7B/vKuL+Z9Tfo=
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">
@@ -56,5 +64,6 @@
   <object name="health_add" x="1397" y="2469" width="48" height="49"/>
   <object name="health_add" x="1338" y="2465" width="48" height="49"/>
   <object name="health_add" x="1271" y="2465" width="48" height="49"/>
+  <object name="solaris" x="2112" y="2350" width="73" height="83"/>
  </objectgroup>
 </map>

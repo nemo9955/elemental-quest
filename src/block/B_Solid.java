@@ -11,5 +11,4 @@ public class B_Solid extends Block {
 		exist=true;
 		zon = new Rectangle (32*pozX+1 , 32*pozY , 31 , 31) ;
 	}
-	
 }
