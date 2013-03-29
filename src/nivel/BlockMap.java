@@ -3,6 +3,9 @@ package nivel;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.tiled.TiledMap;
 
+import entity.Entitate;
+
+import block.B_Solid;
 import block.B_Void;
 import block.Block;
 
@@ -30,17 +33,32 @@ public class BlockMap {
 
 	private void blockTip(int id, int i, int j) {
 
-		if (id > 178 && id <= 182) {
-			bloc[i][j] = new B_Void("void", i, j);
+		if (id >= 175 && id <= 178) {
+			
+			bloc[i][j] = new B_Void("void", i, j , id);
 			return;
-		} else if (id > 0 && id <= 178) {
+			
+		} else if (id > 0 && id < 175) {
+			
+			bloc[i][j] = new B_Solid("solid", i, j , id);
 			return;
+			
 		}
-
-		bloc[i][j] = new Block();
+		
+		bloc[i][j]=new Block (false);
+		
 	}
 
 	// functii / metode pentru accesarea informatiilor din matricea de blocuri
+	
+	public int getId(int x, int y){
+		return bloc[x][y].getID();
+	}
+	
+	public void efect_block(int x, int y , Entitate ent){
+		bloc[x][y].efect(ent);
+	}
+	
 	public boolean isBlock(int x, int y) {
 		if (x < 0 || x > mWidth - 1 || y < 0 || y > mHeight - 1)
 			return false;

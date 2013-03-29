@@ -74,8 +74,7 @@ public class Physics extends Proprietati {
 				if (blockmap.isBlock((int) i / 32, (int) j / 32)) {
 					Rectangle rec = blockmap.getBlock((int) i / 32,(int) j / 32);
 					if (rec.intersects(poly)) {
-						if (blockmap.getProp((int) i / 32, (int) j / 32) == "void")
-							takeLifeFromEnt(100000f);
+						blockmap.efect_block((int) i / 32, (int) j / 32, (Entitate) this);
 						return true;
 					}
 				}
