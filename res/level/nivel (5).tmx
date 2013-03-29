@@ -16,7 +16,7 @@
   </properties>
   <image source="pipe.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="47" name="stone_darker" tilewidth="32" tileheight="32">
+ <tileset firstgid="47" name="stone darker" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
@@ -28,14 +28,14 @@
   </properties>
   <image source="decorations.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="141" name="small_dark_tile" tilewidth="32" tileheight="32">
+ <tileset firstgid="141" name="small dark tile" tilewidth="32" tileheight="32">
   <image source="small_dark_tile.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="145" name="stone darker" tilewidth="32" tileheight="32">
-  <image source="stone_darker.png" width="192" height="160"/>
- </tileset>
- <tileset firstgid="175" name="stone textured" tilewidth="32" tileheight="32">
+ <tileset firstgid="145" name="stone textured" tilewidth="32" tileheight="32">
   <image source="stone_textured.png" width="192" height="160"/>
+ </tileset>
+ <tileset firstgid="175" name="void" tilewidth="32" tileheight="32">
+  <image source="void.png" width="128" height="32"/>
  </tileset>
  <layer name="BG" width="100" height="80">
   <data encoding="base64" compression="zlib">
