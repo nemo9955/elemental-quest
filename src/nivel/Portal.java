@@ -15,20 +15,34 @@ public class Portal {
     private int to;
     private Random zar = new Random();
     private Color col;
+    private boolean canTele;
+    private int index;
 
     public Portal(int x, int y, int wi, int he, String index, String to) {
         port = new RoundedRectangle(x, y, wi, he, 100);
-        this.to = Integer.parseInt(to);
+        if( to == "" )
+            canTele = false;
+        else {
+            canTele = true;
+            this.to = Integer.parseInt(to);
+        }
+        this.index = Integer.parseInt(index);
         col = new Color(zar.nextInt(225), zar.nextInt(225), zar.nextInt(225));
     }
 
     public void update(GameContainer gc, int delta) {
-        if( port.contains(Player.player.getPoy().getCenterX(), Player.player.getPoy().getCenterY()) && !Player.player.isJustTele() ) {
-            Player.player.setX(Obiecte.portal.get(to).port.getCenterX());
-            Player.player.setY(Obiecte.portal.get(to).port.getCenterY());
-            Player.player.poly.setX( Player.player.getX() );
-            Player.player.poly.setY( Player.player.getY() );
-            Player.player.setJustTele(true);
+
+        if( index == Player.player.getPrevPort() )
+            if( !port.contains(Player.player.getPoy().getCenterX(), Player.player.getPoy().getCenterY()) )
+                Player.player.setInPortal(false);
+
+        if( port.contains(Player.player.getPoy().getCenterX(), Player.player.getPoy().getCenterY()) && Player.player.isInPortal() == false && canTele ) {
+            Player.player.setX(Obiecte.portal.get(to).port.getCenterX() - Player.player.poly.getWidth() / 2);
+            Player.player.setY(Obiecte.portal.get(to).port.getCenterY() - Player.player.poly.getHeight() / 2);
+            Player.player.poly.setX(Player.player.getX());
+            Player.player.poly.setY(Player.player.getY());
+            Player.player.setInPortal(true);
+            Player.player.setPrevPort(to);
         }
     }
 

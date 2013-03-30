@@ -133,16 +133,16 @@ public class GameplayState extends BasicGameState {
 		map.render(0, 0);
 		g.setColor(Color.white);
 		
-		
+		for (int i = 0; i < Obiecte.portal.size(); i++)
+		    Obiecte.portal.get(i).render(gc, g);
+
 		for (int i = 0; i < Obiecte.entit.size() ; i++)
 			Obiecte.entit.get(i).render(gc, g);
 		for (int i = 0; i < Obiecte.items.size() ; i++)
 			Obiecte.items.get(i).render(gc, g);
 		for (int i = 0; i < obi.getFinish().size(); i++)
 		    g.texture(Obiecte.finish.get(i), finFill);
-		for (int i = 0; i < Obiecte.portal.size(); i++)
-		    Obiecte.portal.get(i).render(gc, g);
-
+		
 		renderHealthBar();
 		player.render(gc, g);
 	}

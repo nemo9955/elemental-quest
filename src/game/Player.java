@@ -21,8 +21,8 @@ public class Player extends Entitate {
     private int focRate = 1;
     private int spikeRate = 0;
 
-    private boolean justTele = false;
-    private int teleRate = 0;
+    private boolean inPortal ;
+    private int prevPort ;
 
     // constructorul principal al jucatorului din gamestate
     public Player(float x, float y, GameContainer gc) throws SlickException {
@@ -103,12 +103,6 @@ public class Player extends Entitate {
         if( spikeRate > 0 ) spikeRate += delta;
         if( spikeRate > 500 ) spikeRate = 0;
 
-        if( justTele ) teleRate += delta;
-        if( teleRate > 2000 ) {
-            justTele = false;
-            teleRate = 0;
-        }
-
         if( input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON) && focRate == 0 ) {
             float ang, mx, my;
             boolean sus;
@@ -150,13 +144,13 @@ public class Player extends Entitate {
         viata += x;
         if( viata > 100 ) viata = 100;
     }
-
-    public boolean isJustTele() {
-        return justTele;
+    
+    public boolean isInPortal() {
+        return inPortal;
     }
-
-    public void setJustTele(boolean justTele) {
-        this.justTele = justTele;
+    
+    public void setInPortal(boolean inPortal) {
+        this.inPortal = inPortal;
     }
 
     public void takeLife(float x, String sursa) {
@@ -192,5 +186,13 @@ public class Player extends Entitate {
         if( viata < 0 ) {
             viata = 0;
         }
+    }
+
+    public int getPrevPort() {
+        return prevPort;
+    }
+
+    public void setPrevPort(int prevPort) {
+        this.prevPort = prevPort;
     }
 }
