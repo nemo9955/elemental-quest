@@ -6,6 +6,7 @@ import org.newdawn.slick.tiled.TiledMap;
 import entity.Entitate;
 
 import block.B_Solid;
+import block.B_Spike;
 import block.B_Void;
 import block.Block;
 
@@ -36,7 +37,7 @@ public class BlockMap {
     // aici verific tipul block-ului
     private void blockTip(int id, int i, int j, TiledMap map) {
         if( id <= 0 ) {
-            bloc[i][j] = new Block(id);
+            bloc[i][j] = new Block(false);
             return;
         }
 
@@ -45,11 +46,15 @@ public class BlockMap {
             if( map.getTileSet(p).contains(id) ) {
                 switch ( map.getTileSet(p).name ) {
                     case "void" :
-                        bloc[i][j] = new B_Void("void", i, j, id);
+                        bloc[i][j] = new B_Void("void", i, j);
+                        return;
+                        
+                    case "spike" :
+                        bloc[i][j] = new B_Spike("spike", i, j);
                         return;
 
                     default :
-                        bloc[i][j] = new B_Solid("solid", i, j, id);
+                        bloc[i][j] = new B_Solid("solid", i, j);
                         return;
                 }
             }
@@ -57,9 +62,6 @@ public class BlockMap {
 
     // functii / metode pentru accesarea informatiilor din matricea de blocuri
 
-    public int getId(int x, int y) {
-        return bloc[x][y].getID();
-    }
 
     public void efect_block(int x, int y, Entitate ent) {
         bloc[x][y].efect(ent);
@@ -76,6 +78,10 @@ public class BlockMap {
 
     public String getProp(int x, int y) {
         return bloc[x][y].getProp();
+    }
+
+    public boolean is_solid(int x, int y) {
+        return bloc[x][y].getSolis();
     }
 
 }

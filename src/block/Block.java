@@ -9,12 +9,12 @@ public class Block {
 	protected String prop ;
 	protected Rectangle zon ;
 	protected boolean exist = false ;
-	
-	protected int ID ;
+	protected boolean solid = true ;
+
 	
 	// constructor in caz ca blocul e solid
-	public Block(int id){
-		this.ID=id;
+	public Block(){
+		
 	}
 	
 	public Block(boolean exist){
@@ -24,11 +24,7 @@ public class Block {
 	// getters 
 	
 	public void efect(Entitate ent){
-		
-	}
-	
-	public int getID(){
-		return ID ;
+		// daca blocul are un efect special , va fi adaugat in clasa lui
 	}
 	
 	public String getProp() {
@@ -42,4 +38,8 @@ public class Block {
 	public boolean exists() {
 		return exist;
 	}
+
+    public boolean getSolis() {
+        return solid;
+    }
 }

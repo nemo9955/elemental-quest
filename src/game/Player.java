@@ -148,12 +148,20 @@ public class Player extends Entitate {
 		if (viata > 100)
 			viata = 100;
 	}
-
-	public void takeLife(float x) {
+    
+	public void takeLife(float x , String sursa) {
 		viata -= x;
+		
+		switch(sursa){
+		    case "spike"   : break;
+		    case "void"    : break;
+		    case "shot"    : break;
+		    case "cade"    : break;
+		    case "monstru" : break;
+		}
+		
 		if (viata < 0) {
 			viata = 0;
-
 		}
 	}
 }

@@ -78,7 +78,7 @@ public class Shot extends Entitate {
 		for (Entitate inamic : Obiecte.entit)
 			if (inamic.team >= 10)
 				if (poly.intersects(inamic.poly)) {
-					inamic.takeLife(damage);
+					inamic.takeLife(damage , "shot");
 					return true;
 				}
 
@@ -87,7 +87,7 @@ public class Shot extends Entitate {
 
 	private boolean hitPlayer() {
 		if (poly.intersects(player.poly) && player.color != Color.green) {
-			player.takeLife(damage);
+			player.takeLife(damage , "shot");
 			return true;
 		}
 		return false;

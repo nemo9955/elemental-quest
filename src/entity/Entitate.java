@@ -37,7 +37,7 @@ public class Entitate extends Physics {
 		g.drawRect(x, y-15,  LifeLS()*img.getWidth()  , 3);
 	}
 	
-	public void takeLife(float x){
+	public void takeLife(float x , String sursa){
 		viata-=x;
 		if(viata<=0){
 			viata=0;

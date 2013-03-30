@@ -68,8 +68,8 @@ public class Monstru extends Entitate {
 		if (viataRate > 300)
 			viataRate = 0;
 
-		if (poly.intersects(player.getPoy()) && player.color == Color.blue&& viataRate == 0) {
-			player.takeLife(13);
+		if (poly.intersects(player.getPoy()) && player.color == Color.blue && viataRate == 0) {
+			player.takeLife(13 , "monstru");
 			viataRate = 1;
 		}
 	}
