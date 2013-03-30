@@ -112,7 +112,7 @@ public class Player extends Entitate {
 			boolean sus;
 			mx = input.getMouseX() - GameplayState.camera.getX();
 			my = input.getMouseY() - GameplayState.camera.getY();
-			System.out.println( blockmap.getId((int) mx/32,(int) my/32) );
+//			System.out.println( blockmap.getId((int) mx/32,(int) my/32) );
 			ang = (float) Math.atan((poly.getCenterY() - my) / (poly.getCenterX() - mx));
 //			System.out.println(Math.toDegrees(ang));
 			sus = (my < poly.getCenterY()) ? true : false;

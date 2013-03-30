@@ -10,39 +10,39 @@
   </properties>
   <image source="stone.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="31" name="pipe" tilewidth="32" tileheight="32">
+ <tileset firstgid="31" name="void" tilewidth="32" tileheight="32">
+  <image source="void.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="35" name="pipe" tilewidth="32" tileheight="32">
   <properties>
    <property name="spike" value=""/>
   </properties>
   <image source="pipe.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="47" name="stone darker" tilewidth="32" tileheight="32">
+ <tileset firstgid="51" name="stone darker" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
   <image source="stone_darker.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="77" name="decorations" tilewidth="32" tileheight="32">
+ <tileset firstgid="81" name="decorations" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
   <image source="decorations.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="141" name="small dark tile" tilewidth="32" tileheight="32">
+ <tileset firstgid="145" name="small dark tile" tilewidth="32" tileheight="32">
   <image source="small_dark_tile.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="145" name="stone textured" tilewidth="32" tileheight="32">
+ <tileset firstgid="149" name="stone textured" tilewidth="32" tileheight="32">
   <image source="stone_textured.png" width="192" height="160"/>
- </tileset>
- <tileset firstgid="175" name="void" tilewidth="32" tileheight="32">
-  <image source="void.png" width="128" height="32"/>
  </tileset>
  <tileset firstgid="179" name="tree2-final" tilewidth="32" tileheight="32">
   <image source="tree2-final.png" width="256" height="256"/>
  </tileset>
  <layer name="BG" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJztw0ENAAAMA6Hz/6jmTQgkrJqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrqP2heVoA=
+   eJztw0ENAAAMA6Hz/6ziTQgkrJqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrqP6xH04A=
   </data>
  </layer>
  <layer name="FG" width="100" height="80">
@@ -52,7 +52,7 @@
  </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt00dKRGEUBeE3EgSVRnD/exAMAyPmnHMWM5h24OlJz54giH/5uj448wvFHaqqasihJgZ7sNiDxR4s9mCxB4s9WHoqe5AMVvYgsQeLPVh+q0fvPx6J/8FiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPZgaffoK32EOuzBYg8We7DYg8UeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s7R79pY9Qx0DWKn2EOlqVPUjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7B0S4+RbDQby8YL3/KdbugxkU1mU9l0NpPNljzoG03vMZfNZwvZYraULWcr2WrBu+o0vcdatp5tZJvZVrad7WS7Be+q0/Qee9l+dpAdZkfZcXaSnRa8q07Te5xl59lFdpldZdfZTXZb7qxaTe/RdpfdZw/ZY/aUPWcvJY+q0Q092l6zt+w9+8g+y55Tq9XFG/7B/vKuL+Z9Tfo=
+   eJzt00dKRGEUBeE3EgSVRnAD7n9qGBgx55yzmMG0A09PevYEQfzL1/XBmV8o7lBVVUMONTHYg8UeLPZgsQeLPVjswdJT2YNksLIHiT1Y7MHyWz16//FI/A8We7DYg8UeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHS7tHX+kj1GEPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPZgaffoL32EOgayVukj1NGq7EFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPZgsQeLPVjswWIPFnuw2IOlW3qMZKPZWDZe+JbvdEOPiWwym8qms5lstuRB32h6j7lsPlvIFrOlbDlbyVYL3lWn6T3WsvVsI9vMtrLtbCfbLXhXnab32Mv2s4PsMDvKjrOT7LTgXXWa3uMsO88ussvsKrvObrLbcmfVanqPtrvsPnvIHrOn7Dl7KXlUjW7o0faavWXv2Uf2WfacWq0u3vAP9pd3fQG1kEfK
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">

@@ -2,7 +2,6 @@ package block;
 
 import org.newdawn.slick.geom.Rectangle;
 
-
 public class B_Solid extends Block {
 	
 	public B_Solid(String prop, int pozX, int pozY , int id) {
