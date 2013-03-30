@@ -19,6 +19,7 @@ public class Player extends Entitate {
 	private boolean dre = true ;
 	private boolean ent = true ;
 	private int focRate = 1;
+	private int spikeRate = 0 ;
 
 	// constructorul principal al jucatorului din gamestate
 	public Player(float x, float y, GameContainer gc) throws SlickException {
@@ -102,10 +103,11 @@ public class Player extends Entitate {
 			poly.setY(y);
 		}
 
-		if (focRate > 0)
-			focRate += delta;
-		if (focRate > 200)
-			focRate = 0;
+        if( focRate > 0 )   focRate += delta;
+        if( focRate > 200 ) focRate = 0;
+
+        if( spikeRate > 0 )   spikeRate += delta;
+        if( spikeRate > 500 ) spikeRate = 0;
 
 		if (input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON) && focRate == 0) {
 			float ang, mx, my;
@@ -149,19 +151,38 @@ public class Player extends Entitate {
 			viata = 100;
 	}
     
-	public void takeLife(float x , String sursa) {
-		viata -= x;
-		
-		switch(sursa){
-		    case "spike"   : break;
-		    case "void"    : break;
-		    case "shot"    : break;
-		    case "cade"    : break;
-		    case "monstru" : break;
-		}
-		
-		if (viata < 0) {
-			viata = 0;
-		}
-	}
+    public void takeLife(float x, String sursa) {
+
+        switch ( sursa ) {
+
+            case "spike" :
+                if( spikeRate == 0 && color==Color.blue) {
+                    viata -= x;
+                    spikeRate = 1;
+                }
+                break;
+
+            case "void" :
+                viata -= x;
+                break;
+
+            case "shot" :
+                viata -= x;
+                moveSpeed = 0;
+                break;
+
+            case "cade" :
+                viata -= x;
+                
+                break;
+
+            case "monstru" :
+                viata -= x;
+                break;
+        }
+
+        if( viata < 0 ) {
+            viata = 0;
+        }
+    }
 }

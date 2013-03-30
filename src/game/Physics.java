@@ -68,11 +68,13 @@ public class Physics extends Proprietati {
         for( float i = x; i <= x + poly.getWidth(); i += (int) poly.getWidth() / Math.ceil(poly.getWidth() / 32) )
             for( float j = y; j <= y + poly.getHeight(); j += (int) poly.getHeight() / Math.ceil(poly.getHeight() / 32) ) {
                 if( blockmap.isBlock((int) i / 32, (int) j / 32) ) {
-                    Rectangle rec = blockmap.getBlock((int) i / 32, (int) j / 32);
-                    if( rec.intersects(poly) ) {
+                        Rectangle rec = blockmap.getBlock((int) i / 32, (int) j / 32);
+                        if( rec.intersects(poly) ) {
                         blockmap.efect_block((int) i / 32, (int) j / 32, (Entitate) this);
-                        return blockmap.is_solid((int) i / 32, (int) j / 32);
-                    }
+                        if( blockmap.is_solid((int) i / 32, (int) j / 32) )
+                            return true;
+                        }
+                    
                 }
             }
         return false;
@@ -91,7 +93,7 @@ public class Physics extends Proprietati {
 
     private void takeLifeFromEnt(float f) {
         Entitate en = (Entitate) this;
-        en.takeLife(f , "cade");
+        en.takeLife(f, "cade");
     }
 
     public float getX() {
