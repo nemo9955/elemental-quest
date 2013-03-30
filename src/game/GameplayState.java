@@ -90,7 +90,9 @@ public class GameplayState extends BasicGameState {
 		for (int i = 0; i < Obiecte.entit.size() ; i++)
 			Obiecte.entit.get(i).upadte(gc, delta);
 		for (int i = 0; i < Obiecte.items.size() ; i++)
-			Obiecte.items.get(i).upadte(gc, delta);
+		    Obiecte.items.get(i).upadte(gc, delta);
+		for (int i = 0; i < Obiecte.portal.size() ; i++)
+			Obiecte.portal.get(i).update(gc, delta);
 
 		if (input.isKeyPressed(Input.KEY_ESCAPE)) {
 			player.setFocRate(1);
@@ -137,7 +139,9 @@ public class GameplayState extends BasicGameState {
 		for (int i = 0; i < Obiecte.items.size() ; i++)
 			Obiecte.items.get(i).render(gc, g);
 		for (int i = 0; i < obi.getFinish().size(); i++)
-			g.texture(Obiecte.finish.get(i), finFill);
+		    g.texture(Obiecte.finish.get(i), finFill);
+		for (int i = 0; i < Obiecte.portal.size(); i++)
+		    Obiecte.portal.get(i).render(gc, g);
 
 		renderHealthBar();
 		player.render(gc, g);

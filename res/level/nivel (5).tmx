@@ -10,56 +10,53 @@
   </properties>
   <image source="stone.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="31" name="void" tilewidth="32" tileheight="32">
-  <image source="void.png" width="128" height="32"/>
- </tileset>
- <tileset firstgid="35" name="pipe" tilewidth="32" tileheight="32">
+ <tileset firstgid="31" name="pipe" tilewidth="32" tileheight="32">
   <properties>
    <property name="spike" value=""/>
   </properties>
   <image source="pipe.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="51" name="stone darker" tilewidth="32" tileheight="32">
+ <tileset firstgid="47" name="stone darker" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
   <image source="stone_darker.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="81" name="decorations" tilewidth="32" tileheight="32">
+ <tileset firstgid="77" name="decorations" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
   <image source="decorations.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="145" name="small dark tile" tilewidth="32" tileheight="32">
+ <tileset firstgid="141" name="small dark tile" tilewidth="32" tileheight="32">
   <image source="small_dark_tile.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="149" name="stone textured" tilewidth="32" tileheight="32">
+ <tileset firstgid="145" name="stone textured" tilewidth="32" tileheight="32">
   <image source="stone_textured.png" width="192" height="160"/>
  </tileset>
- <tileset firstgid="179" name="tree2-final" tilewidth="32" tileheight="32">
-  <image source="tree2-final.png" width="256" height="256"/>
+ <tileset firstgid="175" name="void" tilewidth="32" tileheight="32">
+  <image source="void.png" width="128" height="32"/>
  </tileset>
- <tileset firstgid="243" name="spike" tilewidth="32" tileheight="32">
-  <image source="spike.png" width="96" height="96"/>
+ <tileset firstgid="179" name="spike" tilewidth="32" tileheight="32">
+  <image source="deathtileseh9.png" width="512" height="512"/>
  </tileset>
  <layer name="BG" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJztw0ENAAAMA6Hz/6ziTQgkrJqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrqP6xH04A=
+   eJztw0ENAAAMA6Hz/6jmTQgkrJqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrqP2heVoA=
   </data>
  </layer>
  <layer name="FG" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T+1hDaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbn0AAAE=
+   eJzt0cEJACAQA8H035MdaE/68VrwkBnIP7AJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/Ge8PkCZZyuadKJJP7cJAAAAAEAHGw5oBwM=
   </data>
  </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt1M0KgkAYRuFZBUGFBN5AV19XWLRKiRELjaafmSNzHni38uFB2xBC61ATgz1Y7MFiDxZ7sNiDxR4sq2APkn2wB4k9WOzB8qse6wWPxO+DxR4s9mCxB4s9WOzBYg8We7DYg8UeLPZgsQeLPVjswdL32JQ+QgN7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHS99jW/oIDXbdmtJHaNAEe5DYg8UeLPZgsQeLPVjs8Z3zaM8u3Y6Jz7PHd85hvok98npuYQ8GeyyHPVjswWIPFnvkdZ1ZZI88jglLYY80n77nd9njPf/uENnjtVwdIntMy90hssejUh0ie9yVbDBmD06LXs09Sv+bptTW4zQaqUNUU4/YgaymHktgD5am4h0SlvOuG33FUuc=
+   eJzt1U1KAzEAR/G4EQSVQegFPYFHEE8gnqEu/Nq4FM+iHsWEMkMsRWdsJ3lD3g/+u9KGPDqzCiGsHGpisAeLPVjswWIPFnuw2IPlONiD5CLYg8QeLPZgOVSPkwWPxP8Hiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYgyX1OK19CA3swWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLKnHWe1DaHAe19U+hAZdsAeJPVjswWIPFnuw2IPFHvNax10djf+8PeaVelzbAyP1uLUHRupxYw+M1OPOHotlj3HeC/2OPVjssb+3uI+4z7ivPb/LHv+znrBL3+ezye/5Kd7zc9zLhPv+iz3GyTs8HPD+t9njd6U69OyxW94heSzQIrHHT9sdSrPHRs0GOXtwWiQt96j9bNqltR732Ugdei316DuQtdRjCezB0jW81wkrea5vcGNIpw==
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">
-  <object name="player" x="1599" y="2276" width="66" height="70"/>
+  <object name="player" x="1664" y="2276" width="66" height="70"/>
   <object name="solaris" x="392" y="1978" width="73" height="83"/>
   <object name="end" x="58" y="1650" width="195" height="861"/>
   <object name="monstru" x="1114" y="2370" width="132" height="63"/>
@@ -67,5 +64,22 @@
   <object name="health_add" x="1397" y="2469" width="48" height="49"/>
   <object name="health_add" x="1338" y="2465" width="48" height="49"/>
   <object name="health_add" x="1271" y="2465" width="48" height="49"/>
+ </objectgroup>
+ <objectgroup color="#ffff33" name="portal" width="100" height="80">
+  <object name="0" type="3" x="939" y="2398" width="78" height="116">
+   <ellipse/>
+  </object>
+  <object name="1" type="2" x="1990" y="2485" width="171" height="65">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="2" type="0" x="1537" y="2268" width="86" height="137">
+   <ellipse/>
+  </object>
+  <object name="3" type="0" x="2894" y="2108" width="85" height="117">
+   <ellipse/>
+  </object>
  </objectgroup>
 </map>
