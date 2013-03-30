@@ -112,4 +112,12 @@ public class Physics extends Proprietati {
         this.y = y;
     }
 
+    public float getCadee() {
+        return cadee;
+    }
+
+    public void setCadee(float cadee) {
+        this.cadee = cadee;
+    }
+
 }

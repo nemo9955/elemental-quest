@@ -55,7 +55,7 @@
  </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt2U1OwkAcQPHpxsTPNCZcxCt6AQ8B6tq7eASP4EY3DiE2QDqlU5j2Qd8v+S+QNDS+DJ2WRQhh4aBGDPZgsQeLPVjswWIPFnuwXAV7kDwGe5DYg8UeLKfqcX3GQ+L6YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7Cse9xNfRJq2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPYo4yfOb8frFHuUcVOFcFulX6fYg2Xd437qk1DjIU499UmoUQd7kFx6j777GspnXHqPvvuasT8j1fDSe1ClGtqDxR4sc+9R8nr/GWeZeczce5S83n8Fe6SMse/d9x3skVJqHRzq3NWj7di59Cilq/NztenxlHi/7Vh7sNiDxR4s9mCxxzDLjHnJ2NfZI8/2/zm1r1rFv7/GeYvznrnHtkc/fToMsX8PYo9u2x2GOHS/uH8PYo92p1oPuc8F7LHr2PVwLHtslLg2DGGP6daDzxN3Tf3d5PPEeG+wNWN1yPntZU49/juMLWePNace58AeLPWM5yNjxjyvP6E6XvM=
+   eJzt2U1OwkAcQPFhY+JniAlncO8VvYCHwI+1d/EIHsGNbhxCaGrDlE5h2kf7fsl/gaSh8WXotKxCCCsHNWKwB4s9WOzBYg8We7DYg+Ui2IPkPtiDxB4s9mA5VY/LMx4S1weLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDZdPjZuyTUMUeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxRxk/cX5bXqfYo4yrRQjXi/TrFHuwbHrcjn0SqtzFWY59Eqosgz1Ipt6j676G8hlT79F1XzP0Z6QaTr0HVaqhPVjswTL3HiWv959x1pnHzL1Hyev9V7BHyhD73qbvYI+UUuvgUOe2HvuOnUuPUto6Py22PR4T7+871h4s9mCxB4s9WOzRzzpjnjP2dfbIU/8/p/ZVL/Hvr3He4rxn7rHt0U2XDn0070Hs0a7eoY9D94vNexB77Heq9ZD7XMAe/x27Ho5lj60S14Y+7DHeesh9nvjQcc7V2N9NPk+M9wa1GapDzm8vc+qx6zC0nD3WnHqcA3uwLGc8Hxkz5Hn9AapQYHk=
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">
@@ -69,7 +69,7 @@
   <object name="health_add" x="1271" y="2465" width="48" height="49"/>
  </objectgroup>
  <objectgroup color="#ffff33" name="portal" width="100" height="80">
-  <object name="0" type="2" x="819" y="2194" width="112" height="214">
+  <object name="0" type="2" x="1152" y="109" width="112" height="214">
    <ellipse/>
   </object>
   <object name="1" type="2" x="1990" y="2485" width="171" height="65">

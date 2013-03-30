@@ -7,6 +7,7 @@ import entity.Entitate;
 
 import block.B_Solid;
 import block.B_Spike;
+import block.B_Stopper;
 import block.B_Void;
 import block.Block;
 
@@ -51,6 +52,10 @@ public class BlockMap {
                         
                     case "spike" :
                         bloc[i][j] = new B_Spike("spike", i, j);
+                        return;
+                        
+                    case "stopper" :
+                        bloc[i][j] = new B_Stopper("stopper", i, j);
                         return;
 
                     default :
