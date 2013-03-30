@@ -38,7 +38,10 @@
   <image source="void.png" width="128" height="32"/>
  </tileset>
  <tileset firstgid="179" name="spike" tilewidth="32" tileheight="32">
-  <image source="deathtileseh9.png" width="512" height="512"/>
+  <image source="spike.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="435" name="arrows" tilewidth="32" tileheight="32">
+  <image source="arrows.png" width="512" height="512"/>
  </tileset>
  <layer name="BG" width="100" height="80">
   <data encoding="base64" compression="zlib">
@@ -47,12 +50,12 @@
  </layer>
  <layer name="FG" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt0cEJACAQA8H035MdaE/68VrwkBnIP7AJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/Ge8PkCZZyuadKJJP7cJAAAAAEAHGw5oBwM=
+   eJzt10EJwDAQBMBr/BtIHbQm4iECqqX55NlnSThmFCwsLGwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwN6eY3WCHGqJOMvqFEzX6OLWBwl0Gw0A8Dt/bi/+3LfmHwCk8QK5XweP
   </data>
  </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt1U1KAzEAR/G4EQSVQegFPYFHEE8gnqEu/Nq4FM+iHsWEMkMsRWdsJ3lD3g/+u9KGPDqzCiGsHGpisAeLPVjswWIPFnuw2IPlONiD5CLYg8QeLPZgOVSPkwWPxP8Hiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYgyX1OK19CA3swWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLKnHWe1DaHAe19U+hAZdsAeJPVjswWIPFnuw2IPFHvNax10djf+8PeaVelzbAyP1uLUHRupxYw+M1OPOHotlj3HeC/2OPVjssb+3uI+4z7ivPb/LHv+znrBL3+ezye/5Kd7zc9zLhPv+iz3GyTs8HPD+t9njd6U69OyxW94heSzQIrHHT9sdSrPHRs0GOXtwWiQt96j9bNqltR732Ugdei316DuQtdRjCezB0jW81wkrea5vcGNIpw==
+   eJzt2U1OwkAcQPHpxsTPNCZcxCt6AQ8B6tq7eASP4EY3DiE2QDqlU5j2Qd8v+S+QNDS+DJ2WRQhh4aBGDPZgsQeLPVjswWIPFnuwXAV7kDwGe5DYg8UeLKfqcX3GQ+L6YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7Cse9xNfRJq2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9WOzBYg8We7DYg8UeLPYo4yfOb8frFHuUcVOFcFulX6fYg2Xd437qk1DjIU499UmoUQd7kFx6j777GspnXHqPvvuasT8j1fDSe1ClGtqDxR4sc+9R8nr/GWeZeczce5S83n8Fe6SMse/d9x3skVJqHRzq3NWj7di59Cilq/NztenxlHi/7Vh7sNiDxR4s9mCxxzDLjHnJ2NfZI8/2/zm1r1rFv7/GeYvznrnHtkc/fToMsX8PYo9u2x2GOHS/uH8PYo92p1oPuc8F7LHr2PVwLHtslLg2DGGP6daDzxN3Tf3d5PPEeG+wNWN1yPntZU49/juMLWePNace58AeLPWM5yNjxjyvP6E6XvM=
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">
