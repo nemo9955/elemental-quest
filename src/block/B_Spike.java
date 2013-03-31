@@ -6,7 +6,6 @@ import entity.Entitate;
 
 public class B_Spike extends Block {
     
-    
     public B_Spike(String prop, int pozX, int pozY ) {
         super();
         solid=false;

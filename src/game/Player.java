@@ -154,7 +154,9 @@ public class Player extends Entitate {
     }
 
     public void takeLife(float x, String sursa) {
-
+        
+        
+        
         switch ( sursa ) {
 
             case "spike" :
@@ -175,7 +177,6 @@ public class Player extends Entitate {
 
             case "cade" :
                 viata -= x;
-
                 break;
 
             case "monstru" :

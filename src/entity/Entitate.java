@@ -57,9 +57,49 @@ public class Entitate extends Physics {
 		if(viata>viataMax)viata=viataMax;
 	}
 	
-	// TODO entitati
 	protected void elimina(){
 		Obiecte.entit.remove(this);
 	}
+	
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public float getCadee() {
+        return cadee;
+    }
+
+    public void setCadee(float cadee) {
+        this.cadee = cadee;
+    }
+    
+    public float getGrav() {
+        return grav;
+    }
+
+    public void setGrav(float grav) {
+        this.grav = grav;
+    }
+
+    public float getAccel() {
+        return accel;
+    }
+
+    public void setAccel(float accel) {
+        this.accel = accel;
+    }
+
 	
 }

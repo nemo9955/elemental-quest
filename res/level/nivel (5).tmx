@@ -43,6 +43,9 @@
  <tileset firstgid="435" name="arrows" tilewidth="32" tileheight="32">
   <image source="arrows.png" width="512" height="512"/>
  </tileset>
+ <tileset firstgid="691" name="stopper" tilewidth="32" tileheight="32">
+  <image source="stopper.png" width="125" height="32"/>
+ </tileset>
  <layer name="BG" width="100" height="80">
   <data encoding="base64" compression="zlib">
    eJztw0ENAAAMA6Hz/6jmTQgkrJqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrqP2heVoA=
@@ -55,13 +58,13 @@
  </layer>
  <layer name="solid" width="100" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt2U1OwkAcQPFhY+JniAlncO8VvYCHwI+1d/EIHsGNbhxCaGrDlE5h2kf7fsl/gaSh8WXotKxCCCsHNWKwB4s9WOzBYg8We7DYg+Ui2IPkPtiDxB4s9mA5VY/LMx4S1weLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDZdPjZuyTUMUeLPZgsQeLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxRxk/cX5bXqfYo4yrRQjXi/TrFHuwbHrcjn0SqtzFWY59Eqosgz1Ipt6j676G8hlT79F1XzP0Z6QaTr0HVaqhPVjswTL3HiWv959x1pnHzL1Hyev9V7BHyhD73qbvYI+UUuvgUOe2HvuOnUuPUto6Py22PR4T7+871h4s9mCxB4s9WOzRzzpjnjP2dfbIU/8/p/ZVL/Hvr3He4rxn7rHt0U2XDn0070Hs0a7eoY9D94vNexB77Heq9ZD7XMAe/x27Ho5lj60S14Y+7DHeesh9nvjQcc7V2N9NPk+M9wa1GapDzm8vc+qx6zC0nD3WnHqcA3uwLGc8Hxkz5Hn9AapQYHk=
+   eJzt2VtKw0AYQOGpD4JXitCNuEU34CLq5VnrUlyCS/BFX5xSjDFk0kzaJKfN+eAHo4QGD2MmcRFCWDioEYM9WOzBYg8We7DYg8UeLKfBHiQ3wR4k9mCxB8u+epwd8JC4PljswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s6x6XY1+ECvZgsQeLPVjswWIPFnuw2IPFHiz2YLEHiz1Y7MFiDxZ7sNiDxR4s9mCxB4s9+vEV57vhOMUe/TifhXAxSx+n2INl3eNq7ItQ4TrOfOyLUGEe7EFy7D3a7mson3HsPdrua4b+jFTDY+9BlWpoDxZ7sEy9R5/3+/c4y8xzpt6jz/v9R7BHyhD73qrPYI+UvtbBts5NPerOnUqPvjR1vpttetwmfl53rj1Y7MFiDxZ7sNijm2XG3Gfs6+yRp/x7Tu2rHuL3H+M8xXnO3GPbo502HbqoPoPYo1m5QxfbnherzyD2qLev9ZD7XsAe/+26HnZlj40+7g1d2GO89ZD7PvH15G9Wcd5qvi4fryrHdGP/bfJ9Ynw2KM1QHXL+9zKlHr8dhpazx5pSj0NgD5b5hOclY4a8rh/JHmpQ
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="100" height="80">
-  <object name="player" x="1664" y="2276" width="66" height="70"/>
-  <object name="solaris" x="516" y="1928" width="73" height="83"/>
-  <object name="end" x="58" y="1650" width="209" height="727"/>
+  <object name="player" x="812" y="2394" width="66" height="70"/>
+  <object name="solaris" x="2495" y="1125" width="73" height="83"/>
+  <object name="end" x="2013" y="35" width="24" height="366"/>
   <object name="monstru" x="1114" y="2370" width="132" height="63"/>
   <object name="health_add" x="1454" y="2467" width="48" height="49"/>
   <object name="health_add" x="1397" y="2469" width="48" height="49"/>
@@ -78,7 +81,7 @@
    </properties>
    <ellipse/>
   </object>
-  <object name="2" type="0" x="1528" y="2185" width="100" height="243">
+  <object name="2" type="0" x="973" y="2221" width="100" height="243">
    <ellipse/>
   </object>
   <object name="3" type="4" x="2894" y="2108" width="91" height="265">

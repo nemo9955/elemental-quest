@@ -11,7 +11,7 @@ public class B_Stopper extends Block {
         solid=false;
         this.prop=prop;
         exist=true;
-        zon = new Rectangle (32*pozX+10 , 32*pozY+10 , 10 , 10) ;
+        zon = new Rectangle (32*pozX+1 , 32*pozY , 32 , 32) ;
     }
 
     public void efect(Entitate ent) {

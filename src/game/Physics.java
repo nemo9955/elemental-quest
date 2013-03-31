@@ -11,9 +11,11 @@ public class Physics extends Proprietati {
     protected float x;
     protected float y;
     protected float accel = 0;
+
     protected boolean jumping = false;
     protected boolean canjump = true;
     protected float grav;
+
     protected float moveSpeed;
     protected boolean moving = false;
     protected float cadee = 0;
@@ -74,7 +76,6 @@ public class Physics extends Proprietati {
                         if( blockmap.is_solid((int) i / 32, (int) j / 32) )
                             return true;
                         }
-                    
                 }
             }
         return false;
@@ -94,30 +95,6 @@ public class Physics extends Proprietati {
     private void takeLifeFromEnt(float f) {
         Entitate en = (Entitate) this;
         en.takeLife(f, "cade");
-    }
-
-    public float getX() {
-        return x;
-    }
-
-    public void setX(float x) {
-        this.x = x;
-    }
-
-    public float getY() {
-        return y;
-    }
-
-    public void setY(float y) {
-        this.y = y;
-    }
-
-    public float getCadee() {
-        return cadee;
-    }
-
-    public void setCadee(float cadee) {
-        this.cadee = cadee;
     }
 
 }

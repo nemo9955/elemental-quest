@@ -26,7 +26,7 @@ public class BlockMap {
         mWidth = map.getWidth();
         mainNo = map.getLayerIndex("solid");
 
-        System.out.println(map.getTileSet(mainNo));
+//        System.out.println(map.getTileSet(mainNo));
 
         for( int j = 0; j < map.getHeight(); j++ )
             for( int i = 0; i < map.getWidth(); i++ ) {
