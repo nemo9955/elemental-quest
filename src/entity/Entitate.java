@@ -44,23 +44,23 @@ public class Entitate extends Physics {
 			elimina();
 		}
 	}
-	
+
 	public float LifeLS(){
 		return (float) viata/viataMax ;
 	}
 	public float getViata(){
 		return viata ;
 	}
-	
+
 	public void addLife(int x){
 		viata+=x;
 		if(viata>viataMax)viata=viataMax;
 	}
-	
+
 	protected void elimina(){
 		Obiecte.entit.remove(this);
 	}
-	
+
     public float getX() {
         return x;
     }
