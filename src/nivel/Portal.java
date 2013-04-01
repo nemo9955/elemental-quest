@@ -20,12 +20,19 @@ public class Portal {
 
     public Portal(int x, int y, int wi, int he, String index, String to) {
         port = new RoundedRectangle(x, y, wi, he, 100);
-        if( to == "" )
-            canTele = false;
-        else {
+
+        try {
             canTele = true;
             this.to = Integer.parseInt(to);
+        } catch (Exception e) {
+            canTele = false;
         }
+
+        /*
+         * if( to == "") canTele = false; else { this.to = Integer.parseInt(to);
+         * }
+         */
+
         this.index = Integer.parseInt(index);
         col = new Color(zar.nextInt(225), zar.nextInt(225), zar.nextInt(225));
     }
