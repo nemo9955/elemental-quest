@@ -51,17 +51,20 @@ public class Physics extends Proprietati {
             accel = 0;
             adapteaza(1);
             grav = 0f;
-            if( cadee > 170 ) takeLifeFromEnt(cadee / 7.5f * gravMod);
+            if( cadee > 170 )
+                takeLifeFromEnt(cadee / 7.5f * gravMod);
             // if(cadee > 0) System.out.println("cazu : " + cadee);// TODO debug
             cadee = 0;
         } else {
             canjump = false;
             grav += gravMod;
 
-            if( accel <= 0 && gravMax > 7 ) cadee += grav / 3;
+            if( accel <= 0 && gravMax > 7 )
+                cadee += grav / 3;
         }
 
-        if( grav > gravMax ) grav = gravMax;
+        if( grav > gravMax )
+            grav = gravMax;
 
     }
 
@@ -70,19 +73,18 @@ public class Physics extends Proprietati {
         for( float i = x; i <= x + poly.getWidth(); i += (int) poly.getWidth() / Math.ceil(poly.getWidth() / 32) )
             for( float j = y; j <= y + poly.getHeight(); j += (int) poly.getHeight() / Math.ceil(poly.getHeight() / 32) ) {
                 if( blockmap.isBlock((int) i / 32, (int) j / 32) ) {
-                        Rectangle rec = blockmap.getBlock((int) i / 32, (int) j / 32);
-                        if( rec.intersects(poly) ) {
+                    Rectangle rec = blockmap.getBlock((int) i / 32, (int) j / 32);
+                    if( rec.intersects(poly) ) {
                         blockmap.efect_block((int) i / 32, (int) j / 32, (Entitate) this);
                         if( blockmap.is_solid((int) i / 32, (int) j / 32) )
                             return true;
-                        }
+                    }
                 }
             }
         return false;
     }
 
-    // adapteaza pozitia entitatii cand aterizeaza sau se loveste cu capul de
-    // ceva
+    // adapteaza pozitia entitatii cand aterizeaza sau se loveste cu capul de ceva
     public void adapteaza(float cantitate) {
         while (!colid()) {
             y += cantitate;
@@ -92,6 +94,7 @@ public class Physics extends Proprietati {
         poly.setY(y);
     }
 
+    // metoda care imi permite sa mut multe variabile / metode din Phisics in Entitate , facand structura claselor mai logica
     private void takeLifeFromEnt(float f) {
         Entitate en = (Entitate) this;
         en.takeLife(f, "cade");

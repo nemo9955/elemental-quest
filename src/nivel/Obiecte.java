@@ -1,5 +1,7 @@
 package nivel;
 
+import game.GameplayState;
+import game.Player;
 import items.Health_add;
 import items.Item;
 
@@ -14,9 +16,6 @@ import org.newdawn.slick.tiled.TiledMap;
 import entity.Entitate;
 import entity.Monstru;
 import entity.Solaris;
-
-import game.GameplayState;
-import game.Player;
 
 public class Obiecte {
 
@@ -54,10 +53,11 @@ public class Obiecte {
             }
         }
         for( int i = 0; i < map.getObjectCount(1); i++ ) {
-            portal.add( new Portal(map.getObjectX(1, i), map.getObjectY(1, i), map.getObjectWidth(1, i), map.getObjectHeight(1, i) ,map.getObjectName(1, i) , map.getObjectType(1, i) ));
+            portal.add(new Portal(map.getObjectX(1, i), map.getObjectY(1, i), map.getObjectWidth(1, i), map.getObjectHeight(1, i), map.getObjectName(1, i), map.getObjectType(1, i)));
         }
 
-        if( finish.size() == 0 ) finish.add(new Rectangle(map.getWidth() * 32 - 52, 32, 20, map.getHeight() * 32 - 64));
+        if( finish.size() == 0 )
+            finish.add(new Rectangle(map.getWidth() * 32 - 52, 32, 20, map.getHeight() * 32 - 64));
     }
 
     public List<Rectangle> getFinish() {

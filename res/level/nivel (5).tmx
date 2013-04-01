@@ -75,6 +75,7 @@
   <object name="health_add" x="1397" y="2469" width="48" height="49"/>
   <object name="health_add" x="1338" y="2465" width="48" height="49"/>
   <object name="health_add" x="1271" y="2465" width="48" height="49"/>
+  <object name="end" x="5288" y="2188" width="400" height="184"/>
  </objectgroup>
  <objectgroup color="#ffff33" name="portal" width="200" height="80">
   <object name="0" type="2" x="1152" y="109" width="112" height="214">

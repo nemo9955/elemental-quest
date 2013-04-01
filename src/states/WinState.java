@@ -11,39 +11,37 @@ import org.newdawn.slick.state.StateBasedGame;
 
 import diverse.Main;
 
-public class WinState extends BasicGameState{
-	
-	private int ID;
-	private Image fin ;
-	private Input input ;
-	
-	public int getID() {
-		return ID;
-	}
-	
-	public WinState(int ID){
-		this.ID=ID;
-	}
+public class WinState extends BasicGameState {
 
-	@Override
-	public void init(GameContainer gc, StateBasedGame sb)throws SlickException {
-		input = gc.getInput();
-		fin=new Image ("res/finish.png");
-	}
+    private int ID;
+    private Image fin;
+    private Input input;
 
-	@Override
-	public void render(GameContainer gc, StateBasedGame sb, Graphics g)throws SlickException {
-		fin.draw(0,0);
-		g.setColor(Color.black);
-		g.drawString(Main.mesaj, 70, 450);
-	}
+    public int getID() {
+        return ID;
+    }
 
-	@Override
-	public void update(GameContainer gc, StateBasedGame sb, int delta)throws SlickException {
-		if(input.isKeyDown(Input.KEY_SPACE))
-			sb.enterState(Main.MAINMENUSTATE);
-	}
-	
+    public WinState(int ID) {
+        this.ID = ID;
+    }
 
-	
+    @Override
+    public void init(GameContainer gc, StateBasedGame sb) throws SlickException {
+        input = gc.getInput();
+        fin = new Image("res/finish.png");
+    }
+
+    @Override
+    public void render(GameContainer gc, StateBasedGame sb, Graphics g) throws SlickException {
+        fin.draw(0, 0);
+        g.setColor(Color.black);
+        g.drawString(Main.mesaj, 70, 450);
+    }
+
+    @Override
+    public void update(GameContainer gc, StateBasedGame sb, int delta) throws SlickException {
+        if( input.isKeyDown(Input.KEY_SPACE) )
+            sb.enterState(Main.MAINMENUSTATE);
+    }
+
 }

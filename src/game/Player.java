@@ -1,9 +1,7 @@
 package game;
 
-import entity.Entitate;
-import entity.Shot;
-
 import nivel.Obiecte;
+
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -11,6 +9,9 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
+
+import entity.Entitate;
+import entity.Shot;
 
 public class Player extends Entitate {
 
@@ -21,8 +22,8 @@ public class Player extends Entitate {
     private int focRate = 1;
     private int spikeRate = 0;
 
-    private boolean inPortal ;
-    private int prevPort ;
+    private boolean inPortal;
+    private int prevPort;
 
     // constructorul principal al jucatorului din gamestate
     public Player(float x, float y, GameContainer gc) throws SlickException {
@@ -46,7 +47,8 @@ public class Player extends Entitate {
         Gravitatie();
 
         // miscarea
-        if( !moving ) moveSpeed = 0;
+        if( !moving )
+            moveSpeed = 0;
         moving = false;
 
         // dreapta
@@ -73,35 +75,42 @@ public class Player extends Entitate {
             moveSpeed += moveSpeedMod;
             moving = true;
         }
-        if( moveSpeed > moveSpeedMax ) moveSpeed = moveSpeedMax;
+        if( moveSpeed > moveSpeedMax )
+            moveSpeed = moveSpeedMax;
 
         if( dre != ent ) {
             img = img.getFlippedCopy(true, false);
             ent = !ent;
         }
 
-        if( input.isKeyPressed(Input.KEY_F11) ) if( color == Color.blue )
-            color = Color.green;
-        else color = Color.blue;
+        // cheat pentru imunitate
+        if( input.isKeyPressed(Input.KEY_F11) )
+            if( color == Color.blue )
+                color = Color.green;
+            else color = Color.blue;
 
         // TODO debug
-        if( input.isKeyPressed(Input.KEY_F1) ) System.out.println(x + "  " + y);
-        if( input.isKeyPressed(Input.KEY_F2) ) System.out.println(poly.getWidth());
-        if( input.isKeyPressed(Input.KEY_F3) ) System.out.println("viata : " + viata);
-        if( input.isKeyPressed(Input.KEY_F4) ) System.out.println(blockmap.getProp((int) x / 32, (int) y / 32));
-        if( input.isKeyPressed(Input.KEY_F6) ) addLife(10);
-        if( input.isKeyPressed(Input.KEY_F5) ) {
-            x = 2400;
-            poly.setX(x);
-            y = 500;
-            poly.setY(y);
-        }
+        /*
+         * if( input.isKeyPressed(Input.KEY_F1) ) System.out.println(x + "  " +
+         * y); if( input.isKeyPressed(Input.KEY_F2) )
+         * System.out.println(poly.getWidth()); if(
+         * input.isKeyPressed(Input.KEY_F3) ) System.out.println("viata : " +
+         * viata); if( input.isKeyPressed(Input.KEY_F4) )
+         * System.out.println(blockmap.getProp((int) x / 32, (int) y / 32)); if(
+         * input.isKeyPressed(Input.KEY_F6) ) addLife(10); if(
+         * input.isKeyPressed(Input.KEY_F5) ) { x = 2400; poly.setX(x); y = 500;
+         * poly.setY(y); }
+         */
 
-        if( focRate > 0 ) focRate += delta;
-        if( focRate > 200 ) focRate = 0;
+        if( focRate > 0 )
+            focRate += delta;
+        if( focRate > 200 )
+            focRate = 0;
 
-        if( spikeRate > 0 ) spikeRate += delta;
-        if( spikeRate > 500 ) spikeRate = 0;
+        if( spikeRate > 0 )
+            spikeRate += delta;
+        if( spikeRate > 500 )
+            spikeRate = 0;
 
         if( input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON) && focRate == 0 ) {
             float ang, mx, my;
@@ -120,7 +129,8 @@ public class Player extends Entitate {
     public void render(GameContainer gc, Graphics g) {
         g.setColor(color);
         g.setLineWidth(2);
-        if( color == Color.green ) g.draw(poly);
+        if( color == Color.green )
+            g.draw(poly);
         img.draw(x, y);
     }
 
@@ -142,21 +152,20 @@ public class Player extends Entitate {
 
     public void addLife(int x) {
         viata += x;
-        if( viata > 100 ) viata = 100;
+        if( viata > 100 )
+            viata = 100;
     }
-    
+
     public boolean isInPortal() {
         return inPortal;
     }
-    
+
     public void setInPortal(boolean inPortal) {
         this.inPortal = inPortal;
     }
 
     public void takeLife(float x, String sursa) {
-        
-        
-        
+
         switch ( sursa ) {
 
             case "spike" :

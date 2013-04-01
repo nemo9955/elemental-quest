@@ -7,8 +7,6 @@ import java.util.Date;
 import nivel.BlockMap;
 import nivel.Obiecte;
 import nivel.Proprietati;
-import diverse.Main;
-import entity.Entitate;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -21,6 +19,9 @@ import org.newdawn.slick.imageout.ImageOut;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
+
+import diverse.Main;
+import entity.Entitate;
 
 public class GameplayState extends BasicGameState {
 
@@ -55,6 +56,7 @@ public class GameplayState extends BasicGameState {
         finFill = new Image("res/finish_fill.png");
     }
 
+    // reincarca clasele atunci cand se schimba nivelul
     public void startGen(GameContainer gc) throws SlickException {
         curent = Main.NIVEL;
         time = 0;
@@ -69,6 +71,7 @@ public class GameplayState extends BasicGameState {
         wallLayerNo = map.getLayerIndex("wall");
     }
 
+    // verifica daca e prima data cand e incarcat un nivel
     @Override
     public void enter(GameContainer gc, StateBasedGame sb) throws SlickException {
         if( firstT ) {
@@ -106,6 +109,7 @@ public class GameplayState extends BasicGameState {
                 sb.enterState(Main.WINSTATE);
             }
 
+        // cand apesi p face screenshot
         if( input.isKeyPressed(Input.KEY_P) ) {
             Image target = new Image(gc.getWidth(), gc.getHeight());
             gc.getGraphics().copyArea(target, 0, 0);
@@ -147,6 +151,7 @@ public class GameplayState extends BasicGameState {
         renderHealthBar();
     }
 
+    // formateaza timpul in ceva "citibil"
     private String convTime(String beg) {
         // System.out.println(time);
         time /= 1000;
@@ -171,6 +176,7 @@ public class GameplayState extends BasicGameState {
         }
     }
 
+    // clasa separata pentru a randa bara de viata pentru ca sunt destul de multe de intra aici
     private void renderHealthBar() {
         // afla cat trebuie sa randeze din bara de viata
         init = health.getWidth() - (player.LifeLS() * health.getWidth());

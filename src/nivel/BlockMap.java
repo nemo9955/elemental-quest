@@ -3,13 +3,12 @@ package nivel;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.tiled.TiledMap;
 
-import entity.Entitate;
-
 import block.B_Solid;
 import block.B_Spike;
 import block.B_Stopper;
 import block.B_Void;
 import block.Block;
+import entity.Entitate;
 
 public class BlockMap {
 
@@ -25,8 +24,6 @@ public class BlockMap {
         mHeight = map.getHeight();
         mWidth = map.getWidth();
         mainNo = map.getLayerIndex("solid");
-
-//        System.out.println(map.getTileSet(mainNo));
 
         for( int j = 0; j < map.getHeight(); j++ )
             for( int i = 0; i < map.getWidth(); i++ ) {
@@ -49,11 +46,11 @@ public class BlockMap {
                     case "void" :
                         bloc[i][j] = new B_Void("void", i, j);
                         return;
-                        
+
                     case "spike" :
                         bloc[i][j] = new B_Spike("spike", i, j);
                         return;
-                        
+
                     case "stopper" :
                         bloc[i][j] = new B_Stopper("stopper", i, j);
                         return;
@@ -67,13 +64,13 @@ public class BlockMap {
 
     // functii / metode pentru accesarea informatiilor din matricea de blocuri
 
-
     public void efect_block(int x, int y, Entitate ent) {
         bloc[x][y].efect(ent);
     }
 
     public boolean isBlock(int x, int y) {
-        if( x < 0 || x > mWidth - 1 || y < 0 || y > mHeight - 1 ) return false;
+        if( x < 0 || x > mWidth - 1 || y < 0 || y > mHeight - 1 )
+            return false;
         return bloc[x][y].exists();
     }
 
