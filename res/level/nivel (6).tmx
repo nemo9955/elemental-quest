@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="100" height="67" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
+<map version="1.0" orientation="orthogonal" width="200" height="80" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
   <property name="gravity" value="2"/>
   <property name="speed" value="2"/>
@@ -16,7 +16,7 @@
   </properties>
   <image source="pipe.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="47" name="stone_darker" tilewidth="32" tileheight="32">
+ <tileset firstgid="47" name="stone darker" tilewidth="32" tileheight="32">
   <properties>
    <property name="solid" value=""/>
   </properties>
@@ -28,45 +28,69 @@
   </properties>
   <image source="decorations.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="141" name="small_dark_tile" tilewidth="32" tileheight="32">
+ <tileset firstgid="141" name="small dark tile" tilewidth="32" tileheight="32">
   <image source="small_dark_tile.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="145" name="stone darker" tilewidth="32" tileheight="32">
-  <image source="stone_darker.png" width="192" height="160"/>
- </tileset>
- <tileset firstgid="175" name="stone textured" tilewidth="32" tileheight="32">
+ <tileset firstgid="145" name="stone textured" tilewidth="32" tileheight="32">
   <image source="stone_textured.png" width="192" height="160"/>
  </tileset>
- <layer name="BG" width="100" height="67">
+ <tileset firstgid="175" name="void" tilewidth="32" tileheight="32">
+  <image source="void.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="179" name="spike" tilewidth="32" tileheight="32">
+  <image source="spike.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="435" name="arrows" tilewidth="32" tileheight="32">
+  <image source="arrows.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="691" name="stopper" tilewidth="32" tileheight="32">
+  <image source="stopper.png" width="125" height="32"/>
+ </tileset>
+ <layer name="BG" width="200" height="80">
   <data encoding="base64" compression="zlib">
-   eJztW0GS20gM8ymnPc0p2U3yjxwmP7RGT95xjVXFIAAJtiRbSenQ1Rq5RbFJAGQrldfL5fIqxo/7fL2Pt/cx38ft7wnuX80xrfx96+ceNabgoxMDtWYKMX8LYxbX1ejkbs1w/dlqMGzgvudw3bHlxC/mejTGLqa3wP4e74prGVaduLD3sdxgXhTOq3WVjS3XPfpdoxpRvW8m9x3MuBjIbE3Ge0bXjdpEnc/0fItxs/0jiaWjjct1lg9cu6wfwdjIulGbqPMLXjs4cOOxjJ+N/GFuYo3fEzPR7462RBtqfRXHtThw8h+Hm1Pmp+L1CM/Ys5FH0d8uJpVtx9csTiN1gnEP97X85sSW9XBsffa38qvCmvKhwmTGXwffM7y/4iuuvcJ9PINkvM7iE21j7UfbVX0Y0S6WQ7zv2kD8q+cn8h5c263z0abKh3NmjL4w7jLfOlqypq9i/kdfMI4YU8QMu1fxr+r5r7CO8Yz1EMwOw7jzTkdLHN2p1jH/GfZZXhg3ujx21iP2FbcqDHd8Y5zr7CfLc+VHhtvsnay2VX2t0o2OJsTeP3IEeabe48SA6aDzu1tfsh4HexVmW2Gsw9fsmY4msPxk++z20gqbWS4c3bvCPXyP6lcYXl296vBhzci+97J9xmeqHq/Dkew+6l6mC0tOs35nEvcYJlWv1MG/2iuL/wzXjO/qmu270pXoT+YLi6PSBeaX2geuQ2ypdYrvXexjrDGuTFPx35tcfXL7IYw/4r4690auKj8yHGOPy/KDGl3hDvmFeY5awrRR+ZLpw1YDOYtaxfCdxVbVkixPzCfGB8U39R4WW7bHjLd4nWFzyxF9VH534qli1cGJykFnT8wfrEnIJbU/lnenPji/Z/zec7ixVD0LxpLFk3ENMadwn+lf5r/bR3cwxHi89chwxzSh6rXYM2gzPqdykPWpo/zcYjyDJ6pexlioXivTEtZnxPgze/Mlx+TecUHsPIIjMTYMg6o2sZio53FW8UdfVF1fGxfku8px5ATT2Y7mO5jKcN+1gXZUn9fBZMQlw6mqLZWmZFhj+oTcZ3hQ2lDhgcVvLbcYjjMMVjmO+VDfCpx+scK/0laWf8UblUdlg2kD2srwVHHiTdhUscmwrXRM5UPZd+67HGX3FEdQD1i+cE/OcHUpu1Z+qnUq/iofLtfXaEDGQYw55o7hK8O0ox2Kxx18KW3BewyXbI/RLvut857Mb1Yz0H7kCPaLTMcdnc74MZJT9FFpZKUPyP2KH5nNLhY7dRbXO+/OYlrpkbo/C/t4zutoB9pn3zDR/ij+JvJ89J/ZwLhjLXEx4nKBnbs79kd1DW1gXuPf+G1rdKgcOT1J9R1ntIdAXUG/nFrI9KUbE4VFnONZkuFnbf+e4TXDY8SQg33cJ+aB6UZm38GCqrfxOtM+5EHUKheryjd8b8Y3FU+1VnEM9x99YOe36hrz1VmjYu7kl8UWa4p6d5ULddZU5zxHs9ecd541OvlldTvGu4PpPXxXHFmjm3/iwNquYobniL2Hmw+muy63lA0H753fcE9RA5hGZRqRfatw/XJ8Zb1x1VswrjvfUfDsWeVpC13FOo77Y7laE8vsHDWyD+ZjJwbZd4eKD53+0l2L543ID2ZrtA5U55g138OU3bV8yzSZrck0LPNdxWuG9zGuuO/J3juJkf1WrdniLFTVRaV1zpm2wmrkAOIXz4FVLkf2PZPxJu47a0Z5m+0l603wnZXeqvMQ7kfpCWroGm442tLl81b+VPrF7nfqJ8uBwy3GB6atTj4VDpR27RFXlU+1t069de9fL7/7gZqrnsNakfmDZ0Zmn9lb8pfl5grPK6xUeqxyne1fcRD34J5dsrxh71TVnop7yIeq33Di5+gxWxfziHvesrZ0NTM7f+EarOdKq5RWMo6gn2i3M+8Zwz2G800wyynLXadfV70x48zyN56v2DeMP3mO8XdqmFub1Ph0+fg/IMuzrxedoy4P8PyTcW8rnVnjdzZX8Xf4n3FqycUnWHvOz5uXfOyJq3P255Mfx5r/uY9n4+KcP+aX+3g2Ls75Y/58OevHkeazfhxrvuXib6sf14P4McqPs34cZ77l4/MD83/ONT++PzD/51zz4/sD83+U+XoQPxg/zv7qOPP5/epY89LvPgsPX8L493389z6+vo9vT/Ln2fMtFy8PzH+cVR6OgNNnzS+XXzGq8Nr5rWuneh7tOOsyH74l93E4a3Ctux/lw/8wvkMj
+   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
   </data>
  </layer>
- <layer name="solid" width="100" height="67">
+ <layer name="FG" width="200" height="80">
   <data encoding="base64" compression="zlib">
-   eJztnNtqwzAMQAMbfRq0Kyts3eX/P3P1qGmqKZZsyZaS6oAYTWIn1YkvuXSnaZpOEa4i8EH48EX48EX48EX48EX48EX48MVuCh+eOE7hwxPhwxeefRway7SU84I3HwcQGvWsCS8+euVvbU6sfYw4j7Xa3AhKPvbX6MHnJb6Q/aV8vQrrLtWT94vt3wMW7cMyF149ZB7NR2LeZ32CsHZl4YPTj3NzU5tHrTHk7RraWI3nVF44ebZykejhImE5v6LmPKV8W7roiZYPyTys5AX279y+Hs5xR7qYH18OLiUfNd9Ha24szV9LeU/vg1A+luh9/nHqt2wDvZD4gJ9HXmNvJf8Qrg+Yg9E+pFi+f1Yz9tW0D8pHICf5eFlYV+ofoJvwoUPJB4XHfnzt78VKfAQ4tddKc5Z8YOd9ad5JlZfWt2ZqnGA+OHN+zjJOna3ztBPxd61AH9g4XcohNdbDMiWf3sYiCzAfEM68l5Nvah9bdVF7/YG1D+paGLs+5Jz73PaUGHHvqKWOmvt0kvG8dI5y2w2n3Hz52tpFr/cJMjHf9YUHH1v7naPkmbwHH8ENysfPqAMJ/rBqHyOev/Ueezlgz25L/Vf0V74IH7bA8X6kj7XPm0YQ7WMs1Dw4fPiit4/ol+rIPnq9jxrU8Uj91X66f48Sfl5aVlpOreOsn2+TfKT/CfDMDAi33Kh4ch7YOD5fv7tG4IPwYQv8rWP4sCOPGZSPPYj59tL9aQLrx8IzWG56tw8Nr1tkKR+j+ivY5lo8Scr2ouU4SmVqfXjKhQYa36MmJ9R2XB9bdVA71lA5oPJEle/RX5XGWI26pf1D6/HAOrSPM5HulWj5wL53S3kqRrdRzCW3XO3x5vslwX/muZTO+ble4npwGc222NMH5tvTWC/t31r7Jw0k7cO6X+dQMwZZesgkF4/y/COz5MfDOZVcHA33H9yTXLxf4oMR5+n2POUbqQtuw6lTM84G+6zNGRXJxS8LiUaS
+   eJztwTEBAAAAwqD1T+1tB6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4A+gAAAQ==
   </data>
  </layer>
- <objectgroup color="#c80003" name="entitati" width="100" height="67">
-  <object name="solaris" x="216" y="1148" width="76" height="60"/>
-  <object name="monstru" x="649" y="1496" width="54" height="51"/>
-  <object name="solaris" x="2133" y="1439" width="73" height="83"/>
-  <object name="monstru" x="1050" y="856" width="564" height="54"/>
-  <object name="monstru" x="1513" y="1393" width="562" height="21"/>
-  <object name="monstru" x="2243" y="179" width="390" height="53"/>
-  <object name="player" x="2063" y="587" width="66" height="70"/>
-  <object name="solaris" x="2361" y="1411" width="73" height="83"/>
-  <object name="monstru" x="39" y="1407" width="312" height="39"/>
-  <object name="monstru" x="1637" y="839" width="242" height="18"/>
-  <object name="monstru" x="957" y="1450" width="880" height="25"/>
-  <object name="solaris" x="744" y="972" width="76" height="60"/>
-  <object name="solaris" x="550" y="556" width="76" height="60"/>
-  <object name="solaris" x="200" y="376" width="76" height="60"/>
-  <object name="solaris" x="1710" y="1198" width="76" height="60"/>
-  <object name="solaris" x="2024" y="1002" width="76" height="60"/>
-  <object name="solaris" x="2408" y="990" width="76" height="60"/>
-  <object name="solaris" x="2468" y="494" width="76" height="60"/>
-  <object name="end" x="1247" y="504" width="271" height="160"/>
-  <object name="end" x="1275" y="335" width="319" height="33"/>
+ <layer name="solid" width="200" height="80">
+  <data encoding="base64" compression="zlib">
+   eJzt3MFKw0AUQNGhKahQXQiK//+lJiAI0kuLmxnxHHgUQhez6CWTJu3DGON0ZbZ9zncev/fYf59tgTWY78/m+4153OcygGsuQx9QjjZeZy8CFnX08TF7EbAofUDTBzR9QNMHNH1A0we0o4+32YuARekDmj6g6QOa5xOh6QOa53ehuf8BTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/QPN8OzfkDmt8PQtMHNNcf0Fx/QLO/gmZ/Bc3+CprzBzTnD2j6gKYPaPqA5v4HNN9fQbO/gqYPaPqApg9ovr+Cpg9o+oDm/gc01+fQ9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0Ae3o42n2ImBRx39fPe9z+pptn/Mfne3G68/3zVjTb9Zr5s3LPp9r5A+e
+  </data>
+ </layer>
+ <layer name="wall" width="200" height="80" opacity="0.9">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1tB6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4A+gAAAQ==
+  </data>
+ </layer>
+ <objectgroup color="#c80003" name="entitati" width="200" height="80">
+  <object name="player" x="133" y="2343" width="64" height="64"/>
+  <object name="solaris" x="1337" y="1933" width="73" height="83"/>
+  <object name="monstru" x="994" y="2248" width="728" height="65"/>
+  <object name="end" x="131" y="1768" width="56" height="429"/>
+  <object name="health_add" x="1833" y="2297" width="48" height="49"/>
+ </objectgroup>
+ <objectgroup color="#ffff33" name="portal" width="200" height="80">
+  <object name="0" x="290" y="2156" width="64" height="221">
+   <ellipse/>
+  </object>
+  <object name="1" x="422" y="2146" width="91" height="234">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="2" x="582" y="2093" width="76" height="256">
+   <ellipse/>
+  </object>
+  <object name="3" x="710" y="2099" width="102" height="280">
+   <ellipse/>
+  </object>
+  <object name="4" x="850" y="2113" width="80" height="285">
+   <ellipse/>
+  </object>
  </objectgroup>
 </map>
