@@ -1,5 +1,6 @@
 package game;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -115,6 +116,12 @@ public class GameplayState extends BasicGameState {
             gc.getGraphics().copyArea(target, 0, 0);
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH,mm,ss");
             Date date = new Date();
+            
+            // in caz ca fisierul nu exista il creaza automat
+            File x = new File("screenshot");
+            if(!x.exists())
+                x.mkdir();
+            
             String pozaTit = String.format("screenshot/screen%s.jpg", dateFormat.format(date));
             ImageOut.write(target.getFlippedCopy(false, false), pozaTit, false);
             target.destroy();
