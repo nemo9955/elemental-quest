@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="200" height="80" tilewidth="32" tileheight="32" backgroundcolor="#b8b8b8">
  <properties>
-  <property name="gravity" value="2"/>
-  <property name="speed" value="2"/>
+  <property name="gravity" value="1"/>
+  <property name="speed" value="3"/>
  </properties>
  <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
   <properties>
@@ -58,39 +58,44 @@
  </layer>
  <layer name="solid" width="200" height="80">
   <data encoding="base64" compression="zlib">
-   eJzt3MFKw0AUQNGhKahQXQiK//+lJiAI0kuLmxnxHHgUQhez6CWTJu3DGON0ZbZ9zncev/fYf59tgTWY78/m+4153OcygGsuQx9QjjZeZy8CFnX08TF7EbAofUDTBzR9QNMHNH1A0we0o4+32YuARekDmj6g6QOa5xOh6QOa53ehuf8BTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/QPN8OzfkDmt8PQtMHNNcf0Fx/QLO/gmZ/Bc3+CprzBzTnD2j6gKYPaPqA5v4HNN9fQbO/gqYPaPqApg9ovr+Cpg9o+oDm/gc01+fQ9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0AU0f0PQBTR/Q9AFNH9D0Ae3o42n2ImBRx39fPe9z+pptn/Mfne3G68/3zVjTb9Zr5s3LPp9r5A+e
+   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
   </data>
  </layer>
  <layer name="wall" width="200" height="80" opacity="0.9">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T+1tB6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4A+gAAAQ==
+   eJzt2rERwkAQA0DdJWCg/1bBNgENQEDC/+DdChQokxIAAAAAgO/dK3nU6BTM7MgdOXVy7tEpmJmOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/1kr2Wp0CpjT0smlR6cAAAAAAAAAAJifHxJ85ocEAAAAAADAkeyVPO3H8Na1k5v9GADg5172eQo1
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="200" height="80">
-  <object name="player" x="133" y="2343" width="64" height="64"/>
-  <object name="solaris" x="1337" y="1933" width="73" height="83"/>
-  <object name="monstru" x="994" y="2248" width="728" height="65"/>
-  <object name="end" x="131" y="1768" width="56" height="429"/>
-  <object name="health_add" x="1833" y="2297" width="48" height="49"/>
- </objectgroup>
- <objectgroup color="#ffff33" name="portal" width="200" height="80">
-  <object name="0" x="290" y="2156" width="64" height="221">
-   <ellipse/>
-  </object>
-  <object name="1" x="422" y="2146" width="91" height="234">
-   <properties>
-    <property name="" value=""/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object name="2" x="582" y="2093" width="76" height="256">
-   <ellipse/>
-  </object>
-  <object name="3" x="710" y="2099" width="102" height="280">
-   <ellipse/>
-  </object>
-  <object name="4" x="850" y="2113" width="80" height="285">
-   <ellipse/>
-  </object>
+  <object name="player" x="277" y="2043" width="64" height="64"/>
+  <object name="solaris" x="5489" y="1953" width="73" height="83"/>
+  <object name="monstru" x="118" y="2256" width="6140" height="61"/>
+  <object name="end" x="5863" y="44" width="492" height="481"/>
+  <object name="health_add" x="2793" y="1609" width="164" height="140"/>
+  <object name="health_add" x="533" y="433" width="164" height="140"/>
+  <object name="health_add" x="5805" y="1325" width="164" height="140"/>
+  <object name="health_add" x="1505" y="1209" width="164" height="140"/>
+  <object name="health_add" x="2581" y="373" width="164" height="140"/>
+  <object name="health_add" x="5193" y="289" width="164" height="140"/>
+  <object name="health_add" x="5189" y="1001" width="164" height="140"/>
+  <object name="health_add" x="4041" y="669" width="164" height="140"/>
+  <object name="health_add" x="4501" y="2325" width="164" height="140"/>
+  <object name="health_add" x="3993" y="1493" width="164" height="140"/>
+  <object name="health_add" x="853" y="1853" width="164" height="140"/>
+  <object name="solaris" x="1573" y="1269" width="73" height="83"/>
+  <object name="solaris" x="4013" y="1109" width="73" height="83"/>
+  <object name="solaris" x="493" y="681" width="73" height="83"/>
+  <object name="solaris" x="493" y="681" width="73" height="83"/>
+  <object name="solaris" x="2917" y="1049" width="73" height="83"/>
+  <object name="monstru" x="118" y="2256" width="6140" height="61"/>
+  <object name="monstru" x="118" y="2256" width="6140" height="61"/>
+  <object name="monstru" x="118" y="2256" width="6140" height="61"/>
+  <object name="monstru" x="118" y="2256" width="6140" height="61"/>
+  <object name="monstru" x="118" y="2256" width="6140" height="61"/>
+  <object name="solaris" x="2157" y="1137" width="73" height="83"/>
+  <object name="solaris" x="1665" y="1869" width="73" height="83"/>
+  <object name="solaris" x="5341" y="1457" width="73" height="83"/>
+  <object name="solaris" x="4653" y="1689" width="73" height="83"/>
+  <object name="solaris" x="4081" y="2301" width="73" height="83"/>
  </objectgroup>
 </map>
