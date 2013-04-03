@@ -57,7 +57,7 @@ public class GameMenuState extends BasicGameState {
 
     public void render(GameContainer gc, StateBasedGame sb, Graphics g) {
         g.setBackground(Color.black);
-        bg.draw(gc.getWidth() / 2 - bg.getWidth() / 2, gc.getHeight() / 2 - bg.getHeight() / 2);
+        bg.draw(0,0);
         resume.render();
         exit.render();
         mainM.render();

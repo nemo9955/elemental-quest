@@ -24,7 +24,7 @@ public class Shot extends Entitate {
         if( team == 5 ) {
             this.team = 6;
             speed = 10;
-            lifeTime = 1500;
+            lifeTime = 1300;
             damage = 35;
             this.img = new Image("res/entitati/shot_pl.png");
         } else if( team >= 10 ) {
