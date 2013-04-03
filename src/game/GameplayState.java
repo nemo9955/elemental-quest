@@ -132,6 +132,8 @@ public class GameplayState extends BasicGameState {
          * System.out.println(camera.getX() + "  " + camera.getY() ); //
          * System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
          */
+        Main.WIDTH=gc.getWidth();
+        Main.HEIGHT=gc.getHeight();
     }
 
     @Override
