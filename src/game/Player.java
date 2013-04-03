@@ -21,6 +21,8 @@ public class Player extends Entitate {
     private boolean ent = true;
     private int focRate = 1;
     private int spikeRate = 0;
+    private Image roata;
+    private Image antena;
 
     private boolean inPortal;
     private int prevPort;
@@ -29,6 +31,8 @@ public class Player extends Entitate {
     public Player(float x, float y, GameContainer gc) throws SlickException {
         super(player);
         this.img = new Image("res/entitati/player.png");
+        roata = new Image("res/entitati/player_roata.png");
+        antena = new Image("res/entitati/player_antena.png");
         this.x = x;
         this.y = y;
         poly = new Rectangle(x, y, img.getWidth(), img.getHeight());
@@ -53,6 +57,7 @@ public class Player extends Entitate {
 
         // dreapta
         if( input.isKeyDown(Input.KEY_D) ) {
+            roata.rotate(moveSpeed);
             dre = true;
             x += moveSpeed;
             poly.setX(x);
@@ -65,6 +70,7 @@ public class Player extends Entitate {
         }
         // stanga
         if( input.isKeyDown(Input.KEY_A) ) {
+            roata.rotate(-moveSpeed);
             dre = false;
             x -= moveSpeed;
             poly.setX(x);
@@ -80,6 +86,8 @@ public class Player extends Entitate {
 
         if( dre != ent ) {
             img = img.getFlippedCopy(true, false);
+            roata = roata.getFlippedCopy(true, false);
+            antena = antena.getFlippedCopy(true, false);
             ent = !ent;
         }
 
@@ -132,6 +140,8 @@ public class Player extends Entitate {
         if( color == Color.green )
             g.draw(poly);
         img.draw(x, y);
+        antena.drawCentered(x + img.getWidth() / 2, y - 4);
+        roata.drawCentered(x + img.getWidth() / 2, y + 53);
     }
 
     public void setFocRate(int x) {
