@@ -9,6 +9,8 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
+import diverse.Main;
+
 public class Shot extends Entitate {
 
     private int lifeTime;
@@ -24,14 +26,14 @@ public class Shot extends Entitate {
         if( team == 5 ) {
             this.team = 6;
             speed = 10;
-            lifeTime = 1300;
+            lifeTime = 1400;
             damage = 35;
             this.img = new Image("res/entitati/shot_pl.png");
         } else if( team >= 10 ) {
             this.team = 7;
             speed = 7;
             damage = 1;
-            lifeTime = 1600;
+            lifeTime = 1750;
             this.img = new Image("res/entitati/shot_en.png");
         }
         // ahh matematica asta
@@ -52,11 +54,11 @@ public class Shot extends Entitate {
     public void upadte(GameContainer gc, int delta) {
 
         if( sus ) {
-            x += speed * Math.sin(Math.toRadians(ang)) * delta/14;
-            y -= speed * Math.cos(Math.toRadians(ang)) * delta/14;
+            x += speed * Math.sin(Math.toRadians(ang)) * delta/Main.del;
+            y -= speed * Math.cos(Math.toRadians(ang)) * delta/Main.del;
         } else {
-            x -= speed * Math.sin(Math.toRadians(ang)) * delta/14;
-            y += speed * Math.cos(Math.toRadians(ang)) * delta/14;
+            x -= speed * Math.sin(Math.toRadians(ang)) * delta/Main.del;
+            y += speed * Math.cos(Math.toRadians(ang)) * delta/Main.del;
         }
 
         lifeTime -= delta;

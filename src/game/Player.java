@@ -10,6 +10,8 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
+import diverse.Main;
+
 import entity.Entitate;
 import entity.Shot;
 
@@ -59,10 +61,10 @@ public class Player extends Entitate {
         if( input.isKeyDown(Input.KEY_D) ) {
             roata.rotate(moveSpeed);
             dre = true;
-            x += moveSpeed * delta / 14;
+            x += moveSpeed * delta / Main.del;
             poly.setX(x);
             if( colid() ) {
-                x -= moveSpeed * delta / 14;
+                x -= moveSpeed * delta / Main.del;
                 poly.setX(x);
             }
             moveSpeed += moveSpeedMod;
@@ -72,10 +74,10 @@ public class Player extends Entitate {
         if( input.isKeyDown(Input.KEY_A) ) {
             roata.rotate(-moveSpeed);
             dre = false;
-            x -= moveSpeed * delta / 14;
+            x -= moveSpeed * delta / Main.del;
             poly.setX(x);
             if( colid() ) {
-                x += moveSpeed * delta / 14;
+                x += moveSpeed * delta / Main.del;
                 poly.setX(x);
             }
             moveSpeed += moveSpeedMod;

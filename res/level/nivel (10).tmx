@@ -67,9 +67,9 @@
   </data>
  </layer>
  <objectgroup color="#c80003" name="entitati" width="200" height="80">
-  <object name="player" x="133" y="2343" width="64" height="64"/>
+  <object name="player" x="1309" y="2419" width="64" height="64"/>
   <object name="solaris" x="1337" y="1933" width="73" height="83"/>
-  <object name="monstru" x="994" y="2248" width="728" height="65"/>
+  <object name="monstru" x="1914" y="2260" width="728" height="65"/>
   <object name="end" x="131" y="1768" width="56" height="429"/>
   <object name="health_add" x="1833" y="2297" width="48" height="49"/>
  </objectgroup>

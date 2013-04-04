@@ -4,6 +4,8 @@ import nivel.Proprietati;
 
 import org.newdawn.slick.geom.Rectangle;
 
+import diverse.Main;
+
 import entity.Entitate;
 
 public class Physics extends Proprietati {
@@ -26,25 +28,25 @@ public class Physics extends Proprietati {
 
         // "comportamentul" sariturii
         if( jumping ) {
-            y -= accel * delta/14;
+            y -= accel * delta/Main.del;
             poly.setY(y);
             if( colid() ) {
                 jumping = false;
-                y += accel * delta/14;
+                y += accel * delta/Main.del;
                 poly.setY(y);
                 adapteaza(-1);
                 accel = 0;
             }
             if( accel > 0 )
-                accel -= accelMod * delta/14;
+                accel -= accelMod * delta/Main.del;
             else jumping = false;
         }
 
         // gravitatia
-        y += grav * delta/14;
+        y += grav * delta/Main.del;
         poly.setY(y);
         if( colid() ) {
-            y -= grav * delta/14;
+            y -= grav * delta/Main.del;
             poly.setY(y);
             jumping = false;
             canjump = true;
@@ -57,7 +59,7 @@ public class Physics extends Proprietati {
             cadee = 0;
         } else {
             canjump = false;
-            grav += gravMod * delta/14;
+            grav += gravMod * delta/Main.del;
 
             if( accel <= 0 && gravMax > 7 )
                 cadee += grav / 3;

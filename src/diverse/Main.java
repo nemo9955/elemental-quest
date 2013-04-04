@@ -32,6 +32,7 @@ public class Main extends StateBasedGame {
 
     public static int WIDTH = 800;
     public static int HEIGHT = 600;
+    public static int del=18 ;
 
     // declaram o variabila statica corespunzatoare fiecarui stagiu
     public static String NIVEL = "res/level/nivel (1).tmx";
@@ -53,7 +54,7 @@ public class Main extends StateBasedGame {
     public static void main(String[] args) throws SlickException {
         AppGameContainer app = new AppGameContainer(new Main(titlu));
         app.setDisplayMode(WIDTH, HEIGHT, false);
-        app.setTargetFrameRate(30);
+        app.setTargetFrameRate(60);
         app.setResizable(true);
         app.setIcons(icons);
         app.setShowFPS(true);
