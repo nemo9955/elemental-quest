@@ -59,10 +59,10 @@ public class Player extends Entitate {
         if( input.isKeyDown(Input.KEY_D) ) {
             roata.rotate(moveSpeed);
             dre = true;
-            x += moveSpeed;
+            x += moveSpeed * delta/14;
             poly.setX(x);
             if( colid() ) {
-                x -= moveSpeed;
+                x -= moveSpeed * delta/14;
                 poly.setX(x);
             }
             moveSpeed += moveSpeedMod;
@@ -72,10 +72,10 @@ public class Player extends Entitate {
         if( input.isKeyDown(Input.KEY_A) ) {
             roata.rotate(-moveSpeed);
             dre = false;
-            x -= moveSpeed;
+            x -= moveSpeed * delta/14;
             poly.setX(x);
             if( colid() ) {
-                x += moveSpeed;
+                x += moveSpeed * delta/14;
                 poly.setX(x);
             }
             moveSpeed += moveSpeedMod;

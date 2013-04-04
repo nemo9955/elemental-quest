@@ -17,8 +17,9 @@ import states.WinState;
 
 /**
  * 
- * Lead Programer Mogoi Adrian aka nemo9955 Grafic designer Caramete Elvis aka
- * Keylos Level developer Udrea Dragos aka dadu dad
+ * Lead Programmer Mogoi Adrian aka nemo9955
+ * Grafic designer Caramete Elvis aka Keylos
+ * Level developer Udrea Dragos aka dadu dad
  * 
  */
 
@@ -53,7 +54,7 @@ public class Main extends StateBasedGame {
         app.setTargetFrameRate(60);
         app.setResizable(true);
         app.setIcons(icons);
-        app.setShowFPS(false);
+        app.setShowFPS(true);
         app.setVSync(true);
         app.start();
     }
