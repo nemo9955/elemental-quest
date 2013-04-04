@@ -24,7 +24,7 @@ public class Entitate extends Physics {
     }
 
     public void upadte(GameContainer gc, int delta) throws SlickException {
-        Gravitatie();
+        Gravitatie(delta);
     }
 
     // modul default de randare a entitatiilor

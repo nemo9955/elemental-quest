@@ -52,11 +52,11 @@ public class Shot extends Entitate {
     public void upadte(GameContainer gc, int delta) {
 
         if( sus ) {
-            x += speed * Math.sin(Math.toRadians(ang));
-            y -= speed * Math.cos(Math.toRadians(ang));
+            x += speed * Math.sin(Math.toRadians(ang)) * delta/14;
+            y -= speed * Math.cos(Math.toRadians(ang)) * delta/14;
         } else {
-            x -= speed * Math.sin(Math.toRadians(ang));
-            y += speed * Math.cos(Math.toRadians(ang));
+            x -= speed * Math.sin(Math.toRadians(ang)) * delta/14;
+            y += speed * Math.cos(Math.toRadians(ang)) * delta/14;
         }
 
         lifeTime -= delta;

@@ -48,7 +48,7 @@ public class Player extends Entitate {
             jumping = true;
         }
 
-        Gravitatie();
+        Gravitatie(delta);
 
         // miscarea
         if( !moving )
@@ -59,10 +59,10 @@ public class Player extends Entitate {
         if( input.isKeyDown(Input.KEY_D) ) {
             roata.rotate(moveSpeed);
             dre = true;
-            x += moveSpeed * delta/14;
+            x += moveSpeed * delta / 14;
             poly.setX(x);
             if( colid() ) {
-                x -= moveSpeed * delta/14;
+                x -= moveSpeed * delta / 14;
                 poly.setX(x);
             }
             moveSpeed += moveSpeedMod;
@@ -72,10 +72,10 @@ public class Player extends Entitate {
         if( input.isKeyDown(Input.KEY_A) ) {
             roata.rotate(-moveSpeed);
             dre = false;
-            x -= moveSpeed * delta/14;
+            x -= moveSpeed * delta / 14;
             poly.setX(x);
             if( colid() ) {
-                x += moveSpeed * delta/14;
+                x += moveSpeed * delta / 14;
                 poly.setX(x);
             }
             moveSpeed += moveSpeedMod;
@@ -96,11 +96,11 @@ public class Player extends Entitate {
             if( color == Color.blue )
                 color = Color.green;
             else color = Color.blue;
-
+        if( input.isKeyPressed(Input.KEY_F1) )
+            System.out.println(delta);
         // TODO debug
         /*
-         * if( input.isKeyPressed(Input.KEY_F1) ) System.out.println(x + "  " +
-         * y); if( input.isKeyPressed(Input.KEY_F2) )
+         * if( input.isKeyPressed(Input.KEY_F2) )
          * System.out.println(poly.getWidth()); if(
          * input.isKeyPressed(Input.KEY_F3) ) System.out.println("viata : " +
          * viata); if( input.isKeyPressed(Input.KEY_F4) )

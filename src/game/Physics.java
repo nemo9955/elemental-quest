@@ -22,29 +22,29 @@ public class Physics extends Proprietati {
 
     public Rectangle poly;
 
-    public void Gravitatie() {
+    public void Gravitatie(int delta) {
 
         // "comportamentul" sariturii
         if( jumping ) {
-            y -= accel;
+            y -= accel * delta/14;
             poly.setY(y);
             if( colid() ) {
                 jumping = false;
-                y += accel;
+                y += accel * delta/14;
                 poly.setY(y);
                 adapteaza(-1);
                 accel = 0;
             }
             if( accel > 0 )
-                accel -= accelMod;
+                accel -= accelMod * delta/14;
             else jumping = false;
         }
 
         // gravitatia
-        y += grav;
+        y += grav * delta/14;
         poly.setY(y);
         if( colid() ) {
-            y -= grav;
+            y -= grav * delta/14;
             poly.setY(y);
             jumping = false;
             canjump = true;
@@ -57,7 +57,7 @@ public class Physics extends Proprietati {
             cadee = 0;
         } else {
             canjump = false;
-            grav += gravMod;
+            grav += gravMod * delta/14;
 
             if( accel <= 0 && gravMax > 7 )
                 cadee += grav / 3;

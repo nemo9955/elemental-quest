@@ -34,7 +34,7 @@ public class Monstru extends Entitate {
     // comportamentul monstrului
     public void upadte(GameContainer gc, int delta) {
 
-        Gravitatie();
+        Gravitatie(delta);
 
         // miscarea
         if( !moving )
