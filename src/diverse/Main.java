@@ -23,6 +23,8 @@ import states.WinState;
  * 
  */
 
+// modificare pentru test
+
 public class Main extends StateBasedGame {
 
     private final static String titlu = "Elemental Quest";
