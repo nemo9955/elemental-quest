@@ -116,12 +116,12 @@ public class GameplayState extends BasicGameState {
             gc.getGraphics().copyArea(target, 0, 0);
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH,mm,ss");
             Date date = new Date();
-            
+
             // in caz ca fisierul nu exista il creaza automat
             File x = new File("screenshot");
-            if(!x.exists())
+            if( !x.exists() )
                 x.mkdir();
-            
+
             String pozaTit = String.format("screenshot/screen%s.jpg", dateFormat.format(date));
             ImageOut.write(target.getFlippedCopy(false, false), pozaTit, false);
             target.destroy();
@@ -132,8 +132,8 @@ public class GameplayState extends BasicGameState {
          * System.out.println(camera.getX() + "  " + camera.getY() ); //
          * System.out.println(input.get + "  " + input.getAbsoluteMouseY() );
          */
-        Main.WIDTH=gc.getWidth();
-        Main.HEIGHT=gc.getHeight();
+        Main.WIDTH = gc.getWidth();
+        Main.HEIGHT = gc.getHeight();
     }
 
     @Override
@@ -156,7 +156,10 @@ public class GameplayState extends BasicGameState {
             g.texture(Obiecte.finish.get(i), finFill);
 
         player.render(gc, g);
-        map.render(0, 0, wallLayerNo);
+        try {
+            map.render(0, 0, wallLayerNo);
+        } catch (Exception e) {
+        }
         renderHealthBar();
     }
 
@@ -185,7 +188,8 @@ public class GameplayState extends BasicGameState {
         }
     }
 
-    // clasa separata pentru a randa bara de viata pentru ca sunt destul de multe de intra aici
+    // clasa separata pentru a randa bara de viata pentru ca sunt destul de
+    // multe de intra aici
     private void renderHealthBar() {
         // afla cat trebuie sa randeze din bara de viata
         init = health.getWidth() - (player.LifeLS() * health.getWidth());
