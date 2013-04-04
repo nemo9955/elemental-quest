@@ -19,7 +19,7 @@ public class Portal {
     private int index;
 
     public Portal(int x, int y, int wi, int he, String index, String to) {
-        port = new RoundedRectangle(x, y, wi, he, 100);
+        port = new RoundedRectangle(x, y, wi, he, 1000);
 
         try {
             canTele = true;
