@@ -20,7 +20,7 @@ public class Monstru extends Entitate {
         super(player);
         this.img = new Image("res/entitati/monstru.png");
         Random zar = new Random();
-        this.x = x + zar.nextInt(range);
+        this.x = x + zar.nextInt( range-((range>img.getWidth()) ? img.getWidth() : 1) );
         this.y = y;
         dr = zar.nextBoolean();
         poly = new Rectangle(this.x, y, img.getWidth(), img.getHeight());
