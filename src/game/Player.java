@@ -8,6 +8,7 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.Sound;
 import org.newdawn.slick.geom.Rectangle;
 
 import diverse.Main;
@@ -25,6 +26,7 @@ public class Player extends Entitate {
     private int spikeRate = 0;
     private Image roata;
     private Image antena;
+    private Sound shot ;
 
     private boolean inPortal;
     private int prevPort;
@@ -40,6 +42,7 @@ public class Player extends Entitate {
         poly = new Rectangle(x, y, img.getWidth(), img.getHeight());
         input = gc.getInput();
         this.team = 5;
+        shot=new Sound ("res/sound/shot_pl.wav");
     }
 
     public void update(int delta, GameContainer gc) throws SlickException {
@@ -125,6 +128,7 @@ public class Player extends Entitate {
         if( input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON) && focRate == 0 ) {
             float ang, mx, my;
             boolean sus;
+            shot.play(0.7f, 0.5f);
             mx = input.getMouseX() - GameplayState.camera.getX();
             my = input.getMouseY() - GameplayState.camera.getY();
             // System.out.println( blockmap.getId((int) mx/32,(int) my/32) );
