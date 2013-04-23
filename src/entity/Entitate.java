@@ -103,5 +103,7 @@ public class Entitate extends Physics {
     public void setAccel(float accel) {
         this.accel = accel;
     }
+    
+    
 
 }

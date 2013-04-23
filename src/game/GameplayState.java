@@ -14,6 +14,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
+import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.imageout.ImageOut;
@@ -43,6 +44,7 @@ public class GameplayState extends BasicGameState {
     private Entitate entit;
     public long time = 0;
     private int wallLayerNo;
+    private Music music ;
 
     public GameplayState(int ID) {
         this.ID = ID;
@@ -55,6 +57,7 @@ public class GameplayState extends BasicGameState {
         prop = new Proprietati();
         firstT = true;
         finFill = new Image("res/finish_fill.png");
+        music = new Music("res/sound/bg_music.wav");
     }
 
     // reincarca clasele atunci cand se schimba nivelul
@@ -75,6 +78,7 @@ public class GameplayState extends BasicGameState {
     // verifica daca e prima data cand e incarcat un nivel
     @Override
     public void enter(GameContainer gc, StateBasedGame sb) throws SlickException {
+        music.loop();
         if( firstT ) {
             startGen(gc);
             firstT = false;
@@ -83,16 +87,24 @@ public class GameplayState extends BasicGameState {
                 startGen(gc);
         }
     }
+    
+    @Override
+    public void leave(GameContainer gc, StateBasedGame sb){
+        music.stop();
+    }
 
     @Override
     public void update(GameContainer gc, StateBasedGame sb, int delta) throws SlickException {
         time += delta;
         player.update(delta, gc);
 
-        for( int i = 0; i < Obiecte.entit.size(); i++ )
-            Obiecte.entit.get(i).upadte(gc, delta);
+        for( int i = 0; i < Obiecte.entit.size(); i++ ){
+           Obiecte.entit.get(i).upadte(gc, delta);
+        }
+        
         for( int i = 0; i < Obiecte.items.size(); i++ )
             Obiecte.items.get(i).upadte(gc, delta);
+        
         for( int i = 0; i < Obiecte.portal.size(); i++ )
             Obiecte.portal.get(i).update(gc, delta);
 
