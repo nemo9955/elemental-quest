@@ -1,5 +1,7 @@
 package game;
 
+import java.util.Random;
+
 import nivel.Obiecte;
 
 import org.newdawn.slick.Color;
@@ -26,6 +28,8 @@ public class Player extends Entitate {
     private int spikeRate = 0;
     private Image roata;
     private Image antena;
+    private Random zar = new Random();
+    
     private Sound shot ;
 
     private boolean inPortal;
@@ -128,7 +132,8 @@ public class Player extends Entitate {
         if( input.isMouseButtonDown(Input.MOUSE_LEFT_BUTTON) && focRate == 0 ) {
             float ang, mx, my;
             boolean sus;
-            shot.play(0.7f, 0.5f);
+            // suneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet <--------------------------------------------------------------------------------------
+            shot.play( (0.7f + (float)( zar.nextInt(20)/100f ) ) , 0.2f);
             mx = input.getMouseX() - GameplayState.camera.getX();
             my = input.getMouseY() - GameplayState.camera.getY();
             // System.out.println( blockmap.getId((int) mx/32,(int) my/32) );
